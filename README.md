@@ -2,7 +2,7 @@
 
 Frontend for the OGP Payroll Reporting prototype project.
 
-### License
+### Public domain
 
 This project is in the worldwide [public domain](LICENSE.md). As stated in [CONTRIBUTING](CONTRIBUTING.md):
 
