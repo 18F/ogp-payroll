@@ -1,6 +1,6 @@
 # OGP Payroll Reporting
 
-Frontend for the OGP Payroll Reporting prototype project.
+Front end for the OGP Payroll Reporting prototype project.
 
 ### Public domain
 
