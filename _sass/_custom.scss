@@ -25,10 +25,7 @@ h1, h2, h3, h4, h5 {
 
 .usa-site-header {
   border-bottom: 1px solid $color-gray-light;
-  
-  .navbar {
-    margin: 3rem 0;
-  }
+  padding: 3rem 0;
 
   a {
     border-bottom: none;
@@ -47,6 +44,7 @@ h1, h2, h3, h4, h5 {
   h1 {
     font-size: $h5-font-size;
     margin-bottom: 4px;
+    margin-top: 0;
 
     @include media($medium-screen) {
       display: block;
@@ -57,6 +55,7 @@ h1, h2, h3, h4, h5 {
   h2 {
     font-size: $h5-font-size;
     font-weight: $font-normal;
+    margin-bottom: 0;
     margin-top: 0;
   }
 }
