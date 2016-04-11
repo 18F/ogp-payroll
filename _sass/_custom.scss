@@ -63,3 +63,34 @@ h1, h2, h3, h4, h5 {
 .welcome-text {
   margin-bottom: 3em;
 }
+
+.button-long {
+  margin-bottom: 1.5em;
+  margin-top: 2.5rem;
+
+  @include media($medium-screen) {
+    padding-left: 2.7em;
+    padding-right: 2.7em;
+    width: auto;
+  }
+}
+
+// Fix for table alignment
+th {
+ text-align: left;
+}
+
+table {
+  .usa-button {
+    margin: 0;
+  }
+}
+
+.standfirst {
+  @include media($medium-screen) {
+    margin: 0 auto;
+    max-width: 50rem;
+    text-align: center;
+  }
+}
+
