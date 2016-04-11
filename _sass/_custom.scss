@@ -90,6 +90,7 @@ table {
   @include media($medium-screen) {
     margin: 0 auto;
     max-width: 50rem;
+    padding-bottom: 3rem;
     text-align: center;
   }
 }
