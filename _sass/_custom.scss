@@ -98,3 +98,11 @@ table {
     text-align: center;
   }
 }
+
+.table-past-projects {
+  tbody {
+    td, th {
+      @include padding(.5rem null);    
+    }
+  }
+}
