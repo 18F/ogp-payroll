@@ -2,6 +2,16 @@
 
 Front end for the OGP Payroll Reporting prototype project.
 
+### Installation
+
+Copy and paste each of the following steps to get the site up and running.
+
+1. `git clone git@github.com:18F/ogp-payroll.git`
+2. `cd ogp-payroll`
+3. `jekyll serve`
+
+You should be able to see the site at: http://127.0.0.1:4000
+
 ### Public domain
 
 This project is in the worldwide [public domain](LICENSE.md). As stated in [CONTRIBUTING](CONTRIBUTING.md):
