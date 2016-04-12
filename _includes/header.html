@@ -10,5 +10,12 @@
       </h1>
       <h2>Wage and Hour Division</h2>
     </div>
+    <div class="header-account">
+    {% if page.logged == 'no' %}
+      <p>Welcome! <a href="/">Please log in</a></p>
+    {% else %}
+      <p>Logged in as ACME Construction <a href="/">(change)</a></p>
+    {% endif %}
+    </div>
   </nav>
 </header>
