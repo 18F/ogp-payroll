@@ -1,0 +1,22 @@
+{
+  "contractors": {
+    "1767": {
+      "name": "ACME Construction Co., Inc.",
+      "type": "subcontractor",
+      "signatory": "John Deere",
+      "signatory_role": "payroll coordinator"
+    },
+    "2341": {
+      "name": "Moore & Sons Construction",
+      "type": "subcontractor",
+      "signatory": "Brian Moore",
+      "signatory_role": "president"
+    },
+    "8452": {
+      "name": "Green Valley Landscaping",
+      "type": "subcontractor",
+      "signatory": "Marilyn Brown",
+      "signatory_role": "payroll coordinator"
+    }
+  }
+}
