@@ -70,6 +70,12 @@ h1, h2, h3, h4, h5 {
   padding-right: 3rem;
 }
 
+// Footer ------------- //
+
+.site-footer {
+  margin: 2rem 0;
+}
+
 // Login page ------------- //
 
 .button-long {
@@ -119,7 +125,7 @@ table {
   @include padding(2rem null);
   background-color: $color-gray-lighter;
 
-  h3 {
+  h2 {
     margin-top: 0;
   }
 
