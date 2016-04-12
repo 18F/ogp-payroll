@@ -21,11 +21,20 @@ h1, h2, h3, h4, h5 {
   font-weight: $font-light;
 }
 
+.welcome-text {
+  margin-bottom: 3em;
+}
+
 // Navigation ------------- //
 
 .usa-site-header {
   border-bottom: 1px solid $color-gray-light;
   padding: 3rem 0;
+}
+
+.logo {
+  display: inline-block;
+  padding-left: 3rem;
 
   a {
     border-bottom: none;
@@ -35,10 +44,6 @@ h1, h2, h3, h4, h5 {
       color: $color-black;
       text-decoration: none;
     }
-  }
-
-  .logo {
-    padding-left: 3rem;
   }
 
   h1 {
@@ -58,4 +63,102 @@ h1, h2, h3, h4, h5 {
     margin-bottom: 0;
     margin-top: 0;
   }
+}
+
+.header-account {
+  float: right;
+  padding-right: 3rem;
+}
+
+// Footer ------------- //
+
+.site-footer {
+  margin: 2rem 0;
+}
+
+// Login page ------------- //
+
+.button-long {
+  margin-bottom: 1.5em;
+  margin-top: 2.5rem;
+
+  @include media($medium-screen) {
+    padding-left: 2.7em;
+    padding-right: 2.7em;
+    width: auto;
+  }
+}
+
+// Second page ------------- //
+
+// Fix for table alignment
+th {
+ text-align: left;
+}
+
+table {
+  .usa-button {
+    margin: 0;
+  }
+}
+
+.standfirst {
+  @include media($medium-screen) {
+    margin: 0 auto;
+    max-width: 50rem;
+    padding-bottom: 3rem;
+    text-align: center;
+  }
+}
+
+.table-past-projects {
+  tbody {
+    td, th {
+      @include padding(.5rem null);    
+    }
+  }
+}
+
+// Upload payroll page ----- //
+
+.file_upload {
+  @include padding(2rem null);
+  background-color: $color-gray-lighter;
+
+  h2 {
+    margin-top: 0;
+  }
+
+  .usa-button {
+    margin-right: 0;
+  }
+}
+
+// This is copied from https://github.com/blueimp/jQuery-File-Upload/blob/master/css/jquery.fileupload.css */
+.fileinput-button {
+  position: relative;
+  overflow: hidden;
+}
+
+.fileinput-button input {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  opacity: 0;
+  -ms-filter:'alpha(opacity=0)';
+  font-size: 200px;
+  direction: ltr;
+  cursor: pointer;
+}
+
+.form-upload {
+  max-width: 50rem;
+}
+
+// Enter employee details page ----- //
+
+.text-emphasize {
+  color: $color-primary;
+  font-weight: $font-bold;
 }

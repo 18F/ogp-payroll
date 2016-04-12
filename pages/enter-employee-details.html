@@ -1,0 +1,50 @@
+---
+layout: default
+title: Enter employee details
+permalink: /enter-employee-details/
+---
+
+<h1>{{ page.title }}</h1>
+<form>
+  <fieldset>
+    <legend class="usa-drop_text">Employee</legend>
+    <label for="first-name">First name</label>
+    <input id="first-name" name="employee" type="text" required="" aria-required="true">
+    <label for="last-name">Last name</label>
+    <input id="last-name" name="employee" type="text" required="" aria-required="true">
+    <label for="id-number">ID number</label>
+    <input class="usa-input-tiny" id="id-number" name="employee" type="number">
+    <label for="work-classification">Work classification</label>
+    <select name="employee" id="work-classification">
+    <option value="value1">Carpenter (apprentice)</option>
+    <option value="value2">Option B</option>
+    <option value="value3">Option C</option>
+    </select>
+    <a href="#">+ Add custom classification</a>
+    <p>Davis-Bacon rate for this classification:</p>
+    <p class="text-emphasize">$16.32</p>
+  </fieldset>
+  <fieldset>
+    <legend>Hours and rates</legend>
+    <label for="gross-federal">Gross earnings: Federal projects</label>
+    <input id="gross-federal" name="employee" type="number" required="" aria-required="true">
+    <label for="gross-total">Gross earnings: Total</label>
+    <input id="gross-total" name="employee" type="number" required="" aria-required="true">
+  </fieldset>
+  <fieldset>
+    <legend>Deductions</legend>
+    <label for="fica">FICA</label>
+    <input id="fica" name="employee" type="number">
+    <label for="withholding-tax">Withholding tax</label>
+    <input id="withholding-tax" name="employee" type="number">
+    <label for="other">Other</label>
+    <input id="other" name="employee" type="number">
+    <label for="other-description">Description of other deduction</label>
+    <input id="other-description" name="employee" type="text">
+    <label for="total-deductions">Total Deductions</label>
+    <input id="total-deductions" name="employee" type="number">
+  </fieldset>
+  <h2>Net wages paid: $633.79</h2>
+  <a class="usa-button button-long" href="/review-hours-and-earnings/">Save</a>
+  <a class="usa-button usa-button-outline" href="#">Add another employee</a>
+</form>
