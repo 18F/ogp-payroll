@@ -1,0 +1,75 @@
+/* generated at http://www.objgen.com/json */
+project
+  ACE-352
+    address = 230 S. Dearborn
+    city = Chicago
+    state = IL
+    zip = 60604
+    desc = 39-story office building
+    contracts[] = ACE-CE-4156, ACE-CE-4793
+contracts
+  ACE-CE-4156
+    contractors[] s = 1767, 2341
+    start_date = 03/29/2016
+  ACE-CE-4793
+    contractors[] s = 1767, 8452
+    start_date = 03/29/2016
+contractors
+  1767
+    name = ACME Construction Co., Inc.
+    type = subcontractor
+    signatory = John Deere
+    signatory_role = payroll coordinator
+    employees[] s = 0319,0714
+  2341
+    name = Moore & Sons Construction
+    type = subcontractor
+    signatory = Brian Moore
+    signatory_role = president
+  8452
+    name = Green Valley Landscaping
+    type = subcontractor
+    signatory = Marilyn Brown
+    signatory_role = payroll coordinator
+employees
+  0319
+    last_name = Degliobezzi
+    first_name = August
+    job[0]
+      contract = ACE-CE-4156
+      week_start = 03/29/2016
+      earnings[0]
+        work_classification = bricklayer
+        hours[] s = 0,4,4,4,4,4,0
+        ot_hours[]
+        rate = 17.46
+        ot_rate
+      earnings[1]
+        work_classification = unskilled labor
+        hours[] s = 0,4,4,4,4,4,0
+        ot_hours[] = 0,1,1,1,1,1,0
+        rate = 14.30
+        ot_rate = 18.52
+      deductions
+        fica = 54.35
+        withholding_tax = 144.92
+        other[]
+          amount = 42.36
+          explanation = child support
+  0714
+    last_name = Gonzales
+    first_name = Miguel
+    job[0]
+      contract = ACE-CE-4156
+      week_start = 03/29/2016
+      earnings[0]
+        work_classification = carpenter
+        hours[] s = 0,8,8,8,8,8,0
+        ot_hours[] s = 0,1,1,1,1,1,0
+        rate = 17.98
+        ot_rate = 35.96
+      deductions
+        fica = 67.43
+        withholding_tax = 179.80
+        other[]
+
