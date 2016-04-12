@@ -1,18 +1,16 @@
 {
-  "contracts": {
-    "ACE-CE-4156": {
-      "contractors": [
-        "1767",
-        "2341"
-      ],
-      "start_date": "03/29/2016"
-    },
-    "ACE-CE-4793": {
-      "contractors": [
-        "1767",
-        "8452"
-      ],
-      "start_date": "03/29/2016"
-    }
+  "ACE-CE-4156": {
+    "contractors": [
+      "1767",
+      "2341"
+    ],
+    "start_date": "03/29/2016"
+  },
+  "ACE-CE-4793": {
+    "contractors": [
+      "1767",
+      "8452"
+    ],
+    "start_date": "03/29/2016"
   }
 }

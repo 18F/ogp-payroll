@@ -1,15 +1,13 @@
 {
-  "project": {
-    "ACE-352": {
-      "address": "230 S. Dearborn",
-      "city": "Chicago",
-      "state": "IL",
-      "zip": "60604",
-      "desc": "39-story office building",
-      "contracts": [
-        "ACE-CE-4156",
-        "ACE-CE-4793"
-      ]
-    }
+  "ACE-352": {
+    "address": "230 S. Dearborn",
+    "city": "Chicago",
+    "state": "IL",
+    "zip": "60604",
+    "desc": "39-story office building",
+    "contracts": [
+      "ACE-CE-4156",
+      "ACE-CE-4793"
+    ]
   }
 }
