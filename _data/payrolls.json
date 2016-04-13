@@ -1,0 +1,92 @@
+{
+  "ACE-CE-4156": {
+    "contractor_id_2": {
+      "03292016": {
+        "employee_id_1": {
+          "earnings": [
+            {
+              "work_classification": "bricklayer",
+              "hours": [
+                "0",
+                "4",
+                "4",
+                "4",
+                "4",
+                "4",
+                "0"
+              ],
+              "ot_hours": [],
+              "rate": "17.46",
+              "ot_rate": {}
+            },
+            {
+              "work_classification": "unskilled labor",
+              "hours": [
+                "0",
+                "4",
+                "4",
+                "4",
+                "4",
+                "4",
+                "0"
+              ],
+              "ot_hours": [
+                "0",
+                "1",
+                "1",
+                "1",
+                "1",
+                "1",
+                "0"
+              ],
+              "rate": "14.30",
+              "ot_rate": "18.52"
+            }
+          ],
+          "deductions": {
+            "fica": "54.35",
+            "withholding_tax": "144.92",
+            "other": [
+              {
+                "amount": "42.36",
+                "explanation": "child support"
+              }
+            ]
+          }
+        },
+        "employee_id_2": {
+          "earnings": [
+            {
+              "work_classification": "carpenter",
+              "hours": [
+                "0",
+                "8",
+                "8",
+                "8",
+                "8",
+                "8",
+                "0"
+              ],
+              "ot_hours": [
+                "0",
+                "1",
+                "1",
+                "1",
+                "1",
+                "1",
+                "0"
+              ],
+              "rate": "17.98",
+              "ot_rate": "35.96"
+            }
+          ],
+          "deductions": {
+            "fica": "67.43",
+            "withholding_tax": "179.80",
+            "other": []
+          }
+        }
+      }
+    }
+  }
+}

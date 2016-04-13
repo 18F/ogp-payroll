@@ -29,85 +29,133 @@
     }
   },
   "contractors": {
-    "1767": {
+    "contractor_id_1": {
       "name": "ACME Construction Co., Inc.",
-      "type": "subcontractor",
+      "username": "acmeconst",
+      "email": "hi@acmeconstruction.com",
+      "type": "prime",
       "signatory": "John Deere",
       "signatory_role": "payroll coordinator"
     },
-    "2341": {
+    "contractor_id_2": {
       "name": "Moore & Sons Construction",
+      "username": "bmoore3",
+      "email": "bmoore@mooreandsons.com",
       "type": "subcontractor",
       "signatory": "Brian Moore",
       "signatory_role": "president"
     },
-    "8452": {
+    "contractor_id_3": {
       "name": "Green Valley Landscaping",
+      "username": "greenvalley",
+      "email": "mbrown@greenvalley.com",
       "type": "subcontractor",
       "signatory": "Marilyn Brown",
       "signatory_role": "payroll coordinator"
     }
   },
   "employees": {
-    "0319": {
+    "employee_id_1": {
       "last_name": "Degliobezzi",
       "first_name": "August",
-      "job": [
-        {
-          "contract": "ACE-CE-4156",
-          "week_start": "03/29/2016",
-          "earnings": [
-            {
-              "work_classification": "bricklayer",
-              "hours": ["0", "4", "4", "4", "4", "4","0"],
-              "ot_hours": [],
-              "rate": "17.46",
-              "ot_rate": {}
-            },
-            {
-              "work_classification": "unskilled labor",
-              "hours": ["0","4","4","4","4","4","0"],
-              "ot_hours": ["0","1","1","1","1","1","0"],
-              "rate": "14.30",
-              "ot_rate": "18.52"
-            }
-          ],
-          "deductions": {
-            "fica": "54.35",
-            "withholding_tax": "144.92",
-            "other": [
-              {
-                "amount": "42.36",
-                "explanation": "child support"
-              }
-            ]
-          }
-        }
-      ]
+      "id": "0319"
     },
-    "0714": {
+    "employee_id_2": {
       "last_name": "Gonzales",
       "first_name": "Miguel",
-      "job": [
-        {
-          "contract": "ACE-CE-4156",
-          "week_start": "03/29/2016",
-          "earnings": [
-            {
-              "work_classification": "carpenter",
-              "hours": ["0","8","8","8","8","8","0"],
-              "ot_hours": ["0","1","1","1","1","1","0"],
-              "rate": "17.98",
-              "ot_rate": "35.96"
+      "id": "0742"
+    }
+  },
+  "payrolls": {
+    "ACE-CE-4156": {
+      "contractor_id_2": {
+        "03292016": {
+          "employee_id_1": {
+            "earnings": [
+              {
+                "work_classification": "bricklayer",
+                "hours": [
+                  "0",
+                  "4",
+                  "4",
+                  "4",
+                  "4",
+                  "4",
+                  "0"
+                ],
+                "ot_hours": [],
+                "rate": "17.46",
+                "ot_rate": {}
+              },
+              {
+                "work_classification": "unskilled labor",
+                "hours": [
+                  "0",
+                  "4",
+                  "4",
+                  "4",
+                  "4",
+                  "4",
+                  "0"
+                ],
+                "ot_hours": [
+                  "0",
+                  "1",
+                  "1",
+                  "1",
+                  "1",
+                  "1",
+                  "0"
+                ],
+                "rate": "14.30",
+                "ot_rate": "18.52"
+              }
+            ],
+            "deductions": {
+              "fica": "54.35",
+              "withholding_tax": "144.92",
+              "other": [
+                {
+                  "amount": "42.36",
+                  "explanation": "child support"
+                }
+              ]
             }
-          ],
-          "deductions": {
-            "fica": "67.43",
-            "withholding_tax": "179.80",
-            "other": []
+          },
+          "employee_id_2": {
+            "earnings": [
+              {
+                "work_classification": "carpenter",
+                "hours": [
+                  "0",
+                  "8",
+                  "8",
+                  "8",
+                  "8",
+                  "8",
+                  "0"
+                ],
+                "ot_hours": [
+                  "0",
+                  "1",
+                  "1",
+                  "1",
+                  "1",
+                  "1",
+                  "0"
+                ],
+                "rate": "17.98",
+                "ot_rate": "35.96"
+              }
+            ],
+            "deductions": {
+              "fica": "67.43",
+              "withholding_tax": "179.80",
+              "other": []
+            }
           }
         }
-      ]
+      }
     }
   }
 }

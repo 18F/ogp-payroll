@@ -1,18 +1,24 @@
 {
-  "1767": {
+  "contractor_id_1": {
     "name": "ACME Construction Co., Inc.",
-    "type": "subcontractor",
+    "username": "acmeconst",
+    "email": "hi@acmeconstruction.com",
+    "type": "prime",
     "signatory": "John Deere",
     "signatory_role": "payroll coordinator"
   },
-  "2341": {
+  "contractor_id_2": {
     "name": "Moore & Sons Construction",
+    "username": "bmoore3",
+    "email": "bmoore@mooreandsons.com",
     "type": "subcontractor",
     "signatory": "Brian Moore",
     "signatory_role": "president"
   },
-  "8452": {
+  "contractor_id_3": {
     "name": "Green Valley Landscaping",
+    "username": "greenvalley",
+    "email": "mbrown@greenvalley.com",
     "type": "subcontractor",
     "signatory": "Marilyn Brown",
     "signatory_role": "payroll coordinator"
