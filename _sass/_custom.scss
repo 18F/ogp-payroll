@@ -162,3 +162,16 @@ table {
   color: $color-primary;
   font-weight: $font-bold;
 }
+
+// Create new payroll
+
+.week-first {
+  @include media($medium-screen) {
+//    float: left;
+  }
+}
+
+.button_wrapper {
+  margin-top: 2rem;
+}
+
