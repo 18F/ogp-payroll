@@ -25,6 +25,14 @@ h1, h2, h3, h4, h5 {
   margin-bottom: 3em;
 }
 
+fieldset {
+  margin-top: 1.5em;
+}
+
+legend {
+  font-size: $h4-font-size;
+}
+
 // Navigation ------------- //
 
 .usa-site-header {
