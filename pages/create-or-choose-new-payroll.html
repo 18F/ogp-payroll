@@ -5,105 +5,109 @@ permalink: /create-or-choose-new-payroll/
 ---
 
 <h1>{{ page.title }}</h1>
-<h4>Create or choose project</h4>
-<form>
-  <label for="options">Dropdown label</label>
-  <select name="options" id="options">
-    <option value="value1">Option A</option>
-    <option value="value2">Option B</option>
-    <option value="value3">Option C</option>
-  </select>
-</form>
-<form>
-  <fieldset>
-    <legend>Project and Contract Information</legend>
-    <label for="payroll-number">Payroll number</label>
-    <input id="payroll-number" name="payroll-info" type="number" required="" aria-required="true">
-    <label for="project">Project</label>
-    <select name="payroll-info" id="project" required="" aria-required="true">
-      <option value="ACE-352">ACE-352</option>
-      <option value="ACE-431">ACE-431</option>
-      <option value="ACE-856">ACE-856</option>
+<div class="usa-width-one-half">
+  <h4>Create or choose project</h4>
+  <form>
+    <label for="options">Contract or Project Number</label>
+    <select name="options" id="options">
+      <option value="value1">Option A</option>
+      <option value="value2">Option B</option>
+      <option value="value3">Option C</option>
     </select>
-    <label for="contract-number">Contract number</label>
-    <select name="payroll-info" id="contract-number" required="" aria-required="true">
-      <option value="ACE-CE-4156">ACE-CE-4156</option>
-      <option value="ACE-CE-1654">ACE-CE-1654</option>
-      <option value="ACE-CE-6234">ACE-CE-6234</option>
-    </select>
-    <label for="project-name">Project name</label>
-    <input id="project-name" name="payroll-info" type="text" required="" aria-required="true">
-    <!-- Project location -->
-    <label for="project-location">Project location (street address)</label>
-    <input id="project-location" name="payroll-info" type="text" required="" aria-required="true">
-    <div>
-      <div class="usa-input-grid usa-input-grid-medium">
-        <label for="city">City</label>
-        <input id="city" name="payroll-info" type="text" required="" aria-required="true">
+  </form>
+</div>
+<div class="usa-width-one-half">
+  <form>
+    <fieldset>
+      <legend>Project and Contract Information</legend>
+      <label for="payroll-number">Payroll number</label>
+      <input id="payroll-number" name="payroll-info" type="number" required="" aria-required="true">
+      <label for="project">Project</label>
+      <select name="payroll-info" id="project" required="" aria-required="true">
+        <option value="ACE-352">ACE-352</option>
+        <option value="ACE-431">ACE-431</option>
+        <option value="ACE-856">ACE-856</option>
+      </select>
+      <label for="contract-number">Contract number</label>
+      <select name="payroll-info" id="contract-number" required="" aria-required="true">
+        <option value="ACE-CE-4156">ACE-CE-4156</option>
+        <option value="ACE-CE-1654">ACE-CE-1654</option>
+        <option value="ACE-CE-6234">ACE-CE-6234</option>
+      </select>
+      <label for="project-name">Project name</label>
+      <input id="project-name" name="payroll-info" type="text" required="" aria-required="true">
+      <!-- Project location -->
+      <label for="project-location">Project location (street address)</label>
+      <input id="project-location" name="payroll-info" type="text" required="" aria-required="true">
+      <div>
+        <div class="usa-input-grid usa-input-grid-medium">
+          <label for="city">City</label>
+          <input id="city" name="payroll-info" type="text" required="" aria-required="true">
+        </div>
+        <div class="usa-input-grid usa-input-grid-small">
+          <label for="state">State</label>
+          <select id="state" name="payroll-info" type="text" required="" aria-required="true">
+            <option value=""></option>
+            <option value="AL">Alabama</option>
+            <option value="AK">Alaska</option>
+            <option value="AZ">Arizona</option>
+            <option value="AR">Arkansas</option>
+            <option value="CA">California</option>
+            <option value="CO">Colorado</option>
+            <option value="CT">Connecticut</option>
+            <option value="DE">Delaware</option>
+            <option value="DC">District of Columbia</option>
+            <option value="FL">Florida</option>
+            <option value="GA">Georgia</option>
+            <option value="HI">Hawaii</option>
+            <option value="ID">Idaho</option>
+            <option value="IL">Illinois</option>
+            <option value="IN">Indiana</option>
+            <option value="IA">Iowa</option>
+            <option value="KS">Kansas</option>
+            <option value="KY">Kentucky</option>
+            <option value="LA">Louisiana</option>
+            <option value="ME">Maine</option>
+            <option value="MD">Maryland</option>
+            <option value="MA">Massachusetts</option>
+            <option value="MI">Michigan</option>
+            <option value="MN">Minnesota</option>
+            <option value="MS">Mississippi</option>
+            <option value="MO">Missouri</option>
+            <option value="MT">Montana</option>
+            <option value="NE">Nebraska</option>
+            <option value="NV">Nevada</option>
+            <option value="NH">New Hampshire</option>
+            <option value="NJ">New Jersey</option>
+            <option value="NM">New Mexico</option>
+            <option value="NY">New York</option>
+            <option value="NC">North Carolina</option>
+            <option value="ND">North Dakota</option>
+            <option value="OH">Ohio</option>
+            <option value="OK">Oklahoma</option>
+            <option value="OR">Oregon</option>
+            <option value="PA">Pennsylvania</option>
+            <option value="RI">Rhode Island</option>
+            <option value="SC">South Carolina</option>
+            <option value="SD">South Dakota</option>
+            <option value="TN">Tennessee</option>
+            <option value="TX">Texas</option>
+            <option value="UT">Utah</option>
+            <option value="VT">Vermont</option>
+            <option value="VA">Virginia</option>
+            <option value="WA">Washington</option>
+            <option value="WV">West Virginia</option>
+            <option value="WI">Wisconsin</option>
+            <option value="WY">Wyoming</option>
+          </select>
+        </div>
       </div>
-      <div class="usa-input-grid usa-input-grid-small">
-        <label for="state">State</label>
-        <select id="state" name="payroll-info" type="text" required="" aria-required="true">
-          <option value=""></option>
-          <option value="AL">Alabama</option>
-          <option value="AK">Alaska</option>
-          <option value="AZ">Arizona</option>
-          <option value="AR">Arkansas</option>
-          <option value="CA">California</option>
-          <option value="CO">Colorado</option>
-          <option value="CT">Connecticut</option>
-          <option value="DE">Delaware</option>
-          <option value="DC">District of Columbia</option>
-          <option value="FL">Florida</option>
-          <option value="GA">Georgia</option>
-          <option value="HI">Hawaii</option>
-          <option value="ID">Idaho</option>
-          <option value="IL">Illinois</option>
-          <option value="IN">Indiana</option>
-          <option value="IA">Iowa</option>
-          <option value="KS">Kansas</option>
-          <option value="KY">Kentucky</option>
-          <option value="LA">Louisiana</option>
-          <option value="ME">Maine</option>
-          <option value="MD">Maryland</option>
-          <option value="MA">Massachusetts</option>
-          <option value="MI">Michigan</option>
-          <option value="MN">Minnesota</option>
-          <option value="MS">Mississippi</option>
-          <option value="MO">Missouri</option>
-          <option value="MT">Montana</option>
-          <option value="NE">Nebraska</option>
-          <option value="NV">Nevada</option>
-          <option value="NH">New Hampshire</option>
-          <option value="NJ">New Jersey</option>
-          <option value="NM">New Mexico</option>
-          <option value="NY">New York</option>
-          <option value="NC">North Carolina</option>
-          <option value="ND">North Dakota</option>
-          <option value="OH">Ohio</option>
-          <option value="OK">Oklahoma</option>
-          <option value="OR">Oregon</option>
-          <option value="PA">Pennsylvania</option>
-          <option value="RI">Rhode Island</option>
-          <option value="SC">South Carolina</option>
-          <option value="SD">South Dakota</option>
-          <option value="TN">Tennessee</option>
-          <option value="TX">Texas</option>
-          <option value="UT">Utah</option>
-          <option value="VT">Vermont</option>
-          <option value="VA">Virginia</option>
-          <option value="WA">Washington</option>
-          <option value="WV">West Virginia</option>
-          <option value="WI">Wisconsin</option>
-          <option value="WY">Wyoming</option>
-        </select>
-      </div>
+      <label for="zip">ZIP</label>
+      <input class="usa-input-medium" id="zip" name="payroll-info" type="text" pattern="[\d]{5}(-[\d]{4})?" data-grouplength="5,4" data-delimiter="-" data-politespace="" required="" aria-required="true">
+    </fieldset>
+    <div class="button_wrapper">
+      <a class="usa-button" href="/enter-employee-details/">Create</a>
+      <a class="usa-button usa-button-outline" href="#">Cancel</a>    
     </div>
-    <label for="zip">ZIP</label>
-    <input class="usa-input-medium" id="zip" name="payroll-info" type="text" pattern="[\d]{5}(-[\d]{4})?" data-grouplength="5,4" data-delimiter="-" data-politespace="" required="" aria-required="true">
-  </fieldset>
-  <div class="button_wrapper">
-    <a class="usa-button" href="/enter-employee-details/">Create</a>
-    <a class="usa-button usa-button-outline" href="#">Cancel</a>    
-  </div>
-</form>
+  </form>
+</div>
