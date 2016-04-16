@@ -25,10 +25,6 @@ h1, h2, h3, h4, h5 {
   margin-bottom: 3em;
 }
 
-fieldset {
-  margin-top: 1.5em;
-}
-
 legend {
   font-size: $h4-font-size;
 }
@@ -169,6 +165,56 @@ table {
 .text-emphasize {
   color: $color-primary;
   font-weight: $font-bold;
+}
+
+.form_group-rate {
+  clear: both;
+}
+
+.form_group-rate-item {
+  clear: none;
+  float: left;
+  margin-right: 1.5rem;
+  width: 4rem;
+}
+
+.form_group-rate-total {
+  margin-left: 2rem;
+  width: 5rem;
+}
+
+.form_group-rate-rate {
+  margin-left: 2rem;
+  width: 7rem;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0; 
+}
+
+.enter-employee-details {
+  form {
+    max-width: none;
+  }
+}
+
+.form-small {
+  input,
+  select {
+    max-width: 32rem;
+  }
+}
+
+.link_block {
+  clear: both;
+  display: table;
+}
+
+.add_overtime {
+  margin-top: 1em;
 }
 
 // Create new payroll
