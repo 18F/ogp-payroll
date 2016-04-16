@@ -74,6 +74,15 @@ legend {
   padding-right: 3rem;
 }
 
+.button-left {
+  margin-top: 3rem;
+  display: inline-block;
+}
+
+.button-right {
+  float: right;
+}
+
 // Footer ------------- //
 
 .site-footer {
@@ -109,7 +118,7 @@ table {
 .standfirst {
   @include media($medium-screen) {
     margin: 0 auto;
-    max-width: 50rem;
+    max-width: 53rem;
     padding-bottom: 3rem;
     text-align: center;
   }
