@@ -20,9 +20,25 @@ permalink: /enter-employee-details/
     <option value="value2">Option B</option>
     <option value="value3">Option C</option>
     </select>
-    <a href="#">+ Add custom classification</a>
+<!--    <a href="#">+ Add custom classification</a> -->
     <p>Davis-Bacon rate for this classification:</p>
     <p class="text-emphasize">$16.32</p>
+    <label for="custom-classification">+ Add custom work classification</label>
+    <input id="custom-classification" name="input-type-text" type="text">
+    <fieldset class="usa-fieldset-inputs fieldset-inputs-owner">
+      <legend>Are you an owner of this project?</legend>
+      <ul class="usa-unstyled-list">
+        <li>
+          <input id="pea-soup" type="radio" name="soup" value="pea">
+          <label for="pea-soup">Yes</label>
+        </li>
+        <li>
+          <input id="chicken-noodle" type="radio" name="soup" value="chicken-noodle">
+          <label for="chicken-noodle">No</label>
+        </li>
+        <p>Owners of the project do not have to fill out wage info.</p>
+      </ul>
+    </fieldset>
   </fieldset>
   <fieldset>
     <legend>Hours and rates</legend>
