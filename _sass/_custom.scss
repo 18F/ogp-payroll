@@ -25,6 +25,10 @@ h1, h2, h3, h4, h5 {
   margin-bottom: 3em;
 }
 
+legend {
+  font-size: $h4-font-size;
+}
+
 // Navigation ------------- //
 
 .usa-site-header {
@@ -70,6 +74,19 @@ h1, h2, h3, h4, h5 {
   padding-right: 3rem;
 }
 
+.button-left {
+  margin-top: 3rem;
+  display: inline-block;
+}
+
+.button-right {
+  float: right;
+}
+
+.button-back {
+  margin-left: 5em;
+}
+
 // Footer ------------- //
 
 .site-footer {
@@ -105,7 +122,7 @@ table {
 .standfirst {
   @include media($medium-screen) {
     margin: 0 auto;
-    max-width: 50rem;
+    max-width: 53rem;
     padding-bottom: 3rem;
     text-align: center;
   }
@@ -156,9 +173,78 @@ table {
   max-width: 50rem;
 }
 
+// Create or choose new payroll page ----- //
+
+.heading-add_new_project {
+  padding-top: 1.5em;
+}
+
 // Enter employee details page ----- //
 
 .text-emphasize {
   color: $color-primary;
   font-weight: $font-bold;
 }
+
+.form_group-rate {
+  clear: both;
+}
+
+.form_group-rate-item {
+  clear: none;
+  float: left;
+  margin-right: 1.5rem;
+  width: 4rem;
+}
+
+.form_group-rate-total {
+  margin-left: 2rem;
+  width: 5rem;
+}
+
+.form_group-rate-rate {
+  margin-left: 2rem;
+  width: 7rem;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0; 
+}
+
+.enter-employee-details {
+  form {
+    max-width: none;
+  }
+}
+
+.form-small {
+  input,
+  select {
+    max-width: 32rem;
+  }
+}
+
+.link_block {
+  clear: both;
+  display: table;
+}
+
+.add_overtime {
+  margin-top: 1em;
+}
+
+// Create new payroll
+
+.week-first {
+  @include media($medium-screen) {
+//    float: left;
+  }
+}
+
+.button_wrapper {
+  margin-top: 2rem;
+}
+

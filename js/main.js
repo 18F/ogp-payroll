@@ -8,7 +8,7 @@ function inputToSessionStorage(){
   var tempObj = {};
   try {
     [].forEach.call(document.querySelectorAll('input, select'), function(el){
-      var key = el.attributes["data-key"].value;
+      var key = el.attributes.name.value;
       verifyOrCreateKey(el, key);
       if (el.value){
         tempObj[key][el.id] = el.value;
