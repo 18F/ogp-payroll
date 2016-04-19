@@ -8,19 +8,19 @@ permalink: /create-new-payroll/
 <form>
   <fieldset>
     <legend>Week</legend>
-    <span class="usa-form-hint usa-datefield-hint" id="dobHint">For example: 04 28 1986</span>
+    <span class="usa-form-hint usa-datefield-hint" id="date-hint">For example: 04 28 1986</span>
     <div class="usa-date-of-birth">
       <div class="usa-datefield usa-form-group usa-form-group-month">
-        <label for="date_of_birth_1">Month</label>
-        <input aria-describedby="dobHint" class="usa-form-control" id="date_of_birth_1" name="date_of_birth_1" pattern="0?[1-9]|1[012]" type="number" min="1" max="12" value="">
+        <label for="start_month">Month</label>
+        <input aria-describedby="date-hint" class="usa-form-control" id="start_month" name="start_month" data-key="payroll_start_week" pattern="0?[1-9]|1[012]" type="number" min="1" max="12" value="">
       </div>
       <div class="usa-datefield usa-form-group usa-form-group-day">
-        <label for="date_of_birth_2">Day</label>
-        <input aria-describedby="dobHint" class="usa-form-control" id="date_of_birth_2" name="date_of_birth_2" pattern="0?[1-9]|1[0-9]|2[0-9]|3[01]" type="number" min="1" max="31" value="">
+        <label for="start_day">Day</label>
+        <input aria-describedby="date-hint" class="usa-form-control" id="start_day" name="start_day" data-key="payroll_start_week" pattern="0?[1-9]|1[0-9]|2[0-9]|3[01]" type="number" min="1" max="31" value="">
       </div>
       <div class="usa-datefield usa-form-group usa-form-group-year">
-        <label for="date_of_birth_3">Year</label>
-        <input aria-describedby="dobHint" class="usa-form-control" id="date_of_birth_3" name="date_of_birth_3" pattern="[0-9]{4}" type="number" min="1900" max="2000" value="">
+        <label for="start_year">Year</label>
+        <input aria-describedby="date-hint" class="usa-form-control" id="start_year" name="start_year" data-key="payroll_start_week" pattern="[0-9]{4}" type="number" min="1900" max="2000" value="">
       </div>
     </div>
   </fieldset>
@@ -29,50 +29,50 @@ permalink: /create-new-payroll/
     <legend class="usa-sr-only">Week</legend>
     <div class="usa-date-of-birth">
       <div class="usa-datefield usa-form-group usa-form-group-month">
-        <label for="date_of_birth_1">Month</label>
-        <input aria-describedby="dobHint" class="usa-form-control" id="date_of_birth_1" name="date_of_birth_1" pattern="0?[1-9]|1[012]" type="number" min="1" max="12" value="">
+        <label for="end_month">Month</label>
+        <input aria-describedby="dobHint" class="usa-form-control" id="end_month" name="end_month" data-key="payroll_end_week" pattern="0?[1-9]|1[012]" type="number" min="1" max="12" value="">
       </div>
       <div class="usa-datefield usa-form-group usa-form-group-day">
-        <label for="date_of_birth_2">Day</label>
-        <input aria-describedby="dobHint" class="usa-form-control" id="date_of_birth_2" name="date_of_birth_2" pattern="0?[1-9]|1[0-9]|2[0-9]|3[01]" type="number" min="1" max="31" value="">
+        <label for="end_day">Day</label>
+        <input aria-describedby="dobHint" class="usa-form-control" id="end_day" name="end_day" data-key="payroll_end_week" pattern="0?[1-9]|1[0-9]|2[0-9]|3[01]" type="number" min="1" max="31" value="">
       </div>
       <div class="usa-datefield usa-form-group usa-form-group-year">
-        <label for="date_of_birth_3">Year</label>
-        <input aria-describedby="dobHint" class="usa-form-control" id="date_of_birth_3" name="date_of_birth_3" pattern="[0-9]{4}" type="number" min="1900" max="2000" value="">
+        <label for="end_day">Year</label>
+        <input aria-describedby="dobHint" class="usa-form-control" id="end_year" name="end_year" data-key="payroll_end_week" pattern="[0-9]{4}" type="number" min="1900" max="2000" value="">
       </div>
     </div>
   </fieldset>
   <fieldset>
     <legend>Project and Contract Information</legend>
     <label for="payroll-number">Payroll number</label>
-    <input id="payroll-number" name="payroll-info" type="number" required="" aria-required="true">
-    <label for="project">Project</label>
-    <select name="payroll-info" id="project" required="" aria-required="true">
+    <input id="payroll-number" name="payroll-info" data-key="payroll_project_info" type="number" required="" aria-required="true">
+    <label for="project_number">Project</label>
+    <select name="payroll-info" id="project_number" data-key="payroll_project_info" required="" aria-required="true">
       <option value="ACE-352">ACE-352</option>
       <option value="ACE-431">ACE-431</option>
       <option value="ACE-856">ACE-856</option>
     </select>
     <label for="contract-number">Contract number</label>
-    <select name="payroll-info" id="contract-number" required="" aria-required="true">
+    <select name="payroll-info" id="contract-number" data-key="payroll_project_info" required="" aria-required="true">
       <option value="ACE-CE-4156">ACE-CE-4156</option>
       <option value="ACE-CE-1654">ACE-CE-1654</option>
       <option value="ACE-CE-6234">ACE-CE-6234</option>
     </select>
     <label for="project-name">Project name</label>
-    <input id="project-name" name="payroll-info" type="text" required="" aria-required="true">
+    <input id="project-name" name="payroll-info" data-key="payroll_project_info" type="text" required="" aria-required="true">
 
     <fieldset>
       <legend class="usa-sr-only">Project location</legend>
       <label for="project-location">Project location (street address)</label>
-      <input id="project-location" name="payroll-info" type="text" required="" aria-required="true">
+      <input id="project-location" name="payroll-info" data-key="payroll_project_info" type="text" required="" aria-required="true">
       <div>
         <div class="usa-input-grid usa-input-grid-medium">
           <label for="city">City</label>
-          <input id="city" name="payroll-info" type="text" required="" aria-required="true">
+          <input id="city" name="payroll-info" data-key="payroll_project_info" type="text" required="" aria-required="true">
         </div>
         <div class="usa-input-grid usa-input-grid-small">
           <label for="state">State</label>
-          <select id="state" name="payroll-info" type="text" required="" aria-required="true">
+          <select id="state" name="payroll-info" data-key="payroll_project_info" type="text" required="" aria-required="true">
             <option value=""></option>
             <option value="AL">Alabama</option>
             <option value="AK">Alaska</option>
@@ -129,9 +129,9 @@ permalink: /create-new-payroll/
         </div>
       </div>
       <label for="zip">ZIP</label>
-      <input class="usa-input-medium" id="zip" name="payroll-info" type="text" pattern="[\d]{5}(-[\d]{4})?" data-grouplength="5,4" data-delimiter="-" data-politespace="" required="" aria-required="true">
+      <input class="usa-input-medium" id="zip" name="payroll-info" data-key="payroll_project_info" type="text" pattern="[\d]{5}(-[\d]{4})?" data-grouplength="5,4" data-delimiter="-" data-politespace="" required="" aria-required="true">
     </fieldset>
   </fieldset>
   <a class="usa-button" href="/enter-employee-details/">Create</a>
-  <a class="usa-button usa-button-outline" href="#">Cancel</a>
+  <a class="usa-button usa-button-outline cancel" href="#">Cancel</a>
 </form>
