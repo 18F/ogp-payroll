@@ -131,7 +131,10 @@ table {
 .table-past-projects {
   tbody {
     td, th {
-      @include padding(.5rem null);    
+      @include padding(.7rem null);    
+    }
+    .col-not_received {
+      @include padding(1.5rem null); 
     }
   }
 }
