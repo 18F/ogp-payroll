@@ -114,17 +114,23 @@ permalink: /edit-employee-details/
       <input id="gross-total" name="employee" type="number" required="" aria-required="true" value="776.02">
     </fieldset>
     <fieldset>
-      <legend>Deductions</legend>
-      <label for="fica">FICA</label>
-      <input id="fica" name="employee" type="number" value="0">
-      <label for="withholding-tax">Withholding tax</label>
-      <input id="withholding-tax" name="employee" type="number" value="0">
-      <label for="other">Other</label>
-      <input id="other" name="employee" type="number" value="32.50">
+      <legend class="legend-deductions">Deductions</legend>
+      <div class="form-group-deductions">
+        <label for="fica">FICA</label>
+        <input id="fica" name="employee" type="number" value="0">
+      </div>
+      <div class="form-group-deductions">
+        <label for="withholding-tax">Withholding tax</label>
+        <input id="withholding-tax" name="employee" type="number" value="0">
+      </div>
+      <div class="form-group-deductions">
+        <label for="other">Other</label>
+        <input id="other" name="employee" type="number"value="32.50">
+      </div>
       <label for="other-description">Description of other deduction</label>
       <input id="other-description" name="employee" type="text" value="Medical insurance">
       <label for="total-deductions">Total Deductions</label>
-      <input id="total-deductions" name="employee" type="number" value="320.64">
+      <input class="total-deductions" id="total-deductions" name="employee" type="number" value="320.64">
     </fieldset>
   </div>
   <h2>Net wages paid: $633.79</h2>
