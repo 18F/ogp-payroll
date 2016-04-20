@@ -1,22 +1,44 @@
 function inputToSessionStorage(){
-  function verifyOrCreateKey(el, key){
+  var tempObj = {};
+
+  function verifyOrCreateKey(el){
+    var key = el.attributes.name.value;
     if (!tempObj[key]){
-      tempObj[key] = {};
-    }
+        tempObj[key] = {};
+      }
     return tempObj;
   }
-  var tempObj = {};
+
+  function nest(fromObj, toObj){
+    var employeeId = tempObj[fromObj]["id-number"];
+    if (!tempObj.hasOwnProperty(toObj)){
+      tempObj[toObj] = {};
+    }
+    tempObj[toObj][employeeId] = {};
+    for (var key in tempObj[fromObj]){
+      tempObj[toObj][employeeId][key] = tempObj[fromObj][key];
+    }
+    delete tempObj[fromObj];
+  }
+
   try {
     [].forEach.call(document.querySelectorAll('input, select'), function(el){
       var key = el.attributes.name.value;
-      verifyOrCreateKey(el, key);
-      if (el.value){
-        tempObj[key][el.id] = el.value;
-      }
+      verifyOrCreateKey(el);
+      tempObj[key][el.id] = el.value;
+
       // Attach user input, now stored in tempObj, to the correct sessionStorage key
       // Can later be parsed like so: JSON.parse(sessionStorage.payroll_start_week)
-      sessionStorage.setItem(key, JSON.stringify(tempObj[key]));
     });
+
+    if (document.getElementsByClassName('enter-employee-details')){
+      nest("rates", "employee");
+      nest("employee", "employees");
+    }
+
+    for (var key in tempObj){
+      sessionStorage.setItem(key, JSON.stringify(tempObj[key]));
+    }
   } catch (e){
     console.log("No values found.");
   }
