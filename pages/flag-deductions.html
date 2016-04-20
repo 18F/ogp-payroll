@@ -1,0 +1,54 @@
+---
+layout: default
+title: Flag issue
+permalink: /flag-deductions/
+---
+
+<h1>{{ page.title }}</h1>
+<p>
+  Payroll #20<br>
+  Week ending March 14, 2016<br>
+  Project: Anacostia River Bridge<br>
+  Contract # ACE-CE-4156
+</p>
+
+<table>
+  <thead>
+    <tr>
+      <th scope="col">Last name</th>
+      <th scope="col">First name</th>
+      <th scope="col">ID #</th>
+      <th scope="col">Gross earnings: All projects</th>
+      <th scope="col">FICA</th>
+      <th scope="col">Withholding tax</th>
+      <th scope="col">Other</th>
+      <th scope="col">Total deductions</th>
+      <th scope="col">Net wages</th>
+      <th scope="col">Send back</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Smith</th>
+      <td>John</td>
+      <td>1093</td>
+      <td>899.00</td>
+      <td>67.43</td>
+      <td>179.80</td>
+      <td>
+        34.50 - Uniforms
+      </td>
+      <td>247.23</td>
+      <td>651.77</td>
+      <td><a class="usa-button" href="{{ site.baseurl }}/edit-employee-details/">Flag</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>Reasons for sending back</h2>
+<p>For example: The standard rate should be  24.35.</p>
+<textarea rows="4" cols="50">
+</textarea>
+
+<a class="usa-button button-long" href="{{ site.baseurl }}/review-deductions-prime/">Flag</a>
+<a class="button-back" href="{{ site.baseurl }}/enter-employee-details/">Go back</a>
