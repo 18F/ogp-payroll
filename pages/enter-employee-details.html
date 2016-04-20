@@ -130,17 +130,23 @@ permalink: /enter-employee-details/
       <input id="gross-total" name="employee" type="number" required="" aria-required="true">
     </fieldset>
     <fieldset>
-      <legend>Deductions</legend>
-      <label for="fica">FICA</label>
-      <input id="fica" name="employee" type="number">
-      <label for="withholding-tax">Withholding tax</label>
-      <input id="withholding-tax" name="employee" type="number">
-      <label for="other">Other</label>
-      <input id="other" name="employee" type="number">
+      <legend class="legend-deductions">Deductions</legend>
+      <div class="form-group-deductions">
+        <label for="fica">FICA</label>
+        <input id="fica" name="employee" type="number">
+      </div>
+      <div class="form-group-deductions">
+        <label for="withholding-tax">Withholding tax</label>
+        <input id="withholding-tax" name="employee" type="number">
+      </div>
+      <div class="form-group-deductions">
+        <label for="other">Other</label>
+        <input id="other" name="employee" type="number">
+      </div>
       <label for="other-description">Description of other deduction</label>
       <input id="other-description" name="employee" type="text">
       <label for="total-deductions">Total Deductions</label>
-      <input id="total-deductions" name="employee" type="number">
+      <input class="total-deductions" id="total-deductions" name="employee" type="number">
     </fieldset>
   </div>
   <h2>Net wages paid: $633.79</h2>

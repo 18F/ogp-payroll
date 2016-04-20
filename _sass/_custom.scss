@@ -249,6 +249,33 @@ input[type=number]::-webkit-outer-spin-button {
   }
 }
 
+.legend-deductions {
+  padding-top: 3rem;
+}
+
+.form-group-deductions {
+  clear: none;
+  float: left;
+  margin-right: 1.5rem;
+
+  label,
+  input {
+    width: 8rem;
+  }
+}
+
+[for=withholding-tax] {
+  margin-top: 8px;
+}
+
+[for=other-description] {
+  max-width: none;
+}
+
+input[id=total-deductions] {
+  width: 12rem;
+}
+
 // Create new payroll
 
 .week-first {
