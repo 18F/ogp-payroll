@@ -1,0 +1,30 @@
+---
+layout: default
+title: Certified Payroll Reporting
+permalink: login-prime
+logged: 'no'
+---
+
+<h1>{{ page.title }}</h1>
+<h4 class="welcome-text">Welcome! This text will explain what this is, who should use it, and what you’ll need to get started.</h4>
+<div class="usa-content">
+  <p>Sign in using your <b>SAM (System for Award Management) Registration</b>. If you don’t know your SAM Registration, you can look it up at <a href="https://uscontractorregistration.com/search-sam-cage-duns/"> https://uscontractorregistration.com/search-sam-cage-duns/</a>. If you don’t have a SAM Registration, you can <a href="{{ site.baseurl }}/create-account/">create an account</a>.</p>
+</div>
+<form>
+  <fieldset>
+    <legend class="usa-drop_text">Sign in</legend>
+    <label for="username">Username or email address</label>
+    <input id="username" name="username" type="text" autocapitalize="off" autocorrect="off">
+    <label for="password">Password</label>
+    <input id="password" name="password" type="password">
+    <p class="usa-form-note">
+      <a title="Show password" href="#" class="usa-show_password" aria-controls="password">
+        Show password</a>
+    </p>
+    <a class="usa-button button-long" href="{{ site.baseurl }}/welcome-prime/">Sign in</a>
+    <p><a href="#" title="Forgot username">
+      Forgot username?</a></p>
+    <p><a href="#" title="Forgot password">
+      Forgot password?</a></p>
+  </fieldset>
+</form>
