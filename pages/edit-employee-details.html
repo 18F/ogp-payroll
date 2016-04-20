@@ -5,9 +5,9 @@ permalink: /edit-employee-details/
 ---
 
 <h1>{{ page.title }}</h1>
-<form>
+<form class="usa-content">
   <fieldset class="form-small">
-    <legend class="usa-drop_text">Employee</legend>
+    <legend class="usa-drop_text">Worker</legend>
     <label for="first-name">First name</label>
     <input id="first-name" name="employee" type="text" required="" aria-required="true" value="John">
     <label for="last-name">Last name</label>
@@ -20,10 +20,25 @@ permalink: /edit-employee-details/
     <option value="value2">Option B</option>
     <option value="value3">Option C</option>
     </select>
-    <a href="#">+ Add custom classification</a>
+<!--    <a href="#">+ Add custom classification</a> -->
     <p>Davis-Bacon rate for this classification:</p>
     <p class="text-emphasize">$16.32</p>
-  </fieldset>
+    <label for="custom-classification">+ Add custom work classification</label>
+    <input id="custom-classification" name="input-type-text" type="text">
+    <fieldset class="usa-fieldset-inputs fieldset-inputs-owner">
+      <legend>Is this worker the business owner?</legend>
+      <ul class="usa-unstyled-list">
+        <li>
+          <input id="pea-soup" type="radio" name="soup" value="pea">
+          <label for="pea-soup">Yes</label>
+        </li>
+        <li>
+          <input id="chicken-noodle" type="radio" name="soup" value="chicken-noodle" checked="">
+          <label for="chicken-noodle">No</label>
+        </li>
+        <p>Business owners need only to include their name, work classification including “owner,” and daily total hours worked.</p>
+      </ul>
+    </fieldset>
   <fieldset>
     <legend>Hours and rates</legend>
     <div class="form_group-rate">

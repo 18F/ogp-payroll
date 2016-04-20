@@ -5,9 +5,9 @@ permalink: /enter-employee-details/
 ---
 
 <h1>{{ page.title }}</h1>
-<form>
+<form class="usa-content">
   <fieldset class="form-small">
-    <legend class="usa-drop_text">Employee</legend>
+    <legend class="usa-drop_text">Worker</legend>
     <label for="first-name">First name</label>
     <input id="first-name" name="employee" type="text" required="" aria-required="true">
     <label for="last-name">Last name</label>
@@ -26,7 +26,7 @@ permalink: /enter-employee-details/
     <label for="custom-classification">+ Add custom work classification</label>
     <input id="custom-classification" name="input-type-text" type="text">
     <fieldset class="usa-fieldset-inputs fieldset-inputs-owner">
-      <legend>Are you an owner of this project?</legend>
+      <legend>Is this worker the business owner?</legend>
       <ul class="usa-unstyled-list">
         <li>
           <input id="pea-soup" type="radio" name="soup" value="pea">
@@ -36,7 +36,7 @@ permalink: /enter-employee-details/
           <input id="chicken-noodle" type="radio" name="soup" value="chicken-noodle">
           <label for="chicken-noodle">No</label>
         </li>
-        <p>Owners of the project do not have to fill out wage info.</p>
+        <p>Business owners need only to include their name, work classification including “owner,” and daily total hours worked.</p>
       </ul>
     </fieldset>
   </fieldset>
