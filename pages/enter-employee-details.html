@@ -1,13 +1,13 @@
 ---
 layout: default
-title: Enter employee details
+title: Enter worker details
 permalink: /enter-employee-details/
 ---
 
 <h1>{{ page.title }}</h1>
 <form>
   <fieldset class="form-small">
-    <legend class="usa-drop_text">Employee</legend>
+    <legend class="usa-drop_text">Worker</legend>
     <label for="first-name">First name</label>
     <input id="first-name" name="employee" type="text" required="" aria-required="true">
     <label for="last-name">Last name</label>
@@ -16,16 +16,13 @@ permalink: /enter-employee-details/
     <input class="usa-input-tiny" id="id-number" name="employee" type="number">
     <label for="work-classification">Work classification</label>
     <select name="employee" id="work-classification">
-      <option value="bricklayer">Bricklayer</option>
-      <option value="carpenter-apprentice">Carpenter (apprentice)</option>
-      <option value="carpenter">Carpenter</option>
-      <option value="crane-operator">Crane operator</option>
-      <option value="driver">Driver</option>
-      <option value="drywall-hanger">Drywall hanger</option>
+      <option value=""></option>
     </select>
     <a href="#">+ Add custom classification</a>
     <p>Davis-Bacon rate for this classification:</p>
-    <p class="text-emphasize">$16.32</p>
+    <p class="text-emphasize" id="rate"></p>
+    <p>Fringes for this classification:</p>
+    <p class="text-emphasize" id="fringes"></p>
   </fieldset>
   <fieldset>
     <legend>Hours and rates</legend>
