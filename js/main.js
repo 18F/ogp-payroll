@@ -175,6 +175,37 @@ switch (setup.page) {
       setup.calculateEarnings();
     });
     break;
+
+  case "edit-employee-details":
+    setup.slideDownHandlers();
+    setup.createWorkClassifications();
+    setup.calculateDeductions();
+    // autopopulate fringes based on values in HTML
+    document.getElementById('work-classification').addEventListener('change', function(evt) {
+      if (document.getElementById('rates-fringes').style.height == 0){
+        document.getElementById('rates-fringes').style.height = "80px";
+      }
+      document.getElementById('rate').innerHTML = '$' + this.selectedOptions[0].attributes['data-rate'].value;
+      document.getElementById('rate').value = this.selectedOptions[0].attributes['data-rate'].value;
+      document.getElementById('fringes').innerHTML = '$' + this.selectedOptions[0].attributes['data-fringes'].value;
+      document.getElementById('fringes').value = this.selectedOptions[0].attributes['data-fringes'].value;
+    });
+    //calculate rates
+    setup.calculateHours("straightHours");
+    //setup.calculateHours("overtimeHours");
+    //error if rate is below Davis-Bacon shown
+    document.getElementById('straight-rate').addEventListener('change', function(evt) {
+      var dbRate = parseInt(document.getElementById('rate').value);
+      setup.straightRate = this.value;
+      if (parseInt(this.value) < dbRate) {
+        this.classList.add('error');
+      } else {
+        this.classList.remove('error');
+      }
+      setup.calculateEarnings();
+    });
+    break;
+
   case "create-or-choose-new-payroll":
     sessionStorage.clear();
 }

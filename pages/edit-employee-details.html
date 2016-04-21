@@ -16,16 +16,19 @@ permalink: /edit-employee-details/
     <input class="usa-input-tiny" id="id-number" name="employee" type="number" value="5483">
     <label for="work-classification">Work classification</label>
     <select name="employee" id="work-classification">
-    <option value="value1">Carpenter (apprentice)</option>
-    <option value="value2">Concrete Finisher</option>
-    <option value="value3">General Laborer</option>
-    <option value="value3">Traffic Control (Flagger)</option>
     </select>
-<!--    <a href="#">+ Add custom classification</a> -->
-    <p>Davis-Bacon rate for this classification:</p>
-    <p class="text-emphasize">$16.32</p>
-    <label for="custom-classification">+ Add custom work classification</label>
-    <input id="custom-classification" name="input-type-text" type="text">
+    <div id="rates-fringes" class="slide-down-content">
+      <p>Davis-Bacon rate: <span class="text-emphasize" id="rate"></span></p>
+      <p>Fringes: <span class="text-emphasize" id="fringes"></span></p>
+    </div>
+    <div class="optional-info">
+      <label for="custom-classification" class="slide-down-handler">
+        <a id="add-classification">+ Add custom work classification</a>
+      </label>
+      <div class="slide-down-content">
+        <input id="custom-classification" name="input-type-text" type="text">
+      </div>
+    </div>
     <fieldset class="usa-fieldset-inputs fieldset-inputs-owner">
       <legend>Is this worker the business owner?</legend>
       <ul class="usa-unstyled-list">
@@ -73,11 +76,11 @@ permalink: /edit-employee-details/
       </div>
       <div class="form_group-rate-item form_group-rate-total">
         <label class="label-straight" for="day_sunday">Total straight hrs</label>
-        <input aria-describedby="dobHint" class="usa-form-control" id="day_sunday" name="rates" pattern="0?[1-9]|1[012]" type="number" min="1" max="8" value="40">
+        <input aria-describedby="dobHint" class="usa-form-control" id="straightHours" name="rates" pattern="0?[1-9]|1[012]" type="number" min="1" max="8" value="40">
       </div>
       <div class="form_group-rate-item form_group-rate-rate">
         <label for="day_sunday">Rate</label>
-        <input aria-describedby="dobHint" class="usa-form-control" id="day_sunday" name="rates" pattern="0?[1-9]|1[012]" type="number" min="1" max="8" value="16.32">
+        <input aria-describedby="dobHint" class="usa-form-control" id="straight-rate" name="straight-rate" pattern="0?[1-9]|1[012]" type="number" min="1" max="8" value="16.32">
       </div>
     </div>
   </fieldset>
