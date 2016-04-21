@@ -1,12 +1,12 @@
 ---
 layout: default
-title: Create or choose new payroll
+title: Create new payroll
 permalink: /create-or-choose-new-payroll/
 ---
 
 <h1>{{ page.title }}</h1>
 <div class="usa-width-one-half">
-  <h4>Add payroll to existing project</h4>
+  <h4>Choose the project this payroll is for</h4>
   <form>
     <label for="payroll-info">Contract or Project Number</label>
     <select name="payroll-info" id="contract-number">
@@ -15,15 +15,13 @@ permalink: /create-or-choose-new-payroll/
       <option value="ACE-CE-1654">ACE-CE-1654</option>
       <option value="ACE-CE-6234">ACE-CE-6234</option>
     </select>
-    <a class="usa-button" href="/enter-employee-details/">Create</a>
+    <a class="usa-button" href="{{ site.baseurl }}/enter-employee-details/">Select</a>
   </form>
 </div>
 <div class="usa-width-one-half">
   <form>
     <fieldset>
       <legend class="heading-add_new_project">Add new project</legend>
-      <label for="payroll-number">Payroll number</label>
-      <input id="payroll-number" name="payroll-info" type="number" required="" aria-required="true">
       <label for="project">Project</label>
       <select name="payroll-info" id="project" required="" aria-required="true">
         <option value=""></option>
@@ -108,6 +106,21 @@ permalink: /create-or-choose-new-payroll/
       </div>
       <label for="zip">ZIP</label>
       <input class="usa-input-medium" id="zip" name="payroll-info" type="text" pattern="[\d]{5}(-[\d]{4})?" data-grouplength="5,4" data-delimiter="-" data-politespace="" required="" aria-required="true">
+      <!-- Project owner question -->
+      <fieldset class="usa-fieldset-inputsr">
+        <label>Are you a contractor or subcontractor?</label>
+        <legend hidden>Are you a contractor or subcontractor?</legend>
+        <ul class="usa-unstyled-list">
+          <li>
+            <input id="pea-soup" type="radio" name="soup" value="pea">
+            <label for="pea-soup">Contractor</label>
+          </li>
+          <li>
+            <input id="chicken-noodle" type="radio" name="soup" value="chicken-noodle">
+            <label for="chicken-noodle">Subcontractor</label>
+          </li>
+        </ul>
+      </fieldset>
     </fieldset>
     <div class="button_wrapper">
       <a class="usa-button" href="{{ site.baseurl }}/enter-employee-details/">Add project</a>
