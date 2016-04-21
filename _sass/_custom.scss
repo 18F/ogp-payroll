@@ -29,6 +29,20 @@ legend {
   font-size: $h4-font-size;
 }
 
+.slide-down-content {
+  transition: height 0.5s ease-out;
+  height: 0;
+  overflow: hidden;
+  p {
+    margin: 10px 0 5px;
+  }
+}
+
+.error {
+  background-color: #f9dede;
+  box-shadow: 0 0 3px #e31c3d, 0 0 7px #e31c3d;
+}
+
 // Navigation ------------- //
 
 .usa-site-header {
@@ -135,10 +149,10 @@ table {
 .table-past-projects {
   tbody {
     td, th {
-      @include padding(.7rem null);    
+      @include padding(.7rem null);
     }
     .col-not_received {
-      @include padding(1.5rem null); 
+      @include padding(1.5rem null);
     }
   }
 }

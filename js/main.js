@@ -1,5 +1,29 @@
 var setup = {
   page: document.getElementsByTagName('body')[0].className,
+  straightHours: 0,
+  straightRate: 0,
+  overtimeHours: 0,
+  overtimeRate: 0,
+  totalDeductions: 0,
+  addClickHandlers: function(){
+    var self = this;
+    [].forEach.call(document.getElementsByClassName('usa-button'), function(el){
+      // Only add the event listener to capture input if user didn't click cancel.
+      if (el.className.indexOf('cancel') == -1) {
+        el.addEventListener('click', function(evt) {
+          self.inputToSessionStorage();
+        });
+      }
+    });
+  },
+  slideDownHandlers: function(){
+    var optionalNodes = document.querySelectorAll('.optional-info');
+    for (var i = 0; i < optionalNodes.length; i++) {
+      optionalNodes[i].querySelector('.slide-down-handler').addEventListener('click', function(evt) {
+        this.parentElement.querySelector('.slide-down-content').style.height = "100px";
+      });
+    }
+  },
   createProject: function(){
     return [{
       "contract_number": "ACE-CE-4126",
@@ -50,21 +74,27 @@ var setup = {
       classificationsList.add(opt, null);
     }
   },
-  addClickHandlers: function(){
+  calculateHours: function(type){
     var self = this;
-    [].forEach.call(document.getElementsByClassName('usa-button'), function(el){
-      // Only add the event listener to capture input if user didn't click cancel.
-      if (el.className.indexOf('cancel') == -1) {
-        el.addEventListener('click', function(evt) {
-          self.inputToSessionStorage();
-        });
-      }
-      if (el.href.indexOf('create-or-choose-new-payroll') > 0){
-        el.addEventListener('click', function(evt) {
-          sessionStorage.clear();
-        });
-      }
+    [].forEach.call(document.querySelectorAll('input[name="rates"]'), function(el){
+      el.addEventListener('change', function(evt){
+        self.straightHours += parseInt(el.value);
+        document.getElementById(type).value = self.straightHours;
+      });
     });
+  },
+  calculateDeductions: function(){
+    var self = this;
+    [].forEach.call(document.querySelectorAll('input[name="deductions"]'), function(el){
+      el.addEventListener('change', function(evt){
+        self.totalDeductions += parseInt(el.value);
+        document.getElementById('total-deductions').value = self.totalDeductions;
+      });
+    });
+  },
+  calculateEarnings: function(){
+    document.getElementById('gross-total').value = (this.straightHours * this.straightRate).toFixed(2);
+    document.getElementById('net-wages').innerHTML = ((this.straightHours * this.straightRate) - this.totalDeductions).toFixed(2);
   },
   inputToSessionStorage: function(){
     var tempObj = {};
@@ -117,11 +147,34 @@ setup.addClickHandlers();
 
 switch (setup.page) {
   case "enter-worker-details":
+    setup.slideDownHandlers();
     setup.createWorkClassifications();
+    setup.calculateDeductions();
+    // autopopulate fringes based on values in HTML
     document.getElementById('work-classification').addEventListener('change', function(evt) {
-      //update db rate and fringes here
+      if (document.getElementById('rates-fringes').style.height == 0){
+        document.getElementById('rates-fringes').style.height = "80px";
+      }
       document.getElementById('rate').innerHTML = '$' + this.selectedOptions[0].attributes['data-rate'].value;
+      document.getElementById('rate').value = this.selectedOptions[0].attributes['data-rate'].value;
       document.getElementById('fringes').innerHTML = '$' + this.selectedOptions[0].attributes['data-fringes'].value;
+      document.getElementById('fringes').value = this.selectedOptions[0].attributes['data-fringes'].value;
+    });
+    //calculate rates
+    setup.calculateHours("straightHours");
+    //setup.calculateHours("overtimeHours");
+    //error if rate is below Davis-Bacon shown
+    document.getElementById('straight-rate').addEventListener('change', function(evt) {
+      var dbRate = parseInt(document.getElementById('rate').value);
+      setup.straightRate = this.value;
+      if (parseInt(this.value) < dbRate) {
+        this.classList.add('error');
+      } else {
+        this.classList.remove('error');
+      }
+      setup.calculateEarnings();
     });
     break;
+  case "create-or-choose-new-payroll":
+    sessionStorage.clear();
 }
