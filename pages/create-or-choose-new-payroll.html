@@ -6,9 +6,30 @@ permalink: /create-or-choose-new-payroll/
 
 <h1>{{ page.title }}</h1>
 <div class="usa-width-one-half">
+  <form>
+    <fieldset class="week-second">
+    <legend>Payroll week end date</legend>
+    <span class="usa-form-hint usa-datefield-hint" id="date-hint">For example: 04 28 1986</span>
+    <div class="usa-date-of-birth">
+      <div class="usa-datefield usa-form-group usa-form-group-month">
+        <label for="end_month">Month</label>
+        <input aria-describedby="dobHint" class="usa-form-control" id="end_month" name="end_week" pattern="0?[1-9]|1[012]" type="number" min="1" max="12" value="">
+      </div>
+      <div class="usa-datefield usa-form-group usa-form-group-day">
+        <label for="end_day">Day</label>
+        <input aria-describedby="dobHint" class="usa-form-control" id="end_day" name="end_week" pattern="0?[1-9]|1[0-9]|2[0-9]|3[01]" type="number" min="1" max="31" value="">
+      </div>
+      <div class="usa-datefield usa-form-group usa-form-group-year">
+        <label for="end_day">Year</label>
+        <input aria-describedby="dobHint" class="usa-form-control" id="end_year" name="end_week" pattern="[0-9]{4}" type="number" min="1900" max="2000" value="">
+      </div>
+    </div>
+  </fieldset>
+
+  </form>
   <h4>Choose the project this payroll is for</h4>
   <form>
-    <label for="payroll-info">Contract or Project Number</label>
+    <label for="payroll-info">Contract or project number</label>
     <select name="payroll-info" id="contract-number">
       <option value=""></option>
       <option value="ACE-CE-4156">ACE-CE-4156</option>
@@ -108,16 +129,16 @@ permalink: /create-or-choose-new-payroll/
       <input class="usa-input-medium" id="zip" name="payroll-info" type="text" pattern="[\d]{5}(-[\d]{4})?" data-grouplength="5,4" data-delimiter="-" data-politespace="" required="" aria-required="true">
       <!-- Project owner question -->
       <fieldset class="usa-fieldset-inputsr">
-        <label>Are you a contractor or subcontractor?</label>
-        <legend hidden>Are you a contractor or subcontractor?</legend>
+        <label>Are you a prime contractor or subcontractor on this project?</label>
+        <legend hidden>Are you a prime contractor or subcontractor?</legend>
         <ul class="usa-unstyled-list">
           <li>
-            <input id="pea-soup" type="radio" name="soup" value="pea">
-            <label for="pea-soup">Contractor</label>
+            <input id="prime" type="radio" name="contractor" value="prime">
+            <label for="prime">Prime contractor</label>
           </li>
           <li>
-            <input id="chicken-noodle" type="radio" name="soup" value="chicken-noodle">
-            <label for="chicken-noodle">Subcontractor</label>
+            <input id="sub" type="radio" name="contractor" value="sub">
+            <label for="sub">Subcontractor</label>
           </li>
         </ul>
       </fieldset>
