@@ -93,7 +93,7 @@ var setup = {
     });
   },
   calculateEarnings: function(){
-    document.getElementById('gross-total').value = (this.straightHours * this.straightRate).toFixed(2);
+    document.getElementById('gross-federal').value = (this.straightHours * this.straightRate).toFixed(2);
     document.getElementById('net-wages').innerHTML = ((this.straightHours * this.straightRate) - this.totalDeductions).toFixed(2);
   },
   inputToSessionStorage: function(){
