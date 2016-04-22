@@ -162,6 +162,14 @@ table {
   font-weight: bold;
 }
 
+td input[type="checkbox"] + label {
+  margin: 0;
+}
+
+.bundle-button {
+  float: right;
+}
+
 // Upload payroll page ----- //
 
 .file_upload {
