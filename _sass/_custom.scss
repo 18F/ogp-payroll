@@ -47,6 +47,7 @@ legend {
   font-family: $font-sans;
   font-size: $lead-font-size;
   font-weight: $font-light;
+  max-width: 73rem;
 }
 
 // Navigation ------------- //
@@ -128,10 +129,6 @@ legend {
     padding-right: 2.7em;
     width: auto;
   }
-}
-
-.usa-font-lead {
-  max-width: 73rem;
 }
 
 // Second page ------------- //
