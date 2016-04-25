@@ -157,9 +157,8 @@ table {
   }
 }
 
-.prime {
-  background-color: #fff1d2;
-  font-weight: bold;
+.prime-row {
+  background-color: $color-gray-lightest;
 }
 
 td input[type="checkbox"] + label {
