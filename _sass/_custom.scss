@@ -43,6 +43,12 @@ legend {
   box-shadow: 0 0 3px #e31c3d, 0 0 7px #e31c3d;
 }
 
+.usa-font-lead {
+  font-family: $font-sans;
+  font-size: 2.2rem;
+  font-weight: $font-light;
+}
+
 // Navigation ------------- //
 
 .usa-site-header {
@@ -122,6 +128,10 @@ legend {
     padding-right: 2.7em;
     width: auto;
   }
+}
+
+.usa-font-lead {
+  max-width: 73rem;
 }
 
 // Second page ------------- //
