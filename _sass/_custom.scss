@@ -1,6 +1,6 @@
 // Variables -------------- //
 
-$lead-font-size:      rem(20px);
+$lead-font-size:      rem(22px);
 $title-font-size:     rem(59px);
 $h1-font-size:        rem(44px);
 $h2-font-size:        rem(34px);
@@ -45,7 +45,7 @@ legend {
 
 .usa-font-lead {
   font-family: $font-sans;
-  font-size: 2.2rem;
+  font-size: $lead-font-size;
   font-weight: $font-light;
 }
 
