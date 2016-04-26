@@ -1,0 +1,243 @@
+---
+layout: default
+title: Create new contract
+permalink: /create-new-contract/
+---
+
+<h1>{{ page.title }}</h1>
+  <h3>1. Enter contract and project information</h3>
+<form>
+    <label for="contract-number">Contract number</label>
+    <input id="contract-number" name="project-info" type="number" required="" aria-required="true">
+
+    <label for="prime-contractor">Prime contractor</label>
+    <input id="prime-contractor" name="project-info" type="number" required="" aria-required="true">
+
+    <label for="project_number">Project name</label>
+    <input id="project-name" name="project-info" type="number" required="" aria-required="true">
+    <fieldset>
+      <legend>Project location</legend>
+      <label for="project-location">Street address</label>
+      <input id="project-location" name="project-info" type="text" required="" aria-required="true">
+      <div>
+        <div class="usa-input-grid usa-input-grid-medium">
+          <label for="city">City</label>
+          <input id="city" name="project-info" type="text" required="" aria-required="true">
+        </div>
+        <div class="usa-input-grid usa-input-grid-small">
+          <label for="state">State</label>
+          <select id="state" name="project-info" type="text" required="" aria-required="true">
+            <option value=""></option>
+            <option value="AL">Alabama</option>
+            <option value="AK">Alaska</option>
+            <option value="AZ">Arizona</option>
+            <option value="AR">Arkansas</option>
+            <option value="CA">California</option>
+            <option value="CO">Colorado</option>
+            <option value="CT">Connecticut</option>
+            <option value="DE">Delaware</option>
+            <option value="DC">District of Columbia</option>
+            <option value="FL">Florida</option>
+            <option value="GA">Georgia</option>
+            <option value="HI">Hawaii</option>
+            <option value="ID">Idaho</option>
+            <option value="IL">Illinois</option>
+            <option value="IN">Indiana</option>
+            <option value="IA">Iowa</option>
+            <option value="KS">Kansas</option>
+            <option value="KY">Kentucky</option>
+            <option value="LA">Louisiana</option>
+            <option value="ME">Maine</option>
+            <option value="MD">Maryland</option>
+            <option value="MA">Massachusetts</option>
+            <option value="MI">Michigan</option>
+            <option value="MN">Minnesota</option>
+            <option value="MS">Mississippi</option>
+            <option value="MO">Missouri</option>
+            <option value="MT">Montana</option>
+            <option value="NE">Nebraska</option>
+            <option value="NV">Nevada</option>
+            <option value="NH">New Hampshire</option>
+            <option value="NJ">New Jersey</option>
+            <option value="NM">New Mexico</option>
+            <option value="NY">New York</option>
+            <option value="NC">North Carolina</option>
+            <option value="ND">North Dakota</option>
+            <option value="OH">Ohio</option>
+            <option value="OK">Oklahoma</option>
+            <option value="OR">Oregon</option>
+            <option value="PA">Pennsylvania</option>
+            <option value="RI">Rhode Island</option>
+            <option value="SC">South Carolina</option>
+            <option value="SD">South Dakota</option>
+            <option value="TN">Tennessee</option>
+            <option value="TX">Texas</option>
+            <option value="UT">Utah</option>
+            <option value="VT">Vermont</option>
+            <option value="VA">Virginia</option>
+            <option value="WA">Washington</option>
+            <option value="WV">West Virginia</option>
+            <option value="WI">Wisconsin</option>
+            <option value="WY">Wyoming</option>
+          </select>
+        </div>
+      </div>
+      <label for="zip">ZIP</label>
+      <input class="usa-input-medium" id="zip" name="project-info" type="text" pattern="[\d]{5}(-[\d]{4})?" data-grouplength="5,4" data-delimiter="-" data-politespace="" required="" aria-required="true">
+    </fieldset>
+    <fieldset class="contract-start-date">
+      <legend>Contract start date</legend>
+      <span class="usa-form-hint usa-datefield-hint" id="date-hint">For example: 04 28 1986</span>
+      <div class="usa-date-of-birth">
+        <div class="usa-datefield usa-form-group usa-form-group-month">
+          <label for="start_month">Month</label>
+          <input aria-describedby="date-hint" class="usa-form-control" id="start_month" name="start_week" pattern="0?[1-9]|1[012]" type="number" min="1" max="12" value="">
+        </div>
+        <div class="usa-datefield usa-form-group usa-form-group-day">
+          <label for="start_day">Day</label>
+          <input aria-describedby="date-hint" class="usa-form-control" id="start_day" name="start_week" pattern="0?[1-9]|1[0-9]|2[0-9]|3[01]" type="number" min="1" max="31" value="">
+        </div>
+        <div class="usa-datefield usa-form-group usa-form-group-year">
+          <label for="start_year">Year</label>
+          <input aria-describedby="date-hint" class="usa-form-control" id="start_year" name="start_week" pattern="[0-9]{4}" type="number" min="1900" max="2000" value="">
+        </div>
+      </div>
+    </fieldset>
+    </form>
+    <h3>2. Add subcontractors</h3>
+    <form>
+      <fieldset>
+        <legend>Subcontractor information</legend>
+        <label for="subcontractor">Subcontractor name</label>
+        <input id="sub-contractor" name="subcontractor" type="number" required="" aria-required="true">
+        <label for="subcontractor-email">Subcontractor email</label>
+        <input id="sub-contractor-email" name="subcontractor" type="number" required="" aria-required="true">
+        <label for="subcontractor-phone">Subcontractor phone number</label>
+        <input id="sub-contractor-phone" name="subcontractor" type="number" required="" aria-required="true">
+      </fieldset>
+      <p><a class="usa-button">Add subcontractor</a></p>
+    </form>
+    <table class="usa-table-borderless">
+      <thead>
+        <tr>
+          <th scope="col">Assigned subcontractor</th>
+          <th scope="col">Email</th>
+          <th scope="col">Phone</th>
+          <th scope="col">Date assigned</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">Great Lakes Building Co., Inc.</th>
+          <td></td>
+          <td>(312)555-5555</td>
+          <td>March 1, 2016</td>
+        </tr>
+        <tr>
+          <th scope="row">Diggedy Dozer, Inc.</th>
+          <td>hello@diggedy.com</td>
+          <td>(212)555-5555</td>
+          <td>Dec. 1, 2015</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>3. Add work classifications</h3>
+      <form>
+        <fieldset>
+          <div>
+            <div class="usa-input-grid usa-input-grid-medium">
+              <label for="city">City</label>
+              <input id="city" name="project-info" type="text" required="" aria-required="true">
+            </div>
+            <div class="usa-input-grid usa-input-grid-small">
+              <label for="state">State</label>
+              <select id="state" name="project-info" type="text" required="" aria-required="true">
+                <option value=""></option>
+                <option value="AL">Alabama</option>
+                <option value="AK">Alaska</option>
+                <option value="AZ">Arizona</option>
+                <option value="AR">Arkansas</option>
+                <option value="CA">California</option>
+                <option value="CO">Colorado</option>
+                <option value="CT">Connecticut</option>
+                <option value="DE">Delaware</option>
+                <option value="DC">District of Columbia</option>
+                <option value="FL">Florida</option>
+                <option value="GA">Georgia</option>
+                <option value="HI">Hawaii</option>
+                <option value="ID">Idaho</option>
+                <option value="IL">Illinois</option>
+                <option value="IN">Indiana</option>
+                <option value="IA">Iowa</option>
+                <option value="KS">Kansas</option>
+                <option value="KY">Kentucky</option>
+                <option value="LA">Louisiana</option>
+                <option value="ME">Maine</option>
+                <option value="MD">Maryland</option>
+                <option value="MA">Massachusetts</option>
+                <option value="MI">Michigan</option>
+                <option value="MN">Minnesota</option>
+                <option value="MS">Mississippi</option>
+                <option value="MO">Missouri</option>
+                <option value="MT">Montana</option>
+                <option value="NE">Nebraska</option>
+                <option value="NV">Nevada</option>
+                <option value="NH">New Hampshire</option>
+                <option value="NJ">New Jersey</option>
+                <option value="NM">New Mexico</option>
+                <option value="NY">New York</option>
+                <option value="NC">North Carolina</option>
+                <option value="ND">North Dakota</option>
+                <option value="OH">Ohio</option>
+                <option value="OK">Oklahoma</option>
+                <option value="OR">Oregon</option>
+                <option value="PA">Pennsylvania</option>
+                <option value="RI">Rhode Island</option>
+                <option value="SC">South Carolina</option>
+                <option value="SD">South Dakota</option>
+                <option value="TN">Tennessee</option>
+                <option value="TX">Texas</option>
+                <option value="UT">Utah</option>
+                <option value="VT">Vermont</option>
+                <option value="VA">Virginia</option>
+                <option value="WA">Washington</option>
+                <option value="WV">West Virginia</option>
+                <option value="WI">Wisconsin</option>
+                <option value="WY">Wyoming</option>
+              </select>
+            </div>
+          </div>
+        <div role="search">
+          <label for="search-field-big">Work classification</label>
+          <input id="search-field-big" type="search" name="search" value="asphalt">
+          <button type="submit">
+            <span class="usa-search-submit-text">Search</span>
+          </button>
+        </div>
+      </fieldset>
+    </form>
+
+      <table class="usa-table-borderless table-classifications">
+        <thead>
+          <tr>
+            <th scope="col">Available classification</th>
+            <th scope="col">Davis-Bacon rate</th>
+            <th scope="col">Fringes</th>
+            <th scope="col">Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Painters <em>Bridges, Heavy Highway, Lead Abatement and Flame/Thermal Spray</em></th>
+            <td>$33.23</td>
+            <td>$9.05</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+  <div class="button_wrapper">
+    <a class="usa-button" href="{{ site.baseurl }}/enter-employee-details/">Create</a>
+    <a class="usa-button usa-button-outline" href="#">Cancel</a>
+  </div>
+</form>
