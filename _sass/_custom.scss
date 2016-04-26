@@ -125,6 +125,13 @@ legend {
 }
 
 // Second page ------------- //
+.contract-payrolls {
+  display: inline;
+  & + span {
+    display: inline-block;
+    margin-left: 15px;
+  }
+}
 
 // Fix for table alignment
 th {
@@ -320,6 +327,18 @@ input[id=total-deductions] {
 
 .button_wrapper {
   margin-top: 2rem;
+}
+
+// Contract info
+.table-classifications {
+  tr,
+  td {
+    vertical-align: top;
+    min-width: 160px;
+  }
+  th[scope="row"] {
+    width: 33%;
+  }
 }
 
 // Review hours
