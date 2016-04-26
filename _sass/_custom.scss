@@ -125,8 +125,11 @@ legend {
 }
 
 // Second page ------------- //
+h2 + .contract-payrolls {
+  margin-top: 0;
+}
 .contract-payrolls {
-  display: inline;
+  display: inline-block;
   & + span {
     display: inline-block;
     margin-left: 15px;
