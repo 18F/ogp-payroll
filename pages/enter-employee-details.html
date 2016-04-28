@@ -18,32 +18,23 @@ permalink: /enter-employee-details/
     <select name="employee" id="work-classification">
       <option value=""></option>
     </select>
-    <div id="rates-fringes" class="slide-down-content">
+    <div id="rates-fringes" class="slide-down-content" data-height="100">
       <p>Davis-Bacon rate: <span class="text-emphasize" id="rate"></span></p>
       <p>Fringes: <span class="text-emphasize" id="fringes"></span></p>
     </div>
-    <div class="optional-info">
+    <div class="optional-info" data-height="200">
       <label for="custom-classification" class="slide-down-handler">
         <a id="add-classification">+ Add custom work classification</a>
       </label>
       <div class="slide-down-content">
         <input id="custom-classification" name="input-type-text" type="text">
+        <fieldset class="usa-fieldset-inputs fieldset-inputs-owner">
+              <input id="apple-pie" type="checkbox" name="apple-pie" value="apple-pie" checked="">
+              <label for="apple-pie">This worker is the business owner</label>
+            <p><em>Business owners need only to include their name, work classification including "owner," and daily total hours worked.</em></p>
+        </fieldset>
       </div>
     </div>
-    <fieldset class="usa-fieldset-inputs fieldset-inputs-owner">
-      <legend>Is this worker the business owner?</legend>
-      <ul class="usa-unstyled-list">
-        <li>
-          <input id="is-owner" type="radio" name="is-owner" value="is-owner">
-          <label for="is-owner">Yes</label>
-        </li>
-        <li>
-          <input id="not-owner" type="radio" name="not-owner" value="not-owner" checked>
-          <label for="not-owner">No</label>
-        </li>
-        <p>Business owners need only to include their name, work classification including "owner," and daily total hours worked.</p>
-      </ul>
-    </fieldset>
   </fieldset>
   <fieldset>
     <legend>Hours and rates</legend>
@@ -155,6 +146,23 @@ permalink: /enter-employee-details/
       </div>
       <label for="other-description">Description of other deduction</label>
       <input id="other-description" name="deduction-description" type="text">
+
+    <div class="optional-info" data-height="100">
+      <label for="custom-classification" class="slide-down-handler">
+        <a id="add-classification">+ Add deduction</a>
+      </label>
+      <div class="slide-down-content">
+        <div class="form-group-deductions">
+          <label for="other">Amount</label>
+          <input id="other" name="deductions" type="number">
+        </div>
+
+        <div class="form-group-deductions">
+          <label for="other">Description</label>
+          <input id="custom-classification" name="input-type-text" type="text">
+        </div>
+      </div>
+    </div>
       <label for="total-deductions">Total Deductions</label>
       <input class="total-deductions" id="total-deductions" name="total-deductions" type="number">
     </fieldset>

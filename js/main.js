@@ -20,7 +20,13 @@ var setup = {
     var optionalNodes = document.querySelectorAll('.optional-info');
     for (var i = 0; i < optionalNodes.length; i++) {
       optionalNodes[i].querySelector('.slide-down-handler').addEventListener('click', function(evt) {
-        this.parentElement.querySelector('.slide-down-content').style.height = "100px";
+        var height = this.parentElement.querySelector('.slide-down-content').style.height;
+        console.log(height);
+        if (height == "" || height == "0px") {
+          this.parentElement.querySelector('.slide-down-content').style.height = this.parentElement.dataset.height + "px";
+        } else {
+          this.parentElement.querySelector('.slide-down-content').style.height = 0;
+        }
       });
     }
   },
