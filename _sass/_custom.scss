@@ -131,7 +131,7 @@ legend {
   }
 }
 
-// Second page ------------- //
+// Welcome dashboard ------------- //
 h2 + .contract-payrolls {
   margin-top: 0;
 }
@@ -168,8 +168,15 @@ table {
     td, th {
       @include padding(.7rem null);
     }
+    
     .col-not_received {
       @include padding(1.5rem null);
+    }
+    
+    .row-normal {
+      th, td {
+        padding: 1.5rem;
+      }
     }
   }
 }
@@ -185,6 +192,14 @@ td input[type="checkbox"] + label {
 .bundle-button {
   float: right;
 }
+
+.row-sub {
+  th, td {
+    padding-left: 3rem;
+  }
+}
+
+
 
 // Upload payroll page ----- //
 
