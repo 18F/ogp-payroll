@@ -19,8 +19,11 @@ permalink: /enter-employee-details/
       <option value=""></option>
     </select>
     <div id="rates-fringes" class="slide-down-content" data-height="100">
-      <p>Davis-Bacon rate: <span class="text-emphasize" id="rate"></span></p>
-      <p>Fringes: <span class="text-emphasize" id="fringes"></span></p>
+      <p>Davis-Bacon prevailing wage: <span class="text-emphasize" id="db-wage"></span></p>
+      <ul>
+        <li><p>Hourly rate: <span class="text-emphasize" id="rate"></span></p></li>
+        <li><p>Fringes: <span class="text-emphasize" id="fringes"></span></p></li>
+      </ul>
     </div>
     <div class="optional-info" data-height="200">
       <label for="custom-classification" class="slide-down-handler">
@@ -73,8 +76,16 @@ permalink: /enter-employee-details/
         <input aria-describedby="dobHint" class="usa-form-control" id="straightHours" name="rates" pattern="0?[1-9]|1[012]" type="number" min="1" max="8" value="">
       </div>
       <div class="form_group-rate-item form_group-rate-rate">
-        <label for="day_sunday">Rate</label>
+        <label for="day_sunday" class="label-straight">Hourly rate</label>
         <input aria-describedby="dobHint" class="usa-form-control" id="straight-rate" name="straight-rate" pattern="0?[1-9]|1[012]" type="number" min="1" max="8" value="">
+      </div>
+      <div class="form_group-rate-item form_group-rate-fringe">
+        <label for="day_sunday" class="label-straight">Hourly fringe (cash)</label>
+        <input aria-describedby="dobHint" class="usa-form-control" id="straight-fringe" name="straight-fringe" pattern="0?[1-9]|1[012]" type="number" min="1" max="8" value="">
+      </div>
+      <div class="form_group-rate-item form_group-rate-fringe">
+        <label for="day_sunday" class="label-straight">Hourly fringe (employer paid)</label>
+        <input aria-describedby="dobHint" class="usa-form-control" id="straight-fringe" name="straight-fringe" pattern="0?[1-9]|1[012]" type="number" min="1" max="8" value="">
       </div>
     </div>
   </fieldset>
