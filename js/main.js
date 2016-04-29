@@ -125,8 +125,10 @@ var setup = {
       setup.straightRate = this.value;
       if (parseInt(this.value) < dbRate) {
         this.classList.add('error');
+        this.parentElement.querySelector('.error-message').innerHTML = "This rate is below the minimum required by Davis-Bacon.";
       } else {
         this.classList.remove('error');
+        this.parentElement.querySelector('.error-message').innerHTML = "";
       }
       self.calculateEarnings();
     });
