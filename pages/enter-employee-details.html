@@ -75,6 +75,8 @@ permalink: /enter-employee-details/
         <label class="label-straight" for="day_sunday">Total straight hrs</label>
         <input aria-describedby="dobHint" class="usa-form-control" id="straightHours" name="rates" pattern="0?[1-9]|1[012]" type="number" min="1" max="8" value="">
       </div>
+    </div>
+    <div class="form_group-rate">
       <div class="form_group-rate-item form_group-rate-rate">
         <label for="day_sunday" class="label-straight">Hourly rate</label>
         <input aria-describedby="dobHint" class="usa-form-control" id="straight-rate" name="straight-rate" pattern="0?[1-9]|1[012]" type="number" min="1" max="8" value="">
@@ -90,9 +92,10 @@ permalink: /enter-employee-details/
       </div>
     </div>
   </fieldset>
-  <div class="optional-info">
+  <div class="optional-info" data-height="270">
     <a class="link_block add_overtime slide-down-handler">+ Add overtime</a>
     <div class="slide-down-content">
+      <h5>Overtime</h5>
       <fieldset>
         <div class="form_group-rate">
           <div class="form_group-rate-item">
@@ -127,9 +130,11 @@ permalink: /enter-employee-details/
             <label for="day_sunday">Total OT hrs</label>
             <input aria-describedby="dobHint" class="usa-form-control" id="day_sunday" name="ot-rates" pattern="0?[1-9]|1[012]" type="number" min="1" max="8" value="">
           </div>
+        </div>
+        <div class="form_group-rate">
           <div class="form_group-rate-item form_group-rate-rate">
-            <label for="day_sunday">Rate</label>
-            <input aria-describedby="dobHint" class="usa-form-control" id="day_sunday" name="ot-rate" pattern="0?[1-9]|1[012]" type="number" min="1" max="8" value="">
+            <label for="day_sunday" class="label-straight">Hourly OT rate</label>
+            <input aria-describedby="dobHint" class="usa-form-control" id="ot-rate" name="straight-rate" pattern="0?[1-9]|1[012]" type="number" min="1" max="8" value="">
           </div>
         </div>
       </fieldset>
