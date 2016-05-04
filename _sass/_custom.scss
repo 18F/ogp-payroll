@@ -302,6 +302,10 @@ input[type=number]::-webkit-outer-spin-button {
 
 .add_overtime {
   margin-top: 1em;
+
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .fieldset-inputs-owner {
