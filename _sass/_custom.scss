@@ -43,6 +43,13 @@ legend {
   box-shadow: 0 0 3px #e31c3d, 0 0 7px #e31c3d;
 }
 
+.error-message {
+  font-size: 1.1rem;
+  line-height: 1.3;
+  font-style: italic;
+  color: #e31c3d;
+}
+
 .usa-font-lead {
   font-family: $font-sans;
   font-size: $lead-font-size;
@@ -253,13 +260,19 @@ td input[type="checkbox"] + label {
   width: 9rem;
 }
 
+.form_group-rate-fringe {
+  margin-left: 2rem;
+  width: 12rem;
+}
+
 .label-straight {
   margin-top: 8px;
 }
 
 .form_group-rate-rate {
-  margin-left: 2rem;
-  width: 7rem;
+  /*margin-left: 2rem;*/
+  margin-top: 2rem;
+  width: 12rem;
 }
 
 input[type=number]::-webkit-inner-spin-button, 

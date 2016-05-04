@@ -20,7 +20,13 @@ var setup = {
     var optionalNodes = document.querySelectorAll('.optional-info');
     for (var i = 0; i < optionalNodes.length; i++) {
       optionalNodes[i].querySelector('.slide-down-handler').addEventListener('click', function(evt) {
-        this.parentElement.querySelector('.slide-down-content').style.height = "100px";
+        var height = this.parentElement.querySelector('.slide-down-content').style.height;
+        console.log(height);
+        if (height == "" || height == "0px") {
+          this.parentElement.querySelector('.slide-down-content').style.height = this.parentElement.dataset.height + "px";
+        } else {
+          this.parentElement.querySelector('.slide-down-content').style.height = 0;
+        }
       });
     }
   },
@@ -96,6 +102,37 @@ var setup = {
     document.getElementById('gross-federal').value = (this.straightHours * this.straightRate).toFixed(2);
     document.getElementById('net-wages').innerHTML = ((this.straightHours * this.straightRate) - this.totalDeductions).toFixed(2);
   },
+  populatePrevailingWage: function(){
+    document.getElementById('work-classification').addEventListener('change', function(evt) {
+      if (document.getElementById('rates-fringes').style.height == 0){
+        document.getElementById('rates-fringes').style.height = "130px";
+      }
+      var rate = this.selectedOptions[0].attributes['data-rate'].value;
+      var fringes = this.selectedOptions[0].attributes['data-fringes'].value;
+      var wage = parseFloat(rate) + parseFloat(fringes);
+      document.getElementById('rate').innerHTML = '$' + rate;
+      document.getElementById('rate').value = rate;
+      document.getElementById('fringes').innerHTML = '$' + fringes;
+      document.getElementById('fringes').value = fringes;
+      document.getElementById('db-wage').innerHTML = '$' + wage;
+      document.getElementById('db-wage').value = wage;
+    });
+  },
+  checkAgainstMinimum: function() {
+    var self = this;
+    document.getElementById('straight-rate').addEventListener('change', function(evt) {
+      var dbRate = parseInt(document.getElementById('rate').value);
+      setup.straightRate = this.value;
+      if (parseInt(this.value) < dbRate) {
+        this.classList.add('error');
+        this.parentElement.querySelector('.error-message').innerHTML = "This rate is below the minimum required by Davis-Bacon.";
+      } else {
+        this.classList.remove('error');
+        this.parentElement.querySelector('.error-message').innerHTML = "";
+      }
+      self.calculateEarnings();
+    });
+  },
   inputToSessionStorage: function(){
     var tempObj = {};
 
@@ -150,60 +187,20 @@ switch (setup.page) {
     setup.slideDownHandlers();
     setup.createWorkClassifications();
     setup.calculateDeductions();
-    // autopopulate fringes based on values in HTML
-    document.getElementById('work-classification').addEventListener('change', function(evt) {
-      if (document.getElementById('rates-fringes').style.height == 0){
-        document.getElementById('rates-fringes').style.height = "80px";
-      }
-      document.getElementById('rate').innerHTML = '$' + this.selectedOptions[0].attributes['data-rate'].value;
-      document.getElementById('rate').value = this.selectedOptions[0].attributes['data-rate'].value;
-      document.getElementById('fringes').innerHTML = '$' + this.selectedOptions[0].attributes['data-fringes'].value;
-      document.getElementById('fringes').value = this.selectedOptions[0].attributes['data-fringes'].value;
-    });
-    //calculate rates
+    setup.populatePrevailingWage();
     setup.calculateHours("straightHours");
     //setup.calculateHours("overtimeHours");
-    //error if rate is below Davis-Bacon shown
-    document.getElementById('straight-rate').addEventListener('change', function(evt) {
-      var dbRate = parseInt(document.getElementById('rate').value);
-      setup.straightRate = this.value;
-      if (parseInt(this.value) < dbRate) {
-        this.classList.add('error');
-      } else {
-        this.classList.remove('error');
-      }
-      setup.calculateEarnings();
-    });
+    setup.checkAgainstMinimum();
     break;
 
   case "edit-employee-details":
     setup.slideDownHandlers();
     setup.createWorkClassifications();
     setup.calculateDeductions();
-    // autopopulate fringes based on values in HTML
-    document.getElementById('work-classification').addEventListener('change', function(evt) {
-      if (document.getElementById('rates-fringes').style.height == 0){
-        document.getElementById('rates-fringes').style.height = "80px";
-      }
-      document.getElementById('rate').innerHTML = '$' + this.selectedOptions[0].attributes['data-rate'].value;
-      document.getElementById('rate').value = this.selectedOptions[0].attributes['data-rate'].value;
-      document.getElementById('fringes').innerHTML = '$' + this.selectedOptions[0].attributes['data-fringes'].value;
-      document.getElementById('fringes').value = this.selectedOptions[0].attributes['data-fringes'].value;
-    });
-    //calculate rates
+    setup.populatePrevailingWage();
     setup.calculateHours("straightHours");
     //setup.calculateHours("overtimeHours");
-    //error if rate is below Davis-Bacon shown
-    document.getElementById('straight-rate').addEventListener('change', function(evt) {
-      var dbRate = parseInt(document.getElementById('rate').value);
-      setup.straightRate = this.value;
-      if (parseInt(this.value) < dbRate) {
-        this.classList.add('error');
-      } else {
-        this.classList.remove('error');
-      }
-      setup.calculateEarnings();
-    });
+    setup.checkAgainstMinimum();
     break;
 
   case "create-or-choose-new-payroll":
