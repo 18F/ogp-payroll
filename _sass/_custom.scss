@@ -38,15 +38,15 @@ legend {
   }
 }
 
-.error {
-  background-color: #f9dede;
-  box-shadow: 0 0 3px #e31c3d, 0 0 7px #e31c3d;
+input.error {
+  border: 3px solid $color-secondary-dark;
 }
 
 .error-message {
-  font-size: 1.3rem;
+  font-size: 1.4rem;
+  font-weight: $font-bold;
   line-height: 1.3;
-  color: #e31c3d;
+  color: $color-secondary-dark;
 }
 
 .usa-font-lead {
