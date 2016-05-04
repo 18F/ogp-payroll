@@ -292,6 +292,19 @@ td input[type="checkbox"] + label {
   }
 }
 
+.prime-accordion-list {
+  padding: 1.5rem 5.5rem 1.5rem 3rem;
+
+  table {
+    line-height: 0;
+  }
+
+  td:nth-child(2),
+  td:nth-child(4) {
+    font-weight: $font-bold;
+  }
+}
+
 // Upload payroll page ----- //
 
 .file_upload {
