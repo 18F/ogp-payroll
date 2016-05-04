@@ -50,6 +50,16 @@ legend {
   max-width: 73rem;
 }
 
+a:visited {
+  color: $color-primary;
+}
+
+table {
+  th, td {
+    border-color: $color-gray-light;
+  }
+}
+
 // Navigation ------------- //
 
 .usa-site-header {
@@ -195,7 +205,7 @@ td input[type="checkbox"] + label {
 
 .row-sub {
  td:nth-child(2) {
-    padding-left: 3rem;
+//    padding-left: 3rem;
   }
 }
 
@@ -205,6 +215,82 @@ td input[type="checkbox"] + label {
   }
 }
 
+.table-no-padding {
+  margin: 0;
+
+  th, td {
+    border: none;
+    padding: 0;
+  }
+}
+
+.table-no-padding {
+  td:nth-child(2) {
+    width: 34%;
+  }
+
+  td:nth-child(3) {
+    width: 20%;
+    font-weight: $font-normal;
+  }
+
+  td:nth-child(4) {
+    width: 20%;
+  }
+}
+
+.table-special {
+  th:nth-child(2) {
+    width: 31%;
+  }
+
+  th:nth-child(3) {
+    width: 18%;
+  }
+
+  th:nth-child(4) {
+    width: 26%;
+  }
+}
+
+.accordion-table-inner {
+  td:nth-child(2) {
+    width: 33%;
+  }
+
+  td:nth-child(3) {
+    width: 19.5%;
+  }
+
+  td:nth-child(4) {
+    width: 23.5%;
+  }
+}
+
+.fa {
+  padding-right: .5rem;
+}
+
+.fa-check {
+  color: $color-green;
+}
+
+.fa-times {
+  color: $color-secondary;
+}
+
+.fa-flag {
+  color: $color-gold;
+}
+
+.button-none {
+  background-image: none !important;
+
+  &:hover {
+    background-color: $color-gray-lightest !important;
+    cursor: default;
+  }
+}
 
 // Upload payroll page ----- //
 
