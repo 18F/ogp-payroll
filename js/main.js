@@ -125,7 +125,7 @@ var setup = {
       setup.straightRate = this.value;
       if (parseInt(this.value) < dbRate) {
         this.classList.add('error');
-        this.parentElement.querySelector('.error-message').innerHTML = "This rate is below the minimum required by Davis-Bacon.";
+        this.parentElement.querySelector('.error-message').innerHTML = "The rate of pay is less than the the prevailing wage.";
       } else {
         this.classList.remove('error');
         this.parentElement.querySelector('.error-message').innerHTML = "";
