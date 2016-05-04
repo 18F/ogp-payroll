@@ -243,10 +243,6 @@ td input[type="checkbox"] + label {
   font-weight: $font-bold;
 }
 
-.form_group-rate {
-  clear: both;
-}
-
 .form_group-rate-item {
   clear: none;
   float: left;
@@ -262,6 +258,11 @@ td input[type="checkbox"] + label {
 .form_group-rate-fringe {
   margin-left: 2rem;
   width: 12rem;
+}
+
+.form_group-rate-fringe-hourly {
+  clear: both;
+  margin-left: 0;
 }
 
 .label-straight {
