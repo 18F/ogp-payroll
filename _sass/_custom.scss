@@ -63,6 +63,10 @@ legend {
   max-width: 73rem;
 }
 
+a:visited {
+  color: $color-primary;
+}
+
 // Navigation ------------- //
 
 .usa-site-header {
@@ -144,7 +148,8 @@ legend {
   }
 }
 
-// Second page ------------- //
+// Dashboard ------------- //
+
 h2 + .contract-payrolls {
   margin-top: 0;
 }
@@ -181,8 +186,15 @@ table {
     td, th {
       @include padding(.7rem null);
     }
+    
     .col-not_received {
       @include padding(1.5rem null);
+    }
+    
+    .row-normal {
+      th, td {
+        padding: 1.5rem;
+      }
     }
   }
 }
@@ -197,6 +209,124 @@ td input[type="checkbox"] + label {
 
 .bundle-button {
   float: right;
+}
+
+.row-sub {
+ td:nth-child(2) {
+//    padding-left: 3rem;
+  }
+}
+
+.sub-1 {
+  th, td {
+    border: none;
+  }
+}
+
+.table-no-padding {
+  margin: 0;
+
+  th, td {
+    border: none;
+    padding: 0;
+  }
+}
+
+.table-no-padding {
+  td:nth-child(2) {
+    width: 45%;
+  }
+
+  td:nth-child(3) {
+    width: 0%;
+    font-weight: $font-normal;
+  }
+
+  td:nth-child(4) {
+    width: 24%;
+  }
+
+  td:nth-child(5) {
+    width: 1%;
+  }
+}
+
+.table-special {
+  th:nth-child(2) {
+    width: 35%;
+  }
+
+  th:nth-child(3) {
+    width: 0%;
+  }
+
+  th:nth-child(4) {
+    width: 22%;
+  }
+
+  th:nth-child(5) {
+    width: 5%;
+  }
+}
+
+.accordion-table-inner {
+  td:nth-child(2) {
+    width: 37%;
+  }
+
+  td:nth-child(3) {
+    width: 0%;
+  }
+
+  td:nth-child(4) {
+    width: 28%;
+  }
+}
+
+.fa {
+  padding-right: .5rem;
+}
+
+.fa-check {
+  color: $color-green;
+}
+
+.fa-times {
+  color: $color-secondary;
+}
+
+.fa-flag {
+  color: $color-gold;
+}
+
+.button-none {
+  background-image: none !important;
+
+  &:hover {
+    background-color: $color-gray-lightest !important;
+    cursor: default;
+  }
+}
+
+.accordion-prime {
+  button {
+    background-position: left 3rem center;
+    padding-left: 5.5rem;
+    padding-right: 3rem;
+  }
+}
+
+.accordion-prime-single {
+  padding: 1.5rem 3rem 1.5rem 5.5rem;
+
+  table {
+    line-height: 0;
+  }
+
+  td:nth-child(2),
+  td:nth-child(4) {
+    font-weight: $font-bold;
+  }
 }
 
 // Upload payroll page ----- //
