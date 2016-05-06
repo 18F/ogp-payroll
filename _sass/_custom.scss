@@ -27,6 +27,12 @@ h1, h2, h3, h4, h5 {
 
 legend {
   font-size: $h4-font-size;
+  padding-top: 3rem;
+}
+
+
+.right {
+  float: right;
 }
 
 .slide-down-content {
@@ -372,4 +378,46 @@ input[id=total-deductions] {
 
 .hours-data {
   margin-left: 2.7rem;
+}
+
+// create contract
+form.classifications {
+  max-width: none;
+}
+
+h5 span {
+  font-weight: normal;
+  color: #757575;
+}
+
+div > aside {
+  margin-top: 2rem;
+  border: 3px solid #f1f1f1;
+  p {
+    margin: 1rem 3rem;
+  }
+  h4 {
+    background: #f1f1f1;
+    margin-top: 0;
+    padding: 1rem 3rem;
+  }
+}
+
+label span {
+  display: none;
+}
+
+table input[type="checkbox"] + label {
+  margin: 0;
+}
+
+.const-type button {
+  font-size: 1.3rem;
+}
+
+.search-results {
+  transition: height 0.5s ease-out;
+  height: 0;
+  overflow: hidden;
+
 }

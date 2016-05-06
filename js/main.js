@@ -205,4 +205,10 @@ switch (setup.page) {
 
   case "create-or-choose-new-payroll":
     sessionStorage.clear();
+
+  case "create-new-contract":
+    document.getElementById('search-button').addEventListener('click', function(evt) {
+        evt.preventDefault();
+        document.querySelector('.search-results').style.height = "1050px";
+    });
 }

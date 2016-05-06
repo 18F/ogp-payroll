@@ -1,0 +1,64 @@
+---
+layout: default
+title: Create new contract
+permalink: /assign-contractors/
+---
+
+<h1>{{ page.title }}</h1>
+<h5><span>Step 1: Enter project information</span> | Step 2: Assign contractors | <span>Step 3: Assign work classifications</span></h5>
+<div class="usa-grid">
+  <div class="usa-width-one-half">
+    <form>
+      <fieldset>
+        <legend>Subcontractor information</legend>
+        <label for="subcontractor">Subcontractor name</label>
+        <input id="sub-contractor" name="subcontractor" type="number" required="" aria-required="true">
+        <label for="subcontractor-email">Subcontractor email</label>
+        <input id="sub-contractor-email" name="subcontractor" type="number" required="" aria-required="true">
+        <label for="subcontractor-phone">Subcontractor phone number</label>
+        <input id="sub-contractor-phone" name="subcontractor" type="number" required="" aria-required="true">
+      </fieldset>
+      <p><a class="usa-button">Add subcontractor</a></p>
+    </form>
+  </div>
+<div class="usa-width-one-half">
+  <aside>
+    <h4>Entering subcontractors</h4>
+    <p>Every subcontractor listed here will be able to send certified payroll electronically through this system. Subcontractors will be able to edit and update their contact information, as well as add any second- or third-tier subs to the system.</p>
+  </aside>
+</div>
+
+</div>
+    <table class="usa-table-borderless">
+      <thead>
+        <tr>
+          <th scope="col">Assigned subcontractor</th>
+          <th scope="col">Email</th>
+          <th scope="col">Phone</th>
+          <th scope="col">Date assigned</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">Great Lakes Building Co., Inc.</th>
+          <td></td>
+          <td>(312)555-5555</td>
+          <td>March 1, 2016</td>
+          <td><a href="">Remove</a></td>
+        </tr>
+        <tr>
+          <th scope="row">Diggedy Dozer, Inc.</th>
+          <td>hello@diggedy.com</td>
+          <td>(212)555-5555</td>
+          <td>Dec. 1, 2015</td>
+          <td><a href="">Remove</a></td>
+        </tr>
+      </tbody>
+    </table>
+  <div class="button_wrapper">
+    <a class="usa-button" href="{{ site.baseurl }}/assign-work-classifications/">Continue</a>
+    <a class="usa-button usa-button-outline" href="{{ site.baseurl }}/create-new-contract/">Go back</a>
+  </div>
+</form>
+</div>
