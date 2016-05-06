@@ -9,170 +9,358 @@ permalink: /prime/welcome/
   <a class="usa-button" href="{{ site.baseurl }}/upload-payroll/">Upload new payroll</a>
   <a class="usa-button" href="{{ site.baseurl }}/add-new-payroll/">Enter new payroll</a>
 </div>
+
 <h2>Project: Anacostia River Bridge</h2>
-<h3 class="contract-payrolls">Contract #: ACE-CE-4156</h3> <span><a href="{{ site.baseurl }}/prime/view-contract/">view contract details</a></span>
-<table class="usa-table-borderless table-past-projects">
+<h3 class="contract-payrolls">Contract #: ACE-CE-4156</h3>
+<span><a href="{{ site.baseurl }}/view-contract/">view contract details</a></span>
+
+<table class="usa-table-borderless table-special">
   <thead>
     <tr>
       <th scope="col">Week ending date</th>
       <th scope="col">Contractor</th>
-      <th scope="col">Payroll #</th>
+      <th scope="col"></th>
+      <th scope="col">Status</th>
+      <th scope="col">Select</th>
     </tr>
   </thead>
-  <tbody>
-    <tr class="prime-row">
-      <th scope="row">April 1, 2016</th>
-      <td>ACME Construction (self)</td>
-      <td>19</td>
-      <td><a class="usa-button" href="{{ site.baseurl }}/review-hours-and-earnings/">View<a></td>
-    </tr>
-    <tr>
-      <th scope="row">March 28, 2016</th>
-      <td>Great Lakes Building Co., Inc.</td>
-      <td>18</td>
-      <td><a class="usa-button" href="{{ site.baseurl }}/prime/review-sub-hours-and-earnings/">View</a></td>
-    </tr>
-    <tr>
-      <th scope="row">March 29, 2016</th>
-      <td>Moore & Sons Construction</td>
-      <td>18</td>
-      <td><a class="usa-button" href="{{ site.baseurl }}/prime/review-sub-hours-and-earnings/">View</a></td>
-    </tr>
-    <tr>
-      <th scope="row">March 29, 2016</th>
-      <td>Roof Doctor, Co.</td>
-      <td>19</td>
-      <td><a class="usa-button" href="{{ site.baseurl }}/prime/review-sub-hours-and-earnings/">View</a></td>
-    </tr>
-    <tr>
-      <th scope="row">March 29, 2016</th>
-      <td>Diggedy Dozer, Inc.</td>
-      <td>18</td>
-      <td><a class="usa-button" href="{{ site.baseurl }}/prime/review-sub-hours-and-earnings/">View</a></td>
-    </tr>
-  </tbody>
 </table>
+
+<div class="usa-accordion accordion-prime">
+  <ul class="usa-unstyled-list">
+    <li class="accordion-prime-single">
+
+      <table class="usa-table-borderless table-no-padding">
+        <tr>
+          <th scope="row">April 1, 2016</th>
+          <td>
+            <i class="fa fa-user" aria-hidden="false"></i>
+            ACME Construction (self)
+          </td>
+          <td></td>
+          <td>
+            <i class="fa fa-check" aria-hidden="false"></i>
+            <a href="{{ site.baseurl }}/review-hours-and-earnings/">View</a></td>
+          <td>
+            <input id="select-01" type="checkbox" name="select" value="apple-pie">
+            <label for="select-01"></label>
+          </td>
+        </tr>
+      </table>
+
+    </li>
+    <li class="accordion-prime-single">
+      <table class="usa-table-borderless table-no-padding">
+        <tr>
+          <th scope="row">Not received</th>
+          <td>Great Lakes Building Co., Inc.</td>
+          <td></td>
+          <td>
+            <i class="fa fa-times" aria-hidden="false"></i>
+            Not received
+          </td>
+          <td>
+            <input id="select-02" type="checkbox" name="select" value="select-02">
+            <label for="select-02"></label>
+          </td>
+        </tr>
+      </table>
+    </li>
+    <li>
+      <button class="usa-button-unstyled" aria-expanded="false" aria-controls="collapsible-0">
+        <table class="usa-table-borderless table-no-padding">
+          <tr>
+            <th scope="row">April 1, 2016</th>
+            <td>Moore & Sons Construction</td>
+            <td></td>
+            <td>
+              <i class="fa fa-check" aria-hidden="false"></i>
+              <a href="{{ site.baseurl }}/review-hours-and-earnings/">View<a>
+            </td>
+            <td>
+            <input id="select-03" type="checkbox" name="select" value="select-03">
+            <label for="select-03"></label>
+          </td>
+          </tr>
+        </table>
+      </button>
+      <div id="collapsible-0" aria-hidden="true" class="usa-accordion-content">
+        <table class="usa-table-borderless accordion-table-inner">
+          <!-- Row sub BEGIN -->
+          <tr class="row-sub">
+            <th scope="row">March 25, 2016</th>
+            <td>Atlantic Northern</td>
+            <td></td>
+            <td>
+              <i class="fa fa-check" aria-hidden="false"></i>
+              <a href="{{ site.baseurl }}/review-hours-and-earnings/">View</a>
+            </td>
+          </tr>
+          <tr class="row-sub">
+            <th scope="row">March 18, 2016</th>
+            <td>Vandelay Industries</td>
+            <td></td>
+            <td>
+              <i class="fa fa-check" aria-hidden="false"></i>
+              <a href="{{ site.baseurl }}/review-hours-and-earnings/">View</a>
+            </td>
+          </tr>
+          <!-- Row sub END -->
+        </table>
+      </div>
+    </li>
+    <li>
+      <button class="usa-button-unstyled" aria-expanded="false" aria-controls="collapsible-1">
+        <table class="usa-table-borderless table-no-padding">
+          <tr>
+            <th scope="row">April 1, 2016</th>
+            <td>Roof Doctor, Co.</td>
+            <td></td>
+            <td>
+              <i class="fa fa-check" aria-hidden="false"></i>
+              <a href="{{ site.baseurl }}/review-hours-and-earnings/">View<a>
+            </td>
+            <td>
+            <input id="select-04" type="checkbox" name="select" value="select-04">
+            <label for="select-04"></label>
+          </td>
+          </tr>
+        </table>
+      </button>
+      <div id="collapsible-1" aria-hidden="true" class="usa-accordion-content">
+        <table class="usa-table-borderless accordion-table-inner">
+          <!-- Row sub BEGIN -->
+          <tr class="row-sub">
+            <th scope="row">March 25, 2016</th>
+            <td>Cogswell Cogs</td>
+            <td></td>
+            <td>
+              <i class="fa fa-check" aria-hidden="false"></i>
+              <a href="{{ site.baseurl }}/review-hours-and-earnings/">View</a>
+            </td>
+          </tr>
+          <tr class="row-sub">
+            <th scope="row">Not received</th>
+            <td>Wernham Hogg</td>
+            <td></td>
+            <td>
+              <i class="fa fa-times" aria-hidden="false"></i>
+              Not received
+            </td>
+          </tr>
+          <tr class="row-sub">
+            <th scope="row">March 18, 2016</th>
+            <td>Dunder Mifflin</td>
+            <td></td>
+            <td>
+              <i class="fa fa-flag" aria-hidden="false"></i>
+              <a href="{{ site.baseurl }}/review-hours-and-earnings/">Flagged</a>
+            </td>
+          </tr>
+          <!-- Row sub END -->
+        </table>
+      </div>
+    </li>
+    <li class="accordion-prime-single">
+      <table class="usa-table-borderless table-no-padding">
+        <tr>
+          <th scope="row">April 1, 2016</th>
+          <td>Diggedy Dozer, Inc.</td>
+          <td></td>
+          <td>
+            <i class="fa fa-flag" aria-hidden="false"></i>
+            <a href="#">Flagged</a>
+          </td>
+          <td>
+            <input id="select-05" type="checkbox" name="select" value="select-05">
+            <label for="select-05"></label>
+          </td>
+        </tr>
+      </table>
+    </li>
+  </ul>
+</div>
+
 <div class="usa-alert usa-alert-info">
   <div class="usa-alert-body">
-    <h3 class="usa-alert-heading">Send payrolls</h3>
-    <p class="usa-alert-text">All payrolls have been received. Send them to the contracting officer.</p>
-    <a class="usa-button usa-button-big" href="{{ site.baseurl }}/prime/send-payrolls/">Send payrolls</a>
+    <h3 class="usa-alert-heading">Send selected payrolls</h3>
+    <p class="usa-alert-text">Send selected payrolls to the contracting officer.</p>
+    <button>Send payrolls</button>
   </div>
 </div>
 
-<h3 class="contract-payrolls">Contract # ACE-CE-4032</h3> <span><a href="{{ site.baseurl }}/prime/view-contract/">view contract details</a></span>
-<table class="usa-table-borderless table-past-projects">
-  <thead>
-    <tr>
-      <th scope="col">Week ending date</th>
-      <th scope="col">Contractor</th>
-      <th scope="col">Payroll #</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr class="prime-row">
-      <th scope="row">April 1, 2016</th>
-      <td>ACME Construction (self)</td>
-      <td>19</td>
-      <td><a class="usa-button" href="{{ site.baseurl }}/review-hours-and-earnings/">View</a></td>
-    </tr>
-    <tr>
-      <th scope="row">March 28, 2016</th>
-      <td>Sierra Concrete</td>
-      <td>8</td>
-      <td><a class="usa-button" href="{{ site.baseurl }}/prime/review-sub-hours-and-earnings/">View</a></td>
-    </tr>
-    <tr>
-      <th scope="row">March 29, 2016</th>
-      <td>Great Lakes Building Co., Inc.</td>
-      <td>32</td>
-      <td><a class="usa-button" href="{{ site.baseurl }}/prime/review-sub-hours-and-earnings/">View</a></td>
-    </tr>
-    <tr>
-      <th scope="row">Not received</th>
-      <td>Myers Construction, Co.</td>
-      <td>18</td>
-      <td class="col-not_received">Not received</td>
-    </tr>
-  </tbody>
-</table>
-<div class="usa-alert usa-alert-warning">
-  <div class="usa-alert-body">
-    <h3 class="usa-alert-heading">Send payrolls</h3>
-    <p class="usa-alert-text">Not all payrolls have been received. You'll be able to send them once all have been received.</p>
-    <button class="usa-button-disabled">Send payrolls</button>
-  </div>
-</div>
-
+<!-- Payroll #2 -->
 <h2>Project: 12-12-Cumberland County</h2>
-<h3 class="contract-payrolls">Contract # ACE-CE-9274</h3> <span><a href="{{ site.baseurl }}/prime/view-contract/">view contract details</a></span>
-<table class="usa-table-borderless table-past-projects">
+<h3 class="contract-payrolls">Contract # ACE-CE-9274</h3> <span><a href="{{ site.baseurl }}/view-contract/">view contract details</a></span>
+
+<table class="usa-table-borderless table-special">
   <thead>
     <tr>
       <th scope="col">Week ending date</th>
       <th scope="col">Contractor</th>
-      <th scope="col">Payroll #</th>
       <th scope="col"></th>
+      <th scope="col">Status</th>
+      <th scope="col">Select</th>
     </tr>
   </thead>
-  <tbody>
-    <tr class="prime-row">
-      <th scope="row">April 1, 2016</th>
-      <td>ACME Construction (self)</td>
-      <td>19</td>
-      <td><a class="usa-button" href="{{ site.baseurl }}/review-hours-and-earnings/">View</a></td>
-    </tr>
-    <tr>
-      <th scope="row">March 28, 2016</th>
-      <td>Great Lakes Building Co., Inc.</td>
-      <td>18</td>
-      <td><a class="usa-button" href="{{ site.baseurl }}/prime/review-sub-hours-and-earnings/">View</a></td>
-    </tr>
-    <tr>
-      <th scope="row">March 29, 2016</th>
-      <td>Moore & Sons Construction</td>
-      <td>18</td>
-      <td><a class="usa-button" href="{{ site.baseurl }}/prime/review-sub-hours-and-earnings/">View</a></td>
-    </tr>
-  </tbody>
 </table>
-<div class="usa-alert usa-alert-success">
-  <div class="usa-alert-body">
-    <h3 class="usa-alert-heading">Payrolls sent</h3>
-    <p class="usa-alert-text">Payrolls sent on 4/4/16.</p>
-  </div>
+
+<div class="usa-accordion accordion-prime">
+  <ul class="usa-unstyled-list">
+    <li class="accordion-prime-single">
+
+      <table class="usa-table-borderless table-no-padding">
+        <tr>
+          <th scope="row">April 1, 2016</th>
+          <td>
+            <i class="fa fa-user" aria-hidden="false"></i>
+            ACME Construction (self)
+          </td>
+          <td></td>
+          <td>
+            <i class="fa fa-check" aria-hidden="false"></i>
+            <a href="{{ site.baseurl }}/review-hours-and-earnings/">View</a>
+          </td>
+          <td>
+            <input id="select-01" type="checkbox" name="select" value="apple-pie">
+            <label for="select-01"></label>
+          </td>
+        </tr>
+      </table>
+
+    </li>
+    <li class="accordion-prime-single">
+      <table class="usa-table-borderless table-no-padding">
+        <tr>
+          <th scope="row">April 1, 2016</th>
+          <td>Great Lakes Building Co., Inc.</td>
+          <td></td>
+          <td>
+            <i class="fa fa-check" aria-hidden="false"></i>
+            <a href="{{ site.baseurl }}/review-hours-and-earnings/">View</a>
+          </td>
+          <td>
+            <input id="select-02" type="checkbox" name="select" value="select-02">
+            <label for="select-02"></label>
+          </td>
+        </tr>
+      </table>
+    </li>
+    <li>
+      <button class="usa-button-unstyled" aria-expanded="false" aria-controls="collapsible-0">
+        <table class="usa-table-borderless table-no-padding">
+          <tr>
+            <th scope="row">April 1, 2016</th>
+            <td>Moore & Sons Construction</td>
+            <td></td>
+            <td>
+              <i class="fa fa-check" aria-hidden="false"></i>
+              <a href="{{ site.baseurl }}/review-hours-and-earnings/">View<a>
+            </td>
+            <td>
+            <input id="select-03" type="checkbox" name="select" value="select-03">
+            <label for="select-03"></label>
+          </td>
+          </tr>
+        </table>
+      </button>
+      <div id="collapsible-0" aria-hidden="true" class="usa-accordion-content">
+        <table class="usa-table-borderless accordion-table-inner">
+          <!-- Row sub BEGIN -->
+          <tr class="row-sub">
+            <th scope="row">March 25, 2016</th>
+            <td>Atlantic Northern</td>
+            <td></td>
+            <td>
+              <i class="fa fa-check" aria-hidden="false"></i>
+              <a href="{{ site.baseurl }}/review-hours-and-earnings/">View</a>
+            </td>
+          </tr>
+          <tr class="row-sub">
+            <th scope="row">March 18, 2016</th>
+            <td>Vandelay Industries</td>
+            <td></td>
+            <td>
+              <i class="fa fa-check" aria-hidden="false"></i>
+              <a href="{{ site.baseurl }}/review-hours-and-earnings/">View</a>
+            </td>
+          </tr>
+          <!-- Row sub END -->
+        </table>
+      </div>
+    </li>
+    <li>
+      <button class="usa-button-unstyled" aria-expanded="false" aria-controls="collapsible-1">
+        <table class="usa-table-borderless table-no-padding">
+          <tr>
+            <th scope="row">April 1, 2016</th>
+            <td>Roof Doctor, Co.</td>
+            <td></td>
+            <td>
+              <i class="fa fa-check" aria-hidden="false"></i>
+              <a href="{{ site.baseurl }}/review-hours-and-earnings/">View<a>
+            </td>
+            <td>
+            <input id="select-04" type="checkbox" name="select" value="select-04">
+            <label for="select-04"></label>
+          </td>
+          </tr>
+        </table>
+      </button>
+      <div id="collapsible-1" aria-hidden="true" class="usa-accordion-content">
+        <table class="usa-table-borderless accordion-table-inner">
+          <!-- Row sub BEGIN -->
+          <tr class="row-sub">
+            <th scope="row">March 25, 2016</th>
+            <td>Cogswell Cogs</td>
+            <td></td>
+            <td>
+              <i class="fa fa-check" aria-hidden="false"></i>
+              <a href="{{ site.baseurl }}/review-hours-and-earnings/">View</a>
+            </td>
+          </tr>
+          <tr class="row-sub">
+            <th scope="row">Not received</th>
+            <td>Wernham Hogg</td>
+            <td></td>
+            <td>
+              <i class="fa fa-times" aria-hidden="false"></i>
+              Not received
+            </td>
+          </tr>
+          <tr class="row-sub">
+            <th scope="row">March 18, 2016</th>
+            <td>Dunder Mifflin</td>
+            <td></td>
+            <td>
+              <i class="fa fa-check" aria-hidden="false"></i>
+              <a href="{{ site.baseurl }}/review-hours-and-earnings/">View</a>
+            </td>
+          </tr>
+          <!-- Row sub END -->
+        </table>
+      </div>
+    </li>
+    <li class="accordion-prime-single">
+      <table class="usa-table-borderless table-no-padding">
+        <tr>
+          <th scope="row">April 1, 2016</th>
+          <td>Diggedy Dozer, Inc.</td>
+          <td></td>
+          <td>
+            <i class="fa fa-check" aria-hidden="false"></i>
+            <a href="#">View</a>
+          </td>
+          <td>
+            <input id="select-05" type="checkbox" name="select" value="select-05">
+            <label for="select-05"></label>
+          </td>
+        </tr>
+      </table>
+    </li>
+  </ul>
 </div>
 
-<h3 class="contract-payrolls">Contract # ACE-CE-9100</h3> <span><a href="{{ site.baseurl }}/prime/view-contract/">view contract details</a></span>
-<table class="usa-table-borderless table-past-projects">
-  <thead>
-    <tr>
-      <th scope="col">Week ending date</th>
-      <th scope="col">Contractor</th>
-      <th scope="col">Payroll #</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr class="prime-row">
-      <th scope="row">April 1, 2016</th>
-      <td>ACME Construction (self)</td>
-      <td>19</td>
-      <td><a class="usa-button" href="{{ site.baseurl }}/review-hours-and-earnings/">View</a></td>
-    </tr>
-    <tr>
-      <th scope="row">March 28, 2016</th>
-      <td>Sierra Concrete</td>
-      <td>8</td>
-      <td><a class="usa-button" href="{{ site.baseurl }}/prime/review-sub-hours-and-earnings/">View</a></td>
-    </tr>
-    <tr>
-      <th scope="row">March 29, 2016</th>
-      <td>Great Lakes Building Co., Inc.</td>
-      <td>32</td>
-      <td><a class="usa-button" href="{{ site.baseurl }}/prime/review-sub-hours-and-earnings/">View</a></td>
-    </tr>
-  </tbody>
-</table>
 <div class="usa-alert usa-alert-success">
   <div class="usa-alert-body">
     <h3 class="usa-alert-heading">Payrolls sent</h3>
