@@ -21,13 +21,13 @@ permalink: /enter-employee-details/
     <div id="rates-fringes" class="slide-down-content" data-height="100">
       <p>Davis-Bacon prevailing wage: <span class="text-emphasize" id="db-wage"></span></p>
       <ul>
-        <li><p>Hourly rate: <span class="text-emphasize" id="rate"></span></p></li>
-        <li><p>Fringes: <span class="text-emphasize" id="fringes"></span></p></li>
+        <li>Hourly rate: <span class="text-emphasize" id="rate"></span></li>
+        <li>Fringes: <span class="text-emphasize" id="fringes"></span></li>
       </ul>
     </div>
     <div class="optional-info" data-height="200">
       <label for="custom-classification" class="slide-down-handler">
-        <a id="add-classification">+ Add custom work classification</a>
+        <a class="add-link" id="add-classification">+ Add custom work classification</a>
       </label>
       <div class="slide-down-content">
         <input id="custom-classification" name="input-type-text" type="text">
@@ -82,7 +82,7 @@ permalink: /enter-employee-details/
         <input aria-describedby="dobHint" class="usa-form-control" id="straight-rate" name="straight-rate" pattern="0?[1-9]|1[012]" type="number" min="1" max="8" value="">
         <p class="error-message"></p>
       </div>
-      <div class="form_group-rate-item form_group-rate-fringe">
+      <div class="form_group-rate-item form_group-rate-fringe form_group-rate-fringe-hourly">
         <label for="day_sunday" class="label-straight">Hourly fringe (cash)</label>
         <input aria-describedby="dobHint" class="usa-form-control" id="straight-fringe" name="straight-fringe" pattern="0?[1-9]|1[012]" type="number" min="1" max="8" value="">
       </div>
@@ -93,7 +93,7 @@ permalink: /enter-employee-details/
     </div>
   </fieldset>
   <div class="optional-info" data-height="270">
-    <a class="link_block add_overtime slide-down-handler">+ Add overtime</a>
+    <a class="link_block add_overtime slide-down-handler add-link">+ Add overtime</a>
     <div class="slide-down-content">
       <h5>Overtime</h5>
       <fieldset>
@@ -166,7 +166,7 @@ permalink: /enter-employee-details/
 
     <div class="optional-info" data-height="100">
       <label for="custom-classification" class="slide-down-handler">
-        <a id="add-classification">+ Add deduction</a>
+        <a class="add-link" id="add-classification">+ Add deduction</a>
       </label>
       <div class="slide-down-content">
         <div class="form-group-deductions">
