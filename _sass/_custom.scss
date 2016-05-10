@@ -456,7 +456,6 @@ input[type=number]::-webkit-outer-spin-button {
   }
 }
 
-
 .fieldset-inputs-owner {
   padding-bottom: 1.5em;
 
@@ -566,5 +565,10 @@ table input[type="checkbox"] + label {
   transition: height 0.5s ease-out;
   height: 0;
   overflow: hidden;
+}
 
+// Sign and certify page
+
+label[for="select-plans"] {
+  max-width: 100%;
 }
