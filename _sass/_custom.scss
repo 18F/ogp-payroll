@@ -159,6 +159,10 @@ h2 + .contract-payrolls {
     margin-left: 15px;
   }
 }
+.final-payroll strong {
+  color: $color-secondary;
+  font-weight: bold;
+}
 
 // Fix for table alignment
 th {
