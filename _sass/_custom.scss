@@ -10,8 +10,6 @@ $h5-font-size:        rem(16px);
 
 $font-light:          300;
 
-$red: #e31c3d;
-
 // Custom styles ---------- //
 
 h1, h2, h3, h4, h5 {
@@ -162,7 +160,7 @@ h2 + .contract-payrolls {
   }
 }
 .final-payroll strong {
-  color: $red;
+  color: $color-secondary;
   font-weight: bold;
 }
 
