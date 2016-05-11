@@ -11,12 +11,48 @@ permalink: /assign-contractors/
     <form>
       <fieldset>
         <legend>Subcontractor information</legend>
-        <label for="subcontractor">Subcontractor name</label>
-        <input id="sub-contractor" name="subcontractor" type="number" required="" aria-required="true">
-        <label for="subcontractor-email">Subcontractor email</label>
-        <input id="sub-contractor-email" name="subcontractor" type="number" required="" aria-required="true">
-        <label for="subcontractor-phone">Subcontractor phone number</label>
-        <input id="sub-contractor-phone" name="subcontractor" type="number" required="" aria-required="true">
+        <label for="subcontractor">Company name</label>
+        <input id="sub-contractor" name="subcontractor" required="" aria-required="true">
+        <label for="subcontractor-contact">Point of contact</label>
+        <input id="sub-contractor-contact" name="subcontractor" required="" aria-required="true">
+        <label for="subcontractor-email">Email</label>
+        <input id="sub-contractor-email" name="subcontractor" required="" aria-required="true">
+        <label for="subcontractor-phone">Phone number</label>
+        <input id="sub-contractor-phone" name="subcontractor" required="" aria-required="true">
+        <label for"start-date">Projected start date</label>
+        <span class="usa-form-hint usa-datefield-hint" id="date-hint">For example: 04 28 1986</span>
+        <div class="usa-date-of-birth">
+          <div class="usa-datefield usa-form-group usa-form-group-month">
+            <label for="start_month">Month</label>
+            <input aria-describedby="date-hint" class="usa-form-control" id="start_month" name="start_week" pattern="0?[1-9]|1[012]" type="number" min="1" max="12" value="">
+          </div>
+          <div class="usa-datefield usa-form-group usa-form-group-day">
+            <label for="start_day">Day</label>
+            <input aria-describedby="date-hint" class="usa-form-control" id="start_day" name="start_week" pattern="0?[1-9]|1[0-9]|2[0-9]|3[01]" type="number" min="1" max="31" value="">
+          </div>
+          <div class="usa-datefield usa-form-group usa-form-group-year">
+            <label for="start_year">Year</label>
+            <input aria-describedby="date-hint" class="usa-form-control" id="start_year" name="start_week" pattern="[0-9]{4}" type="number" min="1900" max="2000" value="">
+          </div>
+        </div>
+      </fieldset>
+      <fieldset>
+        <label for"end-date">Projected end date</label>
+        <div class="usa-date-of-birth">
+          <div class="usa-datefield usa-form-group usa-form-group-month">
+            <label for="end_month">Month</label>
+            <input aria-describedby="date-hint" class="usa-form-control" id="end_month" name="end_week" pattern="0?[1-9]|1[012]" type="number" min="1" max="12" value="">
+          </div>
+          <div class="usa-datefield usa-form-group usa-form-group-day">
+            <label for="end_day">Day</label>
+            <input aria-describedby="date-hint" class="usa-form-control" id="end_day" name="end_week" pattern="0?[1-9]|1[0-9]|2[0-9]|3[01]" type="number" min="1" max="31" value="">
+          </div>
+          <div class="usa-datefield usa-form-group usa-form-group-year">
+            <label for="end_year">Year</label>
+            <input aria-describedby="date-hint" class="usa-form-control" id="end_year" name="end_week" pattern="[0-9]{4}" type="number" min="1900" max="2000" value="">
+          </div>
+        </div>
+
       </fieldset>
       <p><a class="usa-button">Add subcontractor</a></p>
     </form>
@@ -33,25 +69,28 @@ permalink: /assign-contractors/
       <thead>
         <tr>
           <th scope="col">Assigned subcontractor</th>
+          <th scope="col">Point of contact</th>
           <th scope="col">Email</th>
           <th scope="col">Phone</th>
-          <th scope="col">Date assigned</th>
+          <th scope="col">Projected start/end dates</th>
           <th></th>
         </tr>
       </thead>
       <tbody>
         <tr>
           <th scope="row">Great Lakes Building Co., Inc.</th>
+          <td>Deborah Mooney</td>
           <td></td>
           <td>(312)555-5555</td>
-          <td>March 1, 2016</td>
+          <td>March 1, 2015 — May 25, 2016</td>
           <td><a href="">Remove</a></td>
         </tr>
         <tr>
           <th scope="row">Diggedy Dozer, Inc.</th>
-          <td>hello@diggedy.com</td>
+          <td>Bob the Builder</td>
+          <td><span class="email">hello@diggedy.com</span></td>
           <td>(212)555-5555</td>
-          <td>Dec. 1, 2015</td>
+          <td>Dec. 1, 2015 — Aug. 1, 2016</td>
           <td><a href="">Remove</a></td>
         </tr>
       </tbody>

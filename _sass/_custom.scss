@@ -524,6 +524,11 @@ input[id=total-deductions] {
 }
 
 // create contract
+label + h4 {
+  margin-top: 5px;
+  color: #0071bc;
+}
+
 form.classifications {
   max-width: none;
 }
@@ -548,6 +553,11 @@ div > aside {
 
 label span {
   display: none;
+}
+
+.email {
+  color: #0071bc;
+  cursor: pointer;
 }
 
 table input[type="checkbox"] + label {
