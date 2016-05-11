@@ -44,6 +44,11 @@ legend {
   }
 }
 
+.chosen-drop ul li:before {
+  content: "";
+  display: block;
+}
+
 input.error {
   border: 3px solid $color-secondary-dark;
 }
@@ -571,4 +576,32 @@ table input[type="checkbox"] + label {
 
 label[for="select-plans"] {
   max-width: 100%;
+}
+
+// Chosen overrides
+.chosen-container,
+.chosen-container-active.chosen-with-drop {
+  font-size: 1.7rem;
+  .chosen-single {
+    height: auto;
+    background: transparent;
+    background-image: none;
+    border: 1px solid #5b616b;
+    border-radius: 0;
+    box-sizing: border-box;
+    color: #212121;
+    display: block;
+    font-size: 1.7rem;
+    margin: 0.2em 0;
+    max-width: 46rem;
+    outline: none;
+    padding: 1rem 0.7em;
+    width: 100%;
+    div {
+      display: none;
+    }
+  }
+  ul {
+    width: 100%;
+  }
 }

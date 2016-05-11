@@ -211,4 +211,6 @@ switch (setup.page) {
         evt.preventDefault();
         document.querySelector('.search-results').style.height = "1050px";
     });
+  case "past-payrolls":
+    //$(".use-chosen").chosen();
 }
