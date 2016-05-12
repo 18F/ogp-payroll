@@ -211,6 +211,9 @@ switch (setup.page) {
         evt.preventDefault();
         document.querySelector('.search-results').style.height = "1050px";
     });
+  case "past-payrolls":
+    //$(".use-chosen").chosen();
+
   //dashboard
   case "certified-payroll-reporting":
     [].forEach.call(document.querySelectorAll('.usa-button-unstyled'), function(el){
