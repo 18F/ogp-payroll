@@ -159,9 +159,11 @@ h2 + .contract-payrolls {
 }
 .contract-payrolls {
   display: inline-block;
-  & + span {
+  span {
     display: inline-block;
     margin-left: 15px;
+    font-weight: normal;
+    font-size: 0.8em;
   }
 }
 .final-payroll strong {
