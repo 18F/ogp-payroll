@@ -257,13 +257,13 @@ td input[type="checkbox"] + label {
   }
 
   td:nth-child(5) {
-    width: 1%;
+    width: 4%;
   }
 }
 
 .table-special {
   th:nth-child(2) {
-    width: 35%;
+    width: 36%;
   }
 
   th:nth-child(3) {
@@ -271,11 +271,11 @@ td input[type="checkbox"] + label {
   }
 
   th:nth-child(4) {
-    width: 22%;
+    width: 21%;
   }
 
   th:nth-child(5) {
-    width: 5%;
+    width: 9%;
   }
 }
 
@@ -343,6 +343,10 @@ td input[type="checkbox"] + label {
   width: 3rem;
   height: 1.8rem;
   display: block;
+}
+
+.row-third-level {
+
 }
 
 // Upload payroll page ----- //
@@ -534,6 +538,11 @@ input[id=total-deductions] {
 }
 
 // create contract
+label + h4 {
+  margin-top: 5px;
+  color: #0071bc;
+}
+
 form.classifications {
   max-width: none;
 }
@@ -558,6 +567,11 @@ div > aside {
 
 label span {
   display: none;
+}
+
+.email {
+  color: #0071bc;
+  cursor: pointer;
 }
 
 table input[type="checkbox"] + label {
