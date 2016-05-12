@@ -161,27 +161,44 @@ permalink: /enter-employee-details/
         <label for="other">Other</label>
         <input id="other" name="deductions" type="number">
       </div>
-      <label for="other-description">Description of other deduction</label>
-      <input id="other-description" name="deduction-description" type="text">
+      <div class="form-group-deductions">
+        <label for="other-description" class="full-width">Description of other deduction</label>
+        <input id="other-description" name="deduction-description" type="text" class="full-width">
+        <p class="align-right">
+          <a href="#">
+            <i class="fa fa-paperclip" aria-hidden="false"></i>
+            Attach supporting documentation
+          </a>
+        </p>
+      </div>
 
-    <div class="optional-info" data-height="100">
+
+    <div class="optional-info" data-height="200">
+      <label for="total-deductions">Total Deductions</label>
+      <input class="total-deductions" id="total-deductions" name="total-deductions" type="number">
+
       <label for="custom-classification" class="slide-down-handler">
-        <a class="add-link" id="add-classification">+ Add deduction</a>
+        <a class="add-link" id="add-classification">+ Add another deduction</a>
       </label>
       <div class="slide-down-content">
+        <h5>New deduction</h5>
         <div class="form-group-deductions">
           <label for="other">Amount</label>
           <input id="other" name="deductions" type="number">
         </div>
 
         <div class="form-group-deductions">
-          <label for="other">Description</label>
-          <input id="custom-classification" name="input-type-text" type="text">
+          <label for="other" class="full-width">Description</label>
+          <input id="custom-classification" name="input-type-text" type="text" class="full-width">
+          <p>
+            <a href="#">
+              <i class="fa fa-paperclip" aria-hidden="false"></i>
+              Attach supporting documentation
+            </a>
+          </p>
         </div>
       </div>
     </div>
-      <label for="total-deductions">Total Deductions</label>
-      <input class="total-deductions" id="total-deductions" name="total-deductions" type="number">
     </fieldset>
   </div>
   <h2>Net wages paid: $<span id="net-wages"></span></h2>

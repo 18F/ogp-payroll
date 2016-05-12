@@ -20,6 +20,7 @@ var setup = {
     var optionalNodes = document.querySelectorAll('.optional-info');
     for (var i = 0; i < optionalNodes.length; i++) {
       optionalNodes[i].querySelector('.slide-down-handler').addEventListener('click', function(evt) {
+        evt.preventDefault();
         var height = this.parentElement.querySelector('.slide-down-content').style.height;
         console.log(height);
         if (height == "" || height == "0px") {

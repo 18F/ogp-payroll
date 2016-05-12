@@ -481,6 +481,9 @@ input[type=number]::-webkit-outer-spin-button {
   label,
   input {
     width: 8rem;
+    &.full-width {
+      width: 100%;
+    }
   }
 }
 
@@ -494,6 +497,12 @@ input[type=number]::-webkit-outer-spin-button {
 
 input[id=total-deductions] {
   width: 12rem;
+}
+.optional-info {
+  input[id=total-deductions],
+  label[for=custom-classification] {
+    display: inline;
+  }
 }
 
 // Create new payroll
