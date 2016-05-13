@@ -44,16 +44,20 @@ legend {
   }
 }
 
-.error {
-  background-color: #f9dede;
-  box-shadow: 0 0 3px #e31c3d, 0 0 7px #e31c3d;
+.chosen-drop ul li:before {
+  content: "";
+  display: block;
+}
+
+input.error {
+  border: 3px solid $color-secondary-dark;
 }
 
 .error-message {
-  font-size: 1.1rem;
+  font-size: 1.4rem;
+  font-weight: $font-bold;
   line-height: 1.3;
-  font-style: italic;
-  color: #e31c3d;
+  color: $color-secondary-dark;
 }
 
 .usa-font-lead {
@@ -155,10 +159,16 @@ h2 + .contract-payrolls {
 }
 .contract-payrolls {
   display: inline-block;
-  & + span {
+  span {
     display: inline-block;
     margin-left: 15px;
+    font-weight: normal;
+    font-size: 0.8em;
   }
+}
+.final-payroll strong {
+  color: $color-secondary;
+  font-weight: bold;
 }
 
 // Fix for table alignment
@@ -247,13 +257,13 @@ td input[type="checkbox"] + label {
   }
 
   td:nth-child(5) {
-    width: 1%;
+    width: 4%;
   }
 }
 
 .table-special {
   th:nth-child(2) {
-    width: 35%;
+    width: 36%;
   }
 
   th:nth-child(3) {
@@ -261,11 +271,11 @@ td input[type="checkbox"] + label {
   }
 
   th:nth-child(4) {
-    width: 22%;
+    width: 21%;
   }
 
   th:nth-child(5) {
-    width: 5%;
+    width: 9%;
   }
 }
 
@@ -329,6 +339,16 @@ td input[type="checkbox"] + label {
   }
 }
 
+.empty-select {
+  width: 3rem;
+  height: 1.8rem;
+  display: block;
+}
+
+.row-third-level {
+
+}
+
 // Upload payroll page ----- //
 
 .file_upload {
@@ -380,10 +400,6 @@ td input[type="checkbox"] + label {
   font-weight: $font-bold;
 }
 
-.form_group-rate {
-  clear: both;
-}
-
 .form_group-rate-item {
   clear: none;
   float: left;
@@ -399,6 +415,11 @@ td input[type="checkbox"] + label {
 .form_group-rate-fringe {
   margin-left: 2rem;
   width: 12rem;
+}
+
+.form_group-rate-fringe-hourly {
+  clear: both;
+  margin-left: 0;
 }
 
 .label-straight {
@@ -440,6 +461,12 @@ input[type=number]::-webkit-outer-spin-button {
   margin-top: 1em;
 }
 
+.add-link {
+  &:hover {
+    cursor: pointer;
+  }
+}
+
 .fieldset-inputs-owner {
   padding-bottom: 1.5em;
 
@@ -461,6 +488,9 @@ input[type=number]::-webkit-outer-spin-button {
   label,
   input {
     width: 8rem;
+    &.full-width {
+      width: 100%;
+    }
   }
 }
 
@@ -474,6 +504,12 @@ input[type=number]::-webkit-outer-spin-button {
 
 input[id=total-deductions] {
   width: 12rem;
+}
+.optional-info {
+  input[id=total-deductions],
+  label[for=custom-classification] {
+    display: inline;
+  }
 }
 
 // Create new payroll
@@ -511,6 +547,11 @@ input[id=total-deductions] {
 }
 
 // create contract
+label + h4 {
+  margin-top: 5px;
+  color: #0071bc;
+}
+
 form.classifications {
   max-width: none;
 }
@@ -537,6 +578,11 @@ label span {
   display: none;
 }
 
+.email {
+  color: #0071bc;
+  cursor: pointer;
+}
+
 table input[type="checkbox"] + label {
   margin: 0;
 }
@@ -549,7 +595,46 @@ table input[type="checkbox"] + label {
   transition: height 0.5s ease-out;
   height: 0;
   overflow: hidden;
+}
 
+.review-hours-and-earnings {
+  .usa-grid {
+    max-width: 100%;
+  }
+}
+
+// Sign and certify page
+
+label[for="select-plans"] {
+  max-width: 100%;
+}
+
+// Chosen overrides
+.chosen-container,
+.chosen-container-active.chosen-with-drop {
+  font-size: 1.7rem;
+  .chosen-single {
+    height: auto;
+    background: transparent;
+    background-image: none;
+    border: 1px solid #5b616b;
+    border-radius: 0;
+    box-sizing: border-box;
+    color: #212121;
+    display: block;
+    font-size: 1.7rem;
+    margin: 0.2em 0;
+    max-width: 46rem;
+    outline: none;
+    padding: 1rem 0.7em;
+    width: 100%;
+    div {
+      display: none;
+    }
+  }
+  ul {
+    width: 100%;
+  }
 }
 
 // profile page

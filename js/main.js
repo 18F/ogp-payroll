@@ -20,6 +20,7 @@ var setup = {
     var optionalNodes = document.querySelectorAll('.optional-info');
     for (var i = 0; i < optionalNodes.length; i++) {
       optionalNodes[i].querySelector('.slide-down-handler').addEventListener('click', function(evt) {
+        evt.preventDefault();
         var height = this.parentElement.querySelector('.slide-down-content').style.height;
         console.log(height);
         if (height == "" || height == "0px") {
@@ -125,7 +126,7 @@ var setup = {
       setup.straightRate = this.value;
       if (parseInt(this.value) < dbRate) {
         this.classList.add('error');
-        this.parentElement.querySelector('.error-message').innerHTML = "This rate is below the minimum required by Davis-Bacon.";
+        this.parentElement.querySelector('.error-message').innerHTML = "The rate of pay is less than the the prevailing wage.";
       } else {
         this.classList.remove('error');
         this.parentElement.querySelector('.error-message').innerHTML = "";
@@ -210,5 +211,24 @@ switch (setup.page) {
     document.getElementById('search-button').addEventListener('click', function(evt) {
         evt.preventDefault();
         document.querySelector('.search-results').style.height = "1050px";
+    });
+  case "past-payrolls":
+    //$(".use-chosen").chosen();
+
+  //dashboard
+  case "certified-payroll-reporting":
+    [].forEach.call(document.querySelectorAll('.usa-button-unstyled'), function(el){
+      el.addEventListener('click', function(evt){
+        //hacky way to see if the user was trying to click the input box
+        var stuntDouble = el.getBoundingClientRect();
+        if (evt.pageX >= (stuntDouble.right - 55)) {
+          var input = el.getElementsByTagName('input')[0];
+          if (input.checked == false) {
+            input.checked = true;
+          } else {
+            input.checked = false;
+          }
+        }
+      });
     });
 }

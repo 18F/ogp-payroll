@@ -1,0 +1,147 @@
+---
+layout: default
+title: Past payrolls
+permalink: /prime/past-payrolls/
+---
+<h1>{{ page.title }}</h1>
+<p>Find payrolls you and your subcontractors have filed by week ending date, contract number and name.</p>
+<div class="usa-grid">
+  <div class="usa-width-one-third">
+    <fieldset class="Week end date">
+      <label>Payroll week end date</label>
+      <span class="usa-form-hint usa-datefield-hint" id="date-hint">For example: 04 28 1986</span>
+      <div class="usa-date-of-birth">
+        <div class="usa-datefield usa-form-group usa-form-group-month">
+          <label for="end_month">Month</label>
+          <input aria-describedby="dobHint" class="usa-form-control" id="end_month" name="end_week" pattern="0?[1-9]|1[012]" type="number" min="1" max="12" value="">
+        </div>
+        <div class="usa-datefield usa-form-group usa-form-group-day">
+          <label for="end_day">Day</label>
+          <input aria-describedby="dobHint" class="usa-form-control" id="end_day" name="end_week" pattern="0?[1-9]|1[0-9]|2[0-9]|3[01]" type="number" min="1" max="31" value="">
+        </div>
+        <div class="usa-datefield usa-form-group usa-form-group-year">
+          <label for="end_day">Year</label>
+          <input aria-describedby="dobHint" class="usa-form-control" id="end_year" name="end_week" pattern="[0-9]{4}" type="number" min="1900" max="2000" value="">
+        </div>
+      </div>
+    </fieldset>
+  </div>
+  <div class="usa-width-one-third">
+    <form style="margin-top: 75px;">
+      <label for="contract-number">Contract number</label>
+      <select name="contract-number" id="contract-number" class="use-chosen">
+        <option value="">All contracts</option>
+        <option value="ACE-CE-4156" selected>ACE-CE-4156</option>
+        <option value="ACE-CE-1654">ACE-CE-1654</option>
+        <option value="ACE-CE-6234">ACE-CE-6234</option>
+      </select>
+    </form>
+  </div>
+  <div class="usa-width-one-third">
+    <form style="margin-top: 75px;">
+      <label for="company-name">Contractor name</label>
+      <select name="company-name" id="company-name" class="use-chosen">
+        <option value="">All contractors</option>
+        <option value="">ACME Construction (self)</option>
+        <option value="">Diggedy Dozer</option>
+        <option value="">Great Lakes Building Co., Inc.</option>
+        <option value="">Moore & Sons Construction</option>
+        <option value="">Roof Doctor</option>
+        <option value="">Vandelay Industries</option>
+      </select>
+    </form>
+  </div>
+</div>
+<h3>Showing <span>all</span> payrolls.</h3>
+<table class="usa-table-borderless">
+  <thead>
+    <tr>
+      <th scope="col">Week end date</th>
+      <th scope="col">Contract</th>
+      <th scope="col">Contractor</th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>March 25, 2016</td>
+      <td><a href="{{ site.baseurl }}/view-contract/">ACE-CE-4156</a></td>
+      <td><a>ACME Construction</a></td>
+      <td><strong><a>View payroll</a></strong></td>
+    </tr>
+    <tr>
+      <td>March 25, 2016</td>
+      <td><a href="{{ site.baseurl }}/view-contract/">ACE-CE-4156</a></td>
+      <td><a>Roof Doctor</a></td>
+      <td><strong><a>View payroll</a></strong></td>
+    </tr>
+    <tr>
+      <td>March 25, 2016</td>
+      <td><a href="{{ site.baseurl }}/view-contract/">ACE-CE-4156</a></td>
+      <td><a>Moore & Sons Construction</a></td>
+      <td><strong><a>View payroll</a></strong></td>
+    </tr>
+    <tr>
+      <td>March 25, 2016</td>
+      <td><a href="{{ site.baseurl }}/view-contract/">ACE-CE-4156</a></td>
+      <td><a>Diggedy Dozer</a></td>
+      <td><strong><a>View payroll</a></strong></td>
+    </tr>
+    <tr>
+      <td>March 25, 2016</td>
+      <td><a href="{{ site.baseurl }}/view-contract/">ACE-CE-4156</a></td>
+      <td><a>Great Lakes Building Co., Inc.</a></td>
+      <td><strong><a>View payroll</a></strong></td>
+    </tr>
+    <tr>
+      <td>March 18, 2016</td>
+      <td><a href="{{ site.baseurl }}/view-contract/">ACE-CE-4156</a></td>
+      <td><a>Roof Doctor</a></td>
+      <td><strong><a>View payroll</a></strong></td>
+    </tr>
+    <tr>
+      <td>March 18, 2016</td>
+      <td><a href="{{ site.baseurl }}/view-contract/">ACE-CE-4156</a></td>
+      <td><a>Moore & Sons Construction</a></td>
+      <td><strong><a>View payroll</a></strong></td>
+    </tr>
+    <tr>
+      <td>March 18, 2016</td>
+      <td><a href="{{ site.baseurl }}/view-contract/">ACE-CE-4156</a></td>
+      <td><a>Diggedy Dozer</a></td>
+      <td><strong><a>View payroll</a></strong></td>
+    </tr>
+    <tr>
+      <td>March 18, 2016</td>
+      <td><a href="{{ site.baseurl }}/view-contract/">ACE-CE-4156</a></td>
+      <td><a>ACME Construction</a></td>
+      <td><strong><a>View payroll</a></strong></td>
+    </tr>
+    <tr>
+      <td>March 11, 2016</td>
+      <td><a href="{{ site.baseurl }}/view-contract/">ACE-CE-4156</a></td>
+      <td><a>Roof Doctor</a></td>
+      <td><strong><a>View payroll</a></strong></td>
+    </tr>
+    <tr>
+      <td>March 11, 2016</td>
+      <td><a href="{{ site.baseurl }}/view-contract/">ACE-CE-4156</a></td>
+      <td><a>Moore & Sons Construction</a></td>
+      <td><strong><a>View payroll</a></strong></td>
+    </tr>
+    <tr>
+      <td>March 11, 2016</td>
+      <td><a href="{{ site.baseurl }}/view-contract/">ACE-CE-4156</a></td>
+      <td><a>Diggedy Dozer</a></td>
+      <td><strong><a>View payroll</a></strong></td>
+    </tr>
+    <tr>
+      <td>March 11, 2016</td>
+      <td><a href="{{ site.baseurl }}/view-contract/">ACE-CE-4156</a></td>
+      <td><a>ACME Construction</a></td>
+      <td><strong><a>View payroll</a></strong></td>
+    </tr>
+
+
+  </tbody>
+</table>

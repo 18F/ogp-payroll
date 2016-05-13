@@ -9,16 +9,47 @@ permalink: /create-new-contract/
 </div>
 <div class="usa-width-two-thirds">
 <form>
+
     <label for="contract-number">Contract number</label>
-    <input id="contract-number" name="project-info" type="number" required="" aria-required="true">
+    <input id="contract-number" name="project-info" required="" aria-required="true" value="ACE-CE-4125">
 
     <label for="prime-contractor">Prime contractor</label>
-    <input id="prime-contractor" name="project-info" type="number" required="" aria-required="true">
+    <h4>ACME Construction</h4>
 
-    <label for="project_number">Project name</label>
-    <input id="project-name" name="project-info" type="number" required="" aria-required="true">
+    <fieldset class="contract-start-date">
+      <legend>Contract start date</legend>
+      <span class="usa-form-hint usa-datefield-hint" id="date-hint">For example: 04 28 1986</span>
+      <div class="usa-date-of-birth">
+        <div class="usa-datefield usa-form-group usa-form-group-month">
+          <label for="start_month">Month</label>
+          <input aria-describedby="date-hint" class="usa-form-control" id="start_month" name="start_week" pattern="0?[1-9]|1[012]" type="number" min="1" max="12" value="">
+        </div>
+        <div class="usa-datefield usa-form-group usa-form-group-day">
+          <label for="start_day">Day</label>
+          <input aria-describedby="date-hint" class="usa-form-control" id="start_day" name="start_week" pattern="0?[1-9]|1[0-9]|2[0-9]|3[01]" type="number" min="1" max="31" value="">
+        </div>
+        <div class="usa-datefield usa-form-group usa-form-group-year">
+          <label for="start_year">Year</label>
+          <input aria-describedby="date-hint" class="usa-form-control" id="start_year" name="start_week" pattern="[0-9]{4}" type="number" min="1900" max="2000" value="">
+        </div>
+      </div>
+    </fieldset>
+
     <fieldset>
-      <legend>Project location</legend>
+      <legend>Contracting officer</legend>
+        <label for="contracting-officer">Name</label>
+        <input id="contracting-officer" name="contracting-officer"></input>
+
+        <label for="contracting-officer-contact">Phone</label>
+        <input id="contracting-officer-contact" name="contracting-officer"></input>
+
+        <label for="contracting-officer-contact">Email</label>
+        <input id="contracting-officer-contact" name="contracting-officer"></input>
+    </fieldset>
+    <fieldset>
+      <legend>Project</legend>
+      <label for="project_number">Name</label>
+      <input id="project-name" name="project-info" required="" aria-required="true">
       <label for="project-location">Street address</label>
       <input id="project-location" name="project-info" type="text" required="" aria-required="true">
       <div>
@@ -86,24 +117,6 @@ permalink: /create-new-contract/
       </div>
       <label for="zip">ZIP</label>
       <input class="usa-input-medium" id="zip" name="project-info" type="text" pattern="[\d]{5}(-[\d]{4})?" data-grouplength="5,4" data-delimiter="-" data-politespace="" required="" aria-required="true">
-    </fieldset>
-    <fieldset class="contract-start-date">
-      <legend>Contract start date</legend>
-      <span class="usa-form-hint usa-datefield-hint" id="date-hint">For example: 04 28 1986</span>
-      <div class="usa-date-of-birth">
-        <div class="usa-datefield usa-form-group usa-form-group-month">
-          <label for="start_month">Month</label>
-          <input aria-describedby="date-hint" class="usa-form-control" id="start_month" name="start_week" pattern="0?[1-9]|1[012]" type="number" min="1" max="12" value="">
-        </div>
-        <div class="usa-datefield usa-form-group usa-form-group-day">
-          <label for="start_day">Day</label>
-          <input aria-describedby="date-hint" class="usa-form-control" id="start_day" name="start_week" pattern="0?[1-9]|1[0-9]|2[0-9]|3[01]" type="number" min="1" max="31" value="">
-        </div>
-        <div class="usa-datefield usa-form-group usa-form-group-year">
-          <label for="start_year">Year</label>
-          <input aria-describedby="date-hint" class="usa-form-control" id="start_year" name="start_week" pattern="[0-9]{4}" type="number" min="1900" max="2000" value="">
-        </div>
-      </div>
     </fieldset>
     </form>
 
