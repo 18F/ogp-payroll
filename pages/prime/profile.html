@@ -4,11 +4,13 @@ title: ACME Construction
 permalink: /profile/acme/
 ---
   <h1>{{ page.title }}</h1>
+  <h4>ACME Construction is currently a prime contractor on <a>3 contracts</a> and a subcontractor on <a>2 contracts</a>.</h4>
 </div><!--closing div from default layout-->
 <div class="usa-grid">
   <div class="usa-width-one-half">
       <aside>
         <h4>Contact information <span><a href="#">Edit</a></span></h4>
+        <p><strong>Point of contact</strong> Eileen Gibson</p>
         <p><strong>Phone</strong> (555)555-5555</p>
         <p><strong>FAX</strong> (000)000-0000</p>
         <p><strong>Email</strong> acme@acmeconstruction.com</p>
@@ -18,32 +20,198 @@ permalink: /profile/acme/
 </div>
 <div class="usa-grid">
   <div class="usa-width-one-whole">
-  <h3>Prime contracts</h3>
-  <div class="usa-grid contract">
-    <div class="contract-deets usa-width-two-thirds">
-      <h3>ACE-CE-4125: Anacostia River Bridge</h3>
-      <p>25 A St. NE, Washington, DC 20017</p>
-      <p>Oct. 1, 2015 - July 1, 2017</p>
-      <button>View or edit contract</button>
-      <button class="usa-button-outline">Review my payrolls</button>
-    </div>
-    <div class="contract-peeps usa-width-one-third">
-      <strong>There are 9 subcontractors associated with this project.</strong>
-      <ul>
-        <li>Hardy Landscaping</li>
-        <li>Diggedy Dozer</li>
-        <li>Atlantic Northern</li>
-        <li>Vandelay Industries</li>
-        <li><a href="{{ site.baseurl }}/view-contract#subcontractors">and 5 more</a></li>
+    <h3>Contract ACE-CE-4125 (Anacostia River Bridge)</h3>
+    <h4>Reporting hierarchy</h4>
+    <div class="usa-accordion accordion-prime hierarchies">
+      <ul class="usa-unstyled-list">
+        <li>
+          <button class="usa-button-unstyled" aria-expanded="true" aria-controls="collapsible-anacostia" aria-expanded="true">
+            <table class="usa-table-borderless table-no-padding">
+              <tr>
+                <th scope="row-prime">
+                  <strong><i class="fa fa-user" aria-hidden="false"></i>Prime contractor: ACME Construction</strong>
+                </th>
+              </tr>
+            </table>
+          </button>
+          <div id="collapsible-anacostia" aria-hidden="false" class="usa-accordion-content">
+            <table class="usa-table-borderless accordion-table-inner">
+              <thead>
+                <tr>
+                  <th scope="col">Subcontractor</th>
+                  <th scope="col">Start date</th>
+                  <th scope="col"></th>
+                  <th scope="col"></th>
+                  <th scope="col"></th>
+                </tr>
+              </thead>
+              <tr>
+                <th scope="row">
+                Great Lakes Building Co., Inc.
+                </th>
+                <td>April 1, 2016</td>
+                <td></td>
+                <td><a href="{{ site.baseurl }}/all-payrolls?contractor=acmeconstruction&contract=acece9274">View payrolls</a></td>
+                <td></td>
+              </tr>
+
+              <tr>
+                <th scope="row">
+                Moore & Sons Construction
+                </th>
+                <td>April 1, 2016</td>
+                <td></td>
+                <td><a href="{{ site.baseurl }}/all-payrolls?contractor=acmeconstruction&contract=acece9274">View payrolls</a></td>
+                <td></td>
+              </tr>
+
+              <!-- Row sub BEGIN -->
+              <tr class="row-sub">
+                <th scope="row">Atlantic Northern</th>
+                <td>April 1, 2016</td>
+                <td></td>
+                <td><a href="{{ site.baseurl }}/all-payrolls?contractor=cogswellcogs&contract=acece9274">View payrolls</a></td>
+              </tr>
+              <tr class="row-sub">
+                <th scope="row">
+                  <i class="fa fa-plus" aria-hidden="false"></i>Werham Hogg
+                </th>
+                <td>April 8, 2016</td>
+                <td></td>
+                <td><a href="{{ site.baseurl }}/all-payrolls?contractor=wernhamhogg&contract=acece9274">View payrolls</a></td>
+              </tr>
+              <tr class="row-sub">
+                <th scope="row">Dunder Mifflin</th>
+                <td>April 15, 2016</td>
+                <td></td>
+                <td><a href="{{ site.baseurl }}/all-payrolls?contractor=dundermifflin&contract=acece9274">View payrolls</a></td>
+              </tr>
+              <!-- Row sub END -->
+
+              <tr>
+                <th scope="row">
+                Vandelay Industries
+                </th>
+                <td>April 1, 2016</td>
+                <td></td>
+                <td><a href="{{ site.baseurl }}/all-payrolls?contractor=acmeconstruction&contract=acece9274">View payrolls</a></td>
+                <td></td>
+              </tr>
+              <tr>
+                <th scope="row">
+                Roof Doctor, Co.
+                </th>
+                <td>April 1, 2016</td>
+                <td></td>
+                <td><a href="{{ site.baseurl }}/all-payrolls?contractor=acmeconstruction&contract=acece9274">View payrolls</a></td>
+                <td></td>
+              </tr>
+              <!-- Row sub BEGIN -->
+              <tr class="row-sub">
+                <th scope="row">Cogswell Cogs</th>
+                <td>April 1, 2016</td>
+                <td></td>
+                <td><a href="{{ site.baseurl }}/all-payrolls?contractor=cogswellcogs&contract=acece9274">View payrolls</a></td>
+              </tr>
+              <tr class="row-sub">
+                <th scope="row">
+                  <i class="fa fa-plus" aria-hidden="false"></i>Dunder Mifflin
+                </th>
+                <td>April 8, 2016</td>
+                <td></td>
+                <td><a href="{{ site.baseurl }}/all-payrolls?contractor=wernhamhogg&contract=acece9274">View payrolls</a></td>
+              </tr>
+              <tr class="row-sub">
+                <th scope="row">Bedrock Quarry & Gravel</th>
+                <td>April 15, 2016</td>
+                <td></td>
+                <td><a href="{{ site.baseurl }}/all-payrolls?contractor=dundermifflin&contract=acece9274">View payrolls</a></td>
+              </tr>
+              <!-- Row sub END -->
+
+              <tr>
+                <th scope="row">
+                Diggedy Dozer
+                </th>
+                <td>April 1, 2016</td>
+                <td></td>
+                <td><a href="{{ site.baseurl }}/all-payrolls?contractor=acmeconstruction&contract=acece9274">View payrolls</a></td>
+                <td></td>
+              </tr>
+
+            </table>
+          </li>
+        </ul>
+      </div>
+
+
+    <h3>Contract ACE-CE-9274 (12-12 Cumberland County)</h3>
+    <h4>Reporting hierarchy</h4>
+    <div class="usa-accordion accordion-prime hierarchies">
+      <ul class="usa-unstyled-list">
+        <li>
+          <button class="usa-button-unstyled" aria-expanded="true" aria-controls="collapsible-1">
+            <table class="usa-table-borderless table-no-padding">
+              <tr>
+                <th scope="row-prime">
+                  <strong>Prime contractor: Vandelay Industries</strong>
+                </th>
+              </tr>
+            </table>
+          </button>
+          <div id="collapsible-1" aria-hidden="false" class="usa-accordion-content">
+            <table class="usa-table-borderless accordion-table-inner">
+              <thead>
+                <tr>
+                  <th scope="col">Subcontractor</th>
+                  <th scope="col">Start date</th>
+                  <th scope="col"></th>
+                  <th scope="col"></th>
+                  <th scope="col"></th>
+                </tr>
+              </thead>
+              <tr>
+                <th scope="row">
+                  <i class="fa fa-user" aria-hidden="false"></i>
+                  ACME Construction (self)
+                </th>
+                <td>April 1, 2016</td>
+                <td></td>
+                <td><a href="{{ site.baseurl }}/all-payrolls?contractor=acmeconstruction&contract=acece9274">View payrolls</a></td>
+                <td></td>
+              </tr>
+
+              <!-- Row sub BEGIN -->
+              <tr class="row-sub">
+                <th scope="row">Cogswell Cogs</th>
+                <td>April 1, 2016</td>
+                <td></td>
+                <td><a href="{{ site.baseurl }}/all-payrolls?contractor=cogswellcogs&contract=acece9274">View payrolls</a></td>
+              </tr>
+              <tr class="row-sub">
+                <th scope="row">
+                  <i class="fa fa-plus" aria-hidden="false"></i>Wernham Hogg
+                </th>
+                <td>April 8, 2016</td>
+                <td></td>
+                <td><a href="{{ site.baseurl }}/all-payrolls?contractor=wernhamhogg&contract=acece9274">View payrolls</a></td>
+              </tr>
+              <tr class="row-sub">
+                <th scope="row">Dunder Mifflin</th>
+                <td>April 15, 2016</td>
+                <td></td>
+                <td><a href="{{ site.baseurl }}/all-payrolls?contractor=dundermifflin&contract=acece9274">View payrolls</a></td>
+              </tr>
+              <!-- Row sub END -->
+            </table>
+          </div>
+        </li>
       </ul>
     </div>
   </div>
 </div>
-</div>
-<div class="usa-grid">
-  <div class="usa-width-one-whole">
-  <h3>Prime contracts</h3>
-    <table class="usa-table-borderless">
+
+<!--    <table class="usa-table-borderless">
       <thead>
         <tr>
           <th scope="col">Contract number</th>
@@ -60,13 +228,6 @@ permalink: /profile/acme/
           <td>20 S Street SE, Washington, DC 20000</td>
           <td>Oct. 1, 2015</td>
           <td>July 1, 2016</td>
-        </tr>
-        <tr>
-          <td><a href="#">ACE-CE-7849</a></td>
-          <td>12-12-Cumberland County</td>
-          <td>6537 County T Road, Cumberland, VA 34201</td>
-          <td>Jan. 12, 2016</td>
-          <td>Nov. 31, 2016</td>
         </tr>
         <tr>
           <td><a href="#">ACE-CE-0023</a></td>
@@ -90,6 +251,13 @@ permalink: /profile/acme/
       </thead>
       <tbody>
         <tr>
+          <td><a href="#">ACE-CE-7849</a></td>
+          <td>12-12-Cumberland County</td>
+          <td>6537 County T Road, Cumberland, VA 34201</td>
+          <td>Jan. 12, 2016</td>
+          <td>Nov. 31, 2016</td>
+        </tr>
+        <tr>
           <td><a href="#">ACE-CE-6003</a></td>
           <td>Tri-Cities Federal Building</td>
           <td>1234 W. Dixon, Milan, IL 60004</td>
@@ -105,4 +273,4 @@ permalink: /profile/acme/
     <h2>Past contracts</h2>
     <h3>ACE-CE-4152</h3>
   </div>
-</div>
+</div>-->
