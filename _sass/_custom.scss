@@ -309,6 +309,16 @@ td input[type="checkbox"] + label {
   color: $color-gold;
 }
 
+.fa {
+  &.fa-flag + a {
+    font-weight: bold;
+  }
+  &.fa-times + span {
+    font-weight: bold;
+    color: $color-secondary;
+  }
+}
+
 .button-none {
   background-image: none !important;
 
