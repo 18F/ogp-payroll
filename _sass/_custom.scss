@@ -556,6 +556,12 @@ input[id=total-deductions] {
   margin-left: 2.7rem;
 }
 
+.usa-input-error-message {
+  .fa {
+    padding-right: 0;
+  }
+}
+
 // create contract
 label + h4 {
   margin-top: 5px;
