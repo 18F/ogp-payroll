@@ -372,6 +372,7 @@ td input[type="checkbox"] + label {
     padding-top: 10px;
     border: 4px solid #f1f1f1;
   }
+
   .accordion-prime-single table {
     line-height: 1.5;
   }
@@ -675,9 +676,11 @@ label[for="select-plans"] {
 .contract {
   background: #f1f1f1;
   padding: 4rem 6rem;
+
   h3 {
     margin-top: 0;
   }
+  
   ul {
     margin: 10px 0 0 0;
   }
