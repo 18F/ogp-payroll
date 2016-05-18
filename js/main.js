@@ -212,7 +212,7 @@ switch (setup.page) {
         evt.preventDefault();
         document.querySelector('.search-results').style.height = "1050px";
     });
-  case "past-payrolls":
+  case "all-payrolls":
     //$(".use-chosen").chosen();
 
   //dashboard
