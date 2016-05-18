@@ -44,6 +44,10 @@ legend {
   }
 }
 
+table.zebra tr:nth-child(even) {
+    background: #eee;
+}
+
 .chosen-drop ul li:before {
   content: "";
   display: block;
