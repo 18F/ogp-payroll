@@ -218,6 +218,44 @@ switch (setup.page) {
     };
     var payrolls = new List('payrolls', options);
 
+    function checkFilters(selectedFilter){
+      var filters = document.querySelectorAll('select');
+      var setFilters = {};
+      for (i=0; i<filters.length; i++){
+        setFilters[filters[i].id] = filters[i].value;
+      };
+      return setFilters;
+    }
+
+    [].forEach.call(document.querySelectorAll('select'), function(el){
+      el.addEventListener('change', function(evt, el){
+        var self = this,
+            sortField = this.id,
+            sortVal = this.value;
+        payrolls.filter(function(item) {
+          var fieldVal = item.values()[sortField].toLowerCase();
+          // reset the filter if any of the "all" options are chosen
+          if (sortVal == 'all'){
+              payrolls.filter();
+              var filters = checkFilters(self);
+              console.log(filters);
+              return false;
+            // TODO: This makes "received" match "not received"
+          } else if (fieldVal.includes(sortVal) || fieldVal.includes(sortVal.replace(/-/g, ' '))) {
+               var filters = checkFilters(self);
+               /*for(i=0; i<keys(filters).length; i++){
+                 var key = keys(filters)[i];
+                 console.log(item.values()[key], filters[key]);
+               }*/
+               return true;
+           } else {
+               return false;
+           }
+        });
+      });
+    });
+
+
   //dashboard
   case "certified-payroll-reporting":
     [].forEach.call(document.querySelectorAll('.usa-button-unstyled'), function(el){
