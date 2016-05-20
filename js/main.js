@@ -213,7 +213,10 @@ switch (setup.page) {
         document.querySelector('.search-results').style.height = "1050px";
     });
   case "all-payrolls":
-    //$(".use-chosen").chosen();
+    var options = {
+      valueNames:['weekend', 'contract-number', 'contractor', 'payroll-number', 'status']
+    };
+    var payrolls = new List('payrolls', options);
 
   //dashboard
   case "certified-payroll-reporting":
