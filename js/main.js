@@ -212,7 +212,9 @@ switch (setup.page) {
         evt.preventDefault();
         document.querySelector('.search-results').style.height = "1050px";
     });
-  case "all-payrolls":
+
+  //dashboard
+  case "certified-payroll-reporting":
     var options = {
       valueNames:['weekend', 'contract-number', 'contractor', 'payroll-number', 'status']
     };
@@ -252,24 +254,6 @@ switch (setup.page) {
                return false;
            }
         });
-      });
-    });
-
-
-  //dashboard
-  case "certified-payroll-reporting":
-    [].forEach.call(document.querySelectorAll('.usa-button-unstyled'), function(el){
-      el.addEventListener('click', function(evt){
-        //hacky way to see if the user was trying to click the input box
-        var stuntDouble = el.getBoundingClientRect();
-        if (evt.pageX >= (stuntDouble.right - 55)) {
-          var input = el.getElementsByTagName('input')[0];
-          if (input.checked == false) {
-            input.checked = true;
-          } else {
-            input.checked = false;
-          }
-        }
       });
     });
 }
