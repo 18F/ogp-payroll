@@ -49,156 +49,151 @@ permalink: /prime/all-payrolls/
 </div>
 <div class="usa-grid">
   <div class="usa-width-one-third">
-    <form>
       <label for="status">Payroll status</label>
-      <select name="status" id="status" class="use-chosen">
-        <option value="">All statuses</option>
-        <option value="">Sent</option>
-        <option value="">Received</option>
-        <option value="">Flagged</option>
-        <option value="">Not received</option>
-        <option value="">Delinquent</option>
+      <select name="status" id="status">
+        <option value="all">All statuses</option>
+        <option value="sent">Sent</option>
+        <option value="received">Received</option>
+        <option value="flagged">Flagged</option>
+        <option value="not received">Not received</option>
+        <option value="delinquent">Delinquent</option>
       </select>
-    </form>
   </div>
   <div class="usa-width-one-third">
-    <form>
       <label for="contract-number">Contract number</label>
-      <select name="contract-number" id="contract-number" class="use-chosen">
-        <option value="">All contracts</option>
-        <option value="ACE-CE-4156" selected>ACE-CE-4156</option>
-        <option value="ACE-CE-1654">ACE-CE-1654</option>
-        <option value="ACE-CE-6234">ACE-CE-6234</option>
+      <select name="contract-number" id="contract-number">
+        <option value="all">All contracts</option>
+        <option value="ace-ce-4156">ACE-CE-4156</option>
+        <option value="ace-ce-1654">ACE-CE-1654</option>
+        <option value="ace-ce-6234">ACE-CE-6234</option>
       </select>
-    </form>
   </div>
   <div class="usa-width-one-third">
-    <form>
-      <label for="company-name">Contractor name</label>
-      <select name="company-name" id="company-name" class="use-chosen">
-        <option value="">All contractors</option>
-        <option value="">ACME Construction (self)</option>
-        <option value="">Diggedy Dozer</option>
-        <option value="">Great Lakes Building Co., Inc.</option>
-        <option value="">Moore & Sons Construction</option>
-        <option value="">Roof Doctor</option>
-        <option value="">Vandelay Industries</option>
+      <label for="contractor">Contractor name</label>
+      <select name="contractor" id="contractor">
+        <option value="all">All contractors</option>
+        <option value="acme-construction">ACME Construction (self)</option>
+        <option value="diggedy-dozer">Diggedy Dozer</option>
+        <option value="great-lakes-building">Great Lakes Building</option>
+        <option value="moore-and-sons-construction">Moore and Sons Construction</option>
+        <option value="roof-doctor">Roof Doctor</option>
+        <option value="vandelay-industries">Vandelay Industries</option>
       </select>
-    </form>
   </div>
 </div>
 <h3>Showing <span>all</span> payrolls.</h3>
+<div id="payrolls">
 <table class="usa-table-borderless zebra">
   <thead>
     <tr>
-      <th scope="col">Week end date</th>
-      <th scope="col">Contract</th>
-      <th scope="col">Contractor</th>
-      <th scope="col">Payroll #</th>
-      <th scope="col">Status</th>
+      <th scope="col"><a class="sort" data-sort="weekend">Week end date</a></th>
+      <th scope="col"><a class="sort" data-sort="contract-number">Contract</a></th>
+      <th scope="col"><a class="sort" data-sort="contractor">Contractor</a></th>
+      <th scope="col"><a class="sort" data-sort="payroll-number">Payroll #</a></th>
+      <th scope="col"><a class="sort" data-sort="status">Status</a></th>
       <th scope="col"></th>
     </tr>
   </thead>
-  <tbody>
+  <tbody class="list">
     <tr>
-      <td>April 1, 2016</td>
-      <td><a href="{{ site.baseurl }}/view-contract/">ACE-CE-4156</a></td>
-      <td><a>ACME Construction</a></td>
-      <td>21</td>
-      <td>
+      <td class="weekend">April 1, 2016</td>
+      <td class="contract-number"><a href="{{ site.baseurl }}/view-contract/">ACE-CE-4156</a></td>
+      <td class="contractor"><a>ACME Construction</a></td>
+      <td class="payroll-number">21</td>
+      <td class="status">
         <i class="fa fa-check" aria-hidden="false"></i>
         <a href="{{ site.baseurl }}/review-hours-and-earnings/">Sent</a></td>
       <td></td>
     </tr>
     <tr>
-      <td>April 1, 2016</td>
-      <td><a href="{{ site.baseurl }}/view-contract/">ACE-CE-4156</a></td>
-      <td><a>Great Lakes Building Co., Inc.</a></td>
-      <td>12</td>
-      <td>
+      <td class="weekend">April 1, 2016</td>
+      <td class="contract-number"><a href="{{ site.baseurl }}/view-contract/">ACE-CE-4156</a></td>
+      <td class="contractor"><a>Great Lakes Building</a></td>
+      <td class="payroll-number">12</td>
+      <td class="status">
             <i class="fa fa-times" aria-hidden="false"></i>
             <span>Not received</span>
       </td>
       <td></td>
     </tr>
     <tr>
-      <td>April 1, 2016</td>
-      <td><a href="{{ site.baseurl }}/view-contract/">ACE-CE-4156</a></td>
-      <td><a>Moore & Sons Construction</a></td>
-      <td>18</td>
-      <td>
+      <td class="weekend">April 1, 2016</td>
+      <td class="contract-number"><a href="{{ site.baseurl }}/view-contract/">ACE-CE-4156</a></td>
+      <td class="contractor"><a>Moore & Sons Construction</a></td>
+      <td class="payroll-number">18</td>
+      <td class="status">
         <i class="fa fa-check" aria-hidden="false"></i>
         <a href="{{ site.baseurl }}/review-hours-and-earnings/">Sent</a></td>
       <td></td>
     </tr>
     <tr>
-      <td>April 1, 2016</td>
-      <td><a href="{{ site.baseurl }}/view-contract/">ACE-CE-4156</a></td>
-      <td><a>Atlantic Northern</a></td>
-      <td>1</td>
-      <td>
+      <td class="weekend">April 1, 2016</td>
+      <td class="contract-number"><a href="{{ site.baseurl }}/view-contract/">ACE-CE-4156</a></td>
+      <td class="contractor"><a>Atlantic Northern</a></td>
+      <td class="payroll-number">1</td>
+      <td class="status">
         <i class="fa fa-check" aria-hidden="false"></i>
         <strong><a href="{{ site.baseurl }}/review-hours-and-earnings/">Ready to send</a></strong></td>
       <td></td>
     </tr>
     <tr>
-      <td>April 1, 2016</td>
-      <td><a href="{{ site.baseurl }}/view-contract/">ACE-CE-4156</a></td>
-      <td><a>Vandelay Industries</a></td>
-      <td>1</td>
-      <td>
+      <td class="weekend">April 1, 2016</td>
+      <td class="contract-number"><a href="{{ site.baseurl }}/view-contract/">ACE-CE-1654</a></td>
+      <td class="contractor"><a>Vandelay Industries</a></td>
+      <td class="payroll-number">1</td>
+      <td class="status">
         <i class="fa fa-check" aria-hidden="false"></i>
         <strong><a href="{{ site.baseurl }}/review-hours-and-earnings/">Ready to send</a></strong></td>
       <td></td>
     </tr>
     <tr>
-      <td>April 1, 2016</td>
-      <td><a href="{{ site.baseurl }}/view-contract/">ACE-CE-4156</a></td>
-      <td><a>Roof Doctor</a></td>
-      <td>6</td>
-      <td>
+      <td class="weekend">April 1, 2016</td>
+      <td class="contract-number"><a href="{{ site.baseurl }}/view-contract/">ACE-CE-1654</a></td>
+      <td class="contractor"><a>Roof Doctor</a></td>
+      <td class="payroll-number">6</td>
+      <td class="status">
         <i class="fa fa-check" aria-hidden="false"></i>
         <a href="{{ site.baseurl }}/review-hours-and-earnings/">Sent</a></td>
       <td></td>
     </tr>
     <tr>
-      <td>March 25, 2016</td>
-      <td><a href="{{ site.baseurl }}/view-contract/">ACE-CE-4156</a></td>
-      <td><a>ACME Construction</a></td>
-      <td>20</td>
-      <td>
+      <td class="weekend">March 25, 2016</td>
+      <td class="contract-number"><a href="{{ site.baseurl }}/view-contract/">ACE-CE-4156</a></td>
+      <td class="contractor"><a>ACME Construction</a></td>
+      <td class="payroll-number">20</td>
+      <td class="status">
         <i class="fa fa-check" aria-hidden="false"></i>
         <a href="{{ site.baseurl }}/review-hours-and-earnings/">Sent</a></td>
 </td>
       <td></td>
     </tr>
     <tr>
-      <td>March 25, 2016</td>
-      <td><a href="{{ site.baseurl }}/view-contract/">ACE-CE-4156</a></td>
-      <td><a>Roof Doctor</a></td>
-      <td>5</td>
-      <td>
+      <td class="weekend">March 25, 2016</td>
+      <td class="contract-number"><a href="{{ site.baseurl }}/view-contract/">ACE-CE-1654</a></td>
+      <td class="contractor"><a>Roof Doctor</a></td>
+      <td class="payroll-number">5</td>
+      <td class="status">
         <i class="fa fa-check" aria-hidden="false"></i>
         <a href="{{ site.baseurl }}/review-hours-and-earnings/">Sent</a></td>
       <td></td>
     </tr>
     <tr>
-      <td>March 25, 2016</td>
-      <td><a href="{{ site.baseurl }}/view-contract/">ACE-CE-4156</a></td>
-      <td><a>Wernham Hogg</a><br/><small><em>Roof Doctor sub</em><small></td>
-      <td>5</td>
-      <td>
+      <td class="weekend">March 25, 2016</td>
+      <td class="contract-number"><a href="{{ site.baseurl }}/view-contract/">ACE-CE-1654</a></td>
+      <td class="contractor"><a>Wernham Hogg</a><br/><small><em>Roof Doctor sub</em><small></td>
+      <td class="payroll-number">5</td>
+      <td class="status">
         <i class="fa fa-times" aria-hidden="false"></i>
         <span>Not received</span>
       </td>
       <td></td>
     </tr>
     <tr>
-      <td>March 25, 2016</td>
-      <td><a href="{{ site.baseurl }}/view-contract/">ACE-CE-4156</a></td>
-      <td><a>Dunder Mifflen</a><br/><small><em>Roof Doctor sub</em><small></td>
-      <td>5</td>
-      <td>
+      <td class="weekend">March 25, 2016</td>
+      <td class="contract-number"><a href="{{ site.baseurl }}/view-contract/">ACE-CE-1654</a></td>
+      <td class="contractor"><a>Dunder Mifflen</a><br/><small><em>Roof Doctor sub</em><small></td>
+      <td class="payroll-number">5</td>
+      <td class="status">
         <i class="fa fa-flag" aria-hidden="false"></i>
         <a href="#">Flagged</a></td>
       </td>
@@ -206,128 +201,128 @@ permalink: /prime/all-payrolls/
     </tr>
 
     <tr>
-      <td>March 25, 2016</td>
-      <td><a href="{{ site.baseurl }}/view-contract/">ACE-CE-4156</a></td>
-      <td><a>Cogswell Cogs</a><br/><small><em>Roof Doctor sub</em><small></td>
-      <td>5</td>
-      <td>
+      <td class="weekend">March 25, 2016</td>
+      <td class="contract-number"><a href="{{ site.baseurl }}/view-contract/">ACE-CE-1654</a></td>
+      <td class="contractor"><a>Cogswell Cogs</a><br/><small><em>Roof Doctor sub</em><small></td>
+      <td class="payroll-number">5</td>
+      <td class="status">
         <i class="fa fa-check" aria-hidden="false"></i>
         <a href="{{ site.baseurl }}/review-hours-and-earnings/">Sent</a></td>
       <td></td>
     </tr>
 
     <tr>
-      <td>March 25, 2016</td>
-      <td><a href="{{ site.baseurl }}/view-contract/">ACE-CE-4156</a></td>
-      <td><a>Moore & Sons Construction</a></td>
-      <td>17</td>
-      <td>
+      <td class="weekend">March 25, 2016</td>
+      <td class="contract-number"><a href="{{ site.baseurl }}/view-contract/">ACE-CE-4156</a></td>
+      <td class="contractor"><a>Moore and Sons Construction</a></td>
+      <td class="payroll-number">17</td>
+      <td class="status">
         <i class="fa fa-check" aria-hidden="false"></i>
         <a href="{{ site.baseurl }}/review-hours-and-earnings/">Sent</a></td>
       <td></td>
     </tr>
     <tr>
-      <td>March 25, 2016</td>
-      <td><a href="{{ site.baseurl }}/view-contract/">ACE-CE-4156</a></td>
-      <td><a>Diggedy Dozer</a></td>
-      <td>20 <strong>(final)</strong></td>
-      <td>
+      <td class="weekend">March 25, 2016</td>
+      <td class="contract-number"><a href="{{ site.baseurl }}/view-contract/">ACE-CE-6234</a></td>
+      <td class="contractor"><a>Diggedy Dozer</a></td>
+      <td class="payroll-number">20</td>
+      <td class="status">
         <i class="fa fa-flag" aria-hidden="false"></i>
         <a href="#">Flagged</a></td>
       <td></td>
     </tr>
     <tr>
-      <td>March 25, 2016</td>
-      <td><a href="{{ site.baseurl }}/view-contract/">ACE-CE-4156</a></td>
-      <td><a>Great Lakes Building Co., Inc.</a></td>
-      <td>11</td>
-      <td>
+      <td class="weekend">March 25, 2016</td>
+      <td class="contract-number"><a href="{{ site.baseurl }}/view-contract/">ACE-CE-4156</a></td>
+      <td class="contractor"><a>Great Lakes Building</a></td>
+      <td class="payroll-number">11</td>
+      <td class="status">
         <i class="fa fa-times" aria-hidden="false"></i>
         <span>Delinquent</span>
       </td>
       <td></td>
     </tr>
     <tr>
-      <td>March 18, 2016</td>
-      <td><a href="{{ site.baseurl }}/view-contract/">ACE-CE-4156</a></td>
-      <td><a>Roof Doctor</a></td>
-      <td>4</td>
-      <td>
+      <td class="weekend">March 18, 2016</td>
+      <td class="contract-number"><a href="{{ site.baseurl }}/view-contract/">ACE-CE-1654</a></td>
+      <td class="contractor"><a>Roof Doctor</a></td>
+      <td class="payroll-number">4</td>
+      <td class="status">
         <i class="fa fa-check" aria-hidden="false"></i>
         <a href="{{ site.baseurl }}/review-hours-and-earnings/">Sent</a></td>
       <td></td>
     </tr>
     <tr>
-      <td>March 18, 2016</td>
-      <td><a href="{{ site.baseurl }}/view-contract/">ACE-CE-4156</a></td>
-      <td><a>Moore & Sons Construction</a></td>
-      <td>16</td>
-      <td>
+      <td class="weekend">March 18, 2016</td>
+      <td class="contract-number"><a href="{{ site.baseurl }}/view-contract/">ACE-CE-4156</a></td>
+      <td class="contractor"><a>Moore and Sons Construction</a></td>
+      <td class="payroll-number">16</td>
+      <td class="status">
         <i class="fa fa-check" aria-hidden="false"></i>
         <a href="{{ site.baseurl }}/review-hours-and-earnings/">Sent</a></td>
       <td></td>
     </tr>
     <tr>
-      <td>March 18, 2016</td>
-      <td><a href="{{ site.baseurl }}/view-contract/">ACE-CE-4156</a></td>
-      <td><a>Diggedy Dozer</a></td>
-      <td>19</td>
-      <td>
+      <td class="weekend">March 18, 2016</td>
+      <td class="contract-number"><a href="{{ site.baseurl }}/view-contract/">ACE-CE-6234</a></td>
+      <td class="contractor"><a>Diggedy Dozer</a></td>
+      <td class="payroll-number">19</td>
+      <td class="status">
         <i class="fa fa-check" aria-hidden="false"></i>
         <a href="{{ site.baseurl }}/review-hours-and-earnings/">Sent</a></td>
       <td></td>
     </tr>
     <tr>
-      <td>March 18, 2016</td>
-      <td><a href="{{ site.baseurl }}/view-contract/">ACE-CE-4156</a></td>
-      <td><a>ACME Construction</a></td>
-      <td>19</td>
-      <td>
+      <td class="weekend">March 18, 2016</td>
+      <td class="contract-number"><a href="{{ site.baseurl }}/view-contract/">ACE-CE-4156</a></td>
+      <td class="contractor"><a>ACME Construction</a></td>
+      <td class="payroll-number">19</td>
+      <td class="status">
         <i class="fa fa-check" aria-hidden="false"></i>
         <a href="{{ site.baseurl }}/review-hours-and-earnings/">Sent</a></td>
       <td></td>
     </tr>
     <tr>
-      <td>March 11, 2016</td>
-      <td><a href="{{ site.baseurl }}/view-contract/">ACE-CE-4156</a></td>
-      <td><a>Roof Doctor</a></td>
-      <td>3</td>
-      <td>
+      <td class="weekend">March 11, 2016</td>
+      <td class="contract-number"><a href="{{ site.baseurl }}/view-contract/">ACE-CE-4156</a></td>
+      <td class="contractor"><a>Roof Doctor</a></td>
+      <td class="payroll-number">3</td>
+      <td class="status">
         <i class="fa fa-check" aria-hidden="false"></i>
         <a href="{{ site.baseurl }}/review-hours-and-earnings/">Sent</a></td>
       <td></td>
     </tr>
     <tr>
-      <td>March 11, 2016</td>
-      <td><a href="{{ site.baseurl }}/view-contract/">ACE-CE-4156</a></td>
-      <td><a>Moore & Sons Construction</a></td>
-      <td>15</td>
-      <td>
+      <td class="weekend">March 11, 2016</td>
+      <td class="contract-number"><a href="{{ site.baseurl }}/view-contract/">ACE-CE-4156</a></td>
+      <td class="contractor"><a>Moore and Sons Construction</a></td>
+      <td class="payroll-number">15</td>
+      <td class="status">
         <i class="fa fa-times" aria-hidden="false"></i>
         <span>Delinquent</span>
-</td>
+      </td>
       <td></td>
     </tr>
     <tr>
-      <td>March 11, 2016</td>
-      <td><a href="{{ site.baseurl }}/view-contract/">ACE-CE-4156</a></td>
-      <td><a>Diggedy Dozer</a></td>
-      <td>18</td>
-      <td>
+      <td class="weekend">March 11, 2016</td>
+      <td class="contract-number"><a href="{{ site.baseurl }}/view-contract/">ACE-CE-6234</a></td>
+      <td class="contractor"><a>Diggedy Dozer</a></td>
+      <td class="payroll-number">18</td>
+      <td class="status">
         <i class="fa fa-check" aria-hidden="false"></i>
         <a href="{{ site.baseurl }}/review-hours-and-earnings/">Sent</a></td>
       <td></td>
     </tr>
     <tr>
-      <td>March 11, 2016</td>
-      <td><a href="{{ site.baseurl }}/view-contract/">ACE-CE-4156</a></td>
-      <td><a>ACME Construction</a></td>
-      <td>18</td>
-      <td>
+      <td class="weekend">March 11, 2016</td>
+      <td class="contract-number"><a href="{{ site.baseurl }}/view-contract/">ACE-CE-4156</a></td>
+      <td class="contractor"><a>ACME Construction</a></td>
+      <td class="payroll-number">18</td>
+      <td class="status">
         <i class="fa fa-check" aria-hidden="false"></i>
         <a href="{{ site.baseurl }}/review-hours-and-earnings/">Sent</a></td>
       <td></td>
     </tr>
   </tbody>
 </table>
-
+</div>
