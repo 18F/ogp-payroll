@@ -124,6 +124,24 @@ a:visited {
   }
 }
 
+.header-alert {
+  font-weight: $font-bold;
+  text-decoration: none;
+
+  .fa-bell {
+    padding-right: 0;
+  }
+
+  span {
+    font-size: 13px;
+  }
+}
+
+.header-divider {
+  color: $color-gray-light;
+  margin: 0 1rem;
+}
+
 .button-left {
   margin-top: 3rem;
   display: inline-block;
