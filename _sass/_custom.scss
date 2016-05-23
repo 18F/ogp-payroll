@@ -211,7 +211,16 @@ table {
     padding-bottom: 3rem;
     text-align: center;
   }
+
+  label {
+    text-align: left;
+  }
+
+  select {
+    max-width: 32rem;
+  }
 }
+
 
 .table-past-projects {
   tbody {
