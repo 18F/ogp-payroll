@@ -229,6 +229,14 @@ switch (setup.page) {
       return setFilters;
     }
 
+    payrolls.filter(function(item){
+      if (item.values().status.includes('Sent')){
+            return false;
+          } else {
+            return true;
+          }
+    });
+
     [].forEach.call(document.querySelectorAll('select'), function(el){
       el.addEventListener('change', function(evt, el){
         var self = this,
@@ -236,13 +244,19 @@ switch (setup.page) {
             sortVal = this.value;
         payrolls.filter(function(item) {
           var fieldVal = item.values()[sortField].toLowerCase();
+          if (sortVal == 'actionable')  {
+            if (item.values().status.includes('Sent')){
+              return false;
+            } else {
+              return true;
+            }
+
+          } else if (sortVal == 'all'){
           // reset the filter if any of the "all" options are chosen
-          if (sortVal == 'all'){
               payrolls.filter();
               var filters = checkFilters(self);
               console.log(filters);
               return false;
-            // TODO: This makes "received" match "not received"
           } else if (fieldVal.includes(sortVal) || fieldVal.includes(sortVal.replace(/-/g, ' '))) {
                var filters = checkFilters(self);
                /*for(i=0; i<keys(filters).length; i++){
