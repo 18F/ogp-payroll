@@ -6,11 +6,12 @@ permalink: /prime/review-sub-hours-and-earnings/
 
 <h1>{{ page.title }}</h1>
 <p>
-  Contractor: ACME Construction<br>
+  Sub contractor: Great Lakes Building<br>
   Payroll #20<br>
-  Week ending March 14, 2016<br>
+  Week ending: March 14, 2016<br>
   Project: Anacostia River Bridge<br>
-  Contract # ACE-CE-4156
+  Contract # ACE-CE-4156<br>
+  Received: March 16, 2016
 </p>
 
 <table>
@@ -23,9 +24,11 @@ permalink: /prime/review-sub-hours-and-earnings/
       <th class="col-hours" scope="col">Hours by day/date<br>5 6 7 8 9 10 11<br>S M T W Th  F S</th>
       <th scope="col">Total hours</th>
       <th scope="col">Rate</th>
+      <th scope="col">Fringes (cash)</th>
+      <th scope="col">Fringes (employer-paid)</th>
       <th scope="col">Gross earnings:  Federal projects</th>
       <th scope="col">Gross earnings: All projects</th>
-      <th scope="col">Send back</th>
+      <th scope="col">Make changes</th>
     </tr>
   </thead>
   <tbody>
@@ -36,21 +39,32 @@ permalink: /prime/review-sub-hours-and-earnings/
       <td>Carpenter</td>
       <td><span class="hours-data">0 8 8 8 8 8 0</span><br>OT: 0 1 1 1 1 1 0</td>
       <td>40<br>5</td>
-      <td>17.98<br>35.96</td>
-      <td>899.00</td>
-      <td>899.00</td>
+      <td>20.00<br>30.00</td>
+      <td>0</td>
+      <td>1.00</td>
+      <td>995.00</td>
+      <td>995.00</td>
       <td><a class="usa-button" href="{{ site.baseurl }}/flag-hours/">Flag</a></td>
     </tr>
     <tr>
       <th scope="row">Gonzales</th>
       <td>Miguel</td>
       <td>0714</td>
-      <td>Carpenter</td>
-      <td><span class="hours-data">0 8 8 8 8 8 0</span><br>OT: 0 1 1 1 1 1 0</td>
-      <td>40<br>5</td>
-      <td>17.98<br>35.96</td>
-      <td>224.00</td>
-      <td>899.00</td>
+      <td>
+        Cement mixer
+        <br>
+        <span class="usa-input-error-message">
+          <i class="fa fa-exclamation-circle" aria-hidden="false"></i>
+          Not listed on contract
+        </span>
+      </td>
+      <td><span class="hours-data">0 8 8 4 0 0 0</span><br>OT: 0 0 0 0 0 0 0</td>
+      <td>20<br>0</td>
+      <td>20<br>30</td>
+      <td>0</td>
+      <td>1.00</td>
+      <td>420.00</td>
+      <td>800.00</td>
       <td><a class="usa-button" href="{{ site.baseurl }}/flag-hours/">Flag</a></td>
     </tr>
     <tr>
@@ -59,10 +73,19 @@ permalink: /prime/review-sub-hours-and-earnings/
       <td>0417</td>
       <td>Carpenter (apprentice)</td>
       <td><span class="hours-data">0 8 8 8 8 8 0</span></td>
-      <td>20</td>
-      <td>12.64</td>
-      <td>505.60</td>
-      <td>505.60</td>
+      <td>40</td>
+      <td>
+        15.00
+        <br>
+        <span class="usa-input-error-message">
+          <i class="fa fa-exclamation-circle" aria-hidden="false"></i>
+          Prevailing wage is $20
+        </span>
+      </td>
+      <td>0</td>
+      <td>0.50</td>
+      <td>620.00</td>
+      <td>620.00</td>
       <td><a class="usa-button" href="{{ site.baseurl }}/flag-hours/">Flag</a></td>
     </tr>
     <tr>
@@ -72,13 +95,15 @@ permalink: /prime/review-sub-hours-and-earnings/
       <td>Bricklayer<hr>Unskilled labor</td>
       <td><span class="hours-data">0 4 4 4 4 4 0</span><hr><span class="hours-data">0 4 4 4 4 4 0</span><br>OT: 0 1 1 1 1 1 0</td>
       <td>20<hr>20<br>5</td>
-      <td>17.46<hr>14.30<br>18.52</td>
-      <td>728.56</td>
-      <td>728.56</td>
+      <td>17.50<hr>10.00<br>15.00</td>
+      <td>2.50</td>
+      <td>0</td>
+      <td>675.00</td>
+      <td>675.00</td>
       <td><a class="usa-button" href="{{ site.baseurl }}/flag-hours/">Flag</a></td>
     </tr>
   </tbody>
 </table>
 
-<a class="usa-button" href="{{ site.baseurl }}/review-sub-deductions/">View deductions</a>
+<a class="usa-button" href="{{ site.baseurl }}/prime/review-sub-deductions/">View deductions</a>
 <a class="button-back" href="{{ site.baseurl }}/welcome/">Go back</a>
