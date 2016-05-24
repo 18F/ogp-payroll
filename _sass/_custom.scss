@@ -211,7 +211,16 @@ table {
     padding-bottom: 3rem;
     text-align: center;
   }
+
+  label {
+    text-align: left;
+  }
+
+  select {
+    max-width: 32rem;
+  }
 }
+
 
 .table-past-projects {
   tbody {
@@ -398,6 +407,11 @@ td input[type="checkbox"] + label {
   .accordion-prime-single table {
     line-height: 1.5;
   }
+}
+
+.status-new {
+  font-size: 13px;
+  margin-left: 5px;
 }
 
 .sort {
@@ -709,5 +723,46 @@ label[for="select-plans"] {
 
   ul {
     margin: 10px 0 0 0;
+  }
+}
+
+// Custom tooltip styles -------------- //
+
+/* Tooltip container */
+.tooltip {
+  position: relative;
+  display: inline-block;
+
+  /* Show the tooltip text when you mouse over the tooltip container */
+  &:hover .tooltiptext {
+    visibility: visible;
+  }
+
+  .tooltiptext {
+    background-color: $color-base;
+    border-radius: 6px;
+    bottom: 100%;
+    color: #fff;
+    font-size: 13px;
+    left: 50%; 
+    padding: 5px 8px;
+    margin-left: -100px; /* Use half of the width (120/2 = 60), to center the tooltip */
+    width: 200px;
+    visibility: hidden;
+
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 1;
+  }
+
+  .tooltiptext::after {
+    content: " ";
+    position: absolute;
+    top: 100%; /* At the bottom of the tooltip */
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: $color-base transparent transparent transparent;
   }
 }
