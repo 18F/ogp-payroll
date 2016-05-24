@@ -1,0 +1,29 @@
+---
+layout: default
+title: File a no-work payroll
+permalink: /no-work-payroll/
+---
+
+<h1>{{ page.title }}</h1>
+<h3>Payroll #20: No work</h3>
+<p><strong>ACME Construction</strong> has done no work on contract <strong>#ACE-CE-4156</strong> for the week ending <strong>03/14/2016</strong>.</p>
+    <fieldset class="no-work-date">
+      <input id="no-work-continue" type="checkbox" name="no-work-continue" value="no-work-continue">
+      <label for="no-work-continue" style="margin-top: 0; max-width: none;"><em>(Optional)</em> Automatically file a no work payroll for this contract every week through the date below.</label>
+          <div class="usa-date-of-birth">
+            <div class="usa-datefield usa-form-group usa-form-group-month">
+              <label for="end_month">Month</label>
+              <input aria-describedby="dobHint" class="usa-form-control" id="end_month" name="end_week" pattern="0?[1-9]|1[012]" type="number" min="1" max="12" value="">
+            </div>
+            <div class="usa-datefield usa-form-group usa-form-group-day">
+              <label for="end_day">Day</label>
+              <input aria-describedby="dobHint" class="usa-form-control" id="end_day" name="end_week" pattern="0?[1-9]|1[0-9]|2[0-9]|3[01]" type="number" min="1" max="31" value="">
+            </div>
+            <div class="usa-datefield usa-form-group usa-form-group-year">
+              <label for="end_day">Year</label>
+              <input aria-describedby="dobHint" class="usa-form-control" id="end_year" name="end_week" pattern="[0-9]{4}" type="number" min="1900" max="2000" value="">
+            </div>
+          </div>
+        </fieldset>
+
+<p><a class="usa-button" href="{{ site.baseurl }}/sign-and-certify/">Certify and send payroll</a></p>
