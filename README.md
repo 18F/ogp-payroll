@@ -12,6 +12,8 @@ Copy and paste each of the following steps to get the site up and running.
 
 You should be able to see the site at: http://127.0.0.1:4000
 
+>**Warning**: this is a prototype and the code should not be used and will need extensive refactoring.
+
 ### Public domain
 
 This project is in the worldwide [public domain](LICENSE.md). As stated in [CONTRIBUTING](CONTRIBUTING.md):
