@@ -204,14 +204,19 @@ switch (setup.page) {
     setup.checkAgainstMinimum();
     break;
 
-  case "create-or-choose-new-payroll":
-    sessionStorage.clear();
-
   case "create-new-contract":
     document.getElementById('search-button').addEventListener('click', function(evt) {
         evt.preventDefault();
         document.querySelector('.search-results').style.height = "1050px";
     });
+    break;
+
+  case "contractor-profile":
+    var contractor = window.location.search.substring(1);
+    [].forEach.call(document.querySelectorAll('.sub-name'), function(el){
+      el.innerHTML = contractor.replace(/-/g, ' ');
+    });
+    break;
 
   //dashboard
   case "certified-payroll-reporting":
