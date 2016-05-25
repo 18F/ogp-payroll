@@ -6,7 +6,7 @@ permalink: /add-new-payroll/
 
 <h1>{{ page.title }}</h1>
 <div class="usa-width-one-half">
-  <h2>Enter new payroll</h2>
+
   <form>
     <fieldset class="week-second">
     <legend>Payroll week end date</legend>
@@ -27,17 +27,20 @@ permalink: /add-new-payroll/
     </div>
   </fieldset>
   </form>
-  <h4>Choose the project this payroll is for</h4>
+
   <form>
-    <label for="payroll-info">Contract number</label>
+    <label for="payroll-info"><strong>Contract number</strong> </label>
     <select name="payroll-info" id="contract-number">
       <option value=""></option>
       <option value="ACE-CE-4156">ACE-CE-4156</option>
       <option value="ACE-CE-1654">ACE-CE-1654</option>
       <option value="ACE-CE-6234">ACE-CE-6234</option>
     </select>
+  </form>
   <input id="final-payroll" type="checkbox" name="final-payroll" value="final-payroll">
   <label for="final-payroll">This is the final payroll for this contract.</label>
-    <a class="usa-button" href="{{ site.baseurl }}/enter-employee-details/">Select</a>
-  </form>
+  <input id="no-work-payroll" type="checkbox" name="no-work-payroll" value="no-work-payroll">
+  <label for="no-work-payroll">I need to file a no-work payroll.</label>
+  <p><button class="usa-button" id="upload" href="{{ site.baseurl }}/review-hours-and-earnings/">Upload payroll</button>
+  <a class="usa-button usa-button-outline" id="enter" href="{{ site.baseurl }}/enter-employee-details/">Enter payroll</a></p>
 </div>

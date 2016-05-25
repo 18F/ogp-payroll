@@ -184,6 +184,19 @@ var setup = {
 setup.addClickHandlers();
 
 switch (setup.page) {
+  case "add-new-payroll":
+    var upload = document.getElementById('upload'),
+        enter = document.getElementById('enter');
+    document.querySelector('#no-work-payroll').addEventListener('click', function(evt) {
+      if (upload.disabled) {
+        upload.className = 'usa-button';
+        enter.setAttribute('href', '/enter-employee-details/')
+      } else {
+        upload.className = 'usa-button-disabled';
+        enter.setAttribute('href', '/no-work-payroll/')
+      }
+    });
+
   case "enter-worker-details":
     setup.slideDownHandlers();
     setup.createWorkClassifications();

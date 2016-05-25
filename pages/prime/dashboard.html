@@ -4,17 +4,17 @@ title: Certified Payroll Reporting
 permalink: /prime/welcome/
 ---
 
-<div class="standfirst">
-  <h1>{{ page.title }}</h1>
-  <a class="usa-button" href="{{ site.baseurl }}/upload-payroll/">Upload new payroll</a>
-  <a class="usa-button" href="{{ site.baseurl }}/add-new-payroll/">Enter new payroll</a>
-</div>
+  <h1>Certified Payroll Dashboard</h1>
+  <p><a class="usa-button" href="{{ site.baseurl }}/add-new-payroll/">Create new payroll record</a>
+  <small><em>No work done this week? You'll still need to file a no-work payroll.</em></small></p>
+
+  <h2>Manage my payroll</h2>
 </div><!--closing div from template-->
 <div class="usa-grid">
-  <div class="usa-width-one-third">
+  <div class="usa-width-one-fourth">
+    <h4 style="margin: 0;">Filter by:</h4>
     <fieldset class="Week end date">
-      <legend>Date range</legend>
-      <label>Start date</label>
+      <label>Week end date</label>
       <div class="usa-date-of-birth">
         <div class="usa-datefield usa-form-group usa-form-group-month">
           <label for="end_month">Month</label>
@@ -29,12 +29,9 @@ permalink: /prime/welcome/
           <input aria-describedby="dobHint" class="usa-form-control" id="end_year" name="end_week" pattern="[0-9]{4}" type="number" min="1900" max="2000" value="">
         </div>
       </div>
-    </fieldset>
-  </div>
-  <div class="usa-width-one-third">
-    <fieldset style="margin-top: 55px;">
-      <label>End date</label>
-      <div class="usa-date-of-birth">
+      <input id="show-end-date" type="checkbox" name="select" value="show-end-date">
+      <label for="show-end-date">Date range</label>
+      <div class="usa-date-of-birth" style="display: none;">
         <div class="usa-datefield usa-form-group usa-form-group-month">
           <label for="end_month">Month</label>
           <input aria-describedby="dobHint" class="usa-form-control" id="end_month" name="end_week" pattern="0?[1-9]|1[012]" type="number" min="1" max="12" value="">
@@ -49,11 +46,8 @@ permalink: /prime/welcome/
         </div>
       </div>
     </fieldset>
-
-  </div>
 </div>
-<div class="usa-grid">
-  <div class="usa-width-one-third">
+<div class="usa-width-one-fourth" style="margin-top: 45px;">
       <label for="status">Payroll status</label>
       <select name="status" id="status">
         <option value="actionable">Actionable statuses</option>
@@ -64,7 +58,7 @@ permalink: /prime/welcome/
         <option value="delinquent">Delinquent</option>
       </select>
   </div>
-  <div class="usa-width-one-third">
+  <div class="usa-width-one-fourth" style="margin-top: 45px;">
       <label for="contract-number">Contract number</label>
       <select name="contract-number" id="contract-number">
         <option value="all">All contracts</option>
@@ -73,7 +67,7 @@ permalink: /prime/welcome/
         <option value="ace-ce-6234">ACE-CE-6234</option>
       </select>
   </div>
-  <div class="usa-width-one-third">
+  <div class="usa-width-one-fourth" style="margin-top: 45px;">
       <label for="contractor">Contractor name</label>
       <select name="contractor" id="contractor">
         <option value="all">All contractors</option>
