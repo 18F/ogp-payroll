@@ -39,7 +39,8 @@ permalink: /add-new-payroll/
   </form>
   <input id="final-payroll" type="checkbox" name="final-payroll" value="final-payroll">
   <label for="final-payroll">This is the final payroll for this contract.</label>
-  <p><a class="usa-button" href="{{ site.baseurl }}/review-hours-and-earnings/">Upload payroll</a>
-  <a class="usa-button usa-button-outline" href="{{ site.baseurl }}/enter-employee-details/">Enter payroll</a></p>
-  <p><small><em>No work done this week? <a href="{{ site.baseurl }}/no-work-payroll/">File a no-work payroll.</a></em></small></p>
+  <input id="no-work-payroll" type="checkbox" name="no-work-payroll" value="no-work-payroll">
+  <label for="no-work-payroll">I need to file a no-work payroll.</label>
+  <p><button class="usa-button" id="upload" href="{{ site.baseurl }}/review-hours-and-earnings/">Upload payroll</button>
+  <a class="usa-button usa-button-outline" id="enter" href="{{ site.baseurl }}/enter-employee-details/">Enter payroll</a></p>
 </div>
