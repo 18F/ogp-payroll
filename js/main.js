@@ -5,17 +5,6 @@ var setup = {
   overtimeHours: 0,
   overtimeRate: 0,
   totalDeductions: 0,
-  addClickHandlers: function(){
-    var self = this;
-    [].forEach.call(document.getElementsByClassName('usa-button'), function(el){
-      // Only add the event listener to capture input if user didn't click cancel.
-      if (el.className.indexOf('cancel') == -1) {
-        el.addEventListener('click', function(evt) {
-          self.inputToSessionStorage();
-        });
-      }
-    });
-  },
   slideDownHandlers: function(){
     var optionalNodes = document.querySelectorAll('.optional-info');
     for (var i = 0; i < optionalNodes.length; i++) {
@@ -134,54 +123,7 @@ var setup = {
       self.calculateEarnings();
     });
   },
-  inputToSessionStorage: function(){
-    var tempObj = {};
-
-    function verifyOrCreateKey(el, key){
-      if (!tempObj[key]){
-          tempObj[key] = {};
-        }
-      return tempObj;
-    }
-
-    function nest(fromObj, toObj){
-      var employeeId = tempObj[fromObj]["id-number"];
-      if (!tempObj.hasOwnProperty(toObj)){
-        tempObj[toObj] = {};
-      }
-      tempObj[toObj][employeeId] = {};
-      for (var key in tempObj[fromObj]){
-        tempObj[toObj][employeeId][key] = tempObj[fromObj][key];
-      }
-      delete tempObj[fromObj];
-    }
-
-    try {
-      [].forEach.call(document.querySelectorAll('input, select'), function(el){
-        var key = el.attributes.name.value;
-        verifyOrCreateKey(el, key);
-        if (el.value){
-          tempObj[key][el.id] = el.value;
-        }
-      });
-
-      if (document.getElementsByClassName('enter-employee-details').length > 0){
-        nest("rates", "employee");
-        nest("employee", "employees");
-      }
-
-      // Attach user input, now stored in tempObj, to the correct sessionStorage key
-      // Can later be parsed like so: JSON.parse(sessionStorage.payroll_start_week)
-      for (var key in tempObj){
-        sessionStorage.setItem(key, JSON.stringify(tempObj[key]));
-      }
-    } catch (e){
-      console.log("No values found.");
-    }
-  }
 }
-
-setup.addClickHandlers();
 
 switch (setup.page) {
   case "add-new-payroll":
